@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83C363251E71C7C2972DF034 /* libPods-daner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB47334D33339E70E72E4161 /* libPods-daner.a */; };
+		8961E9CC2182BBA700B914FD /* FoundListMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8961E9CB2182BBA700B914FD /* FoundListMessageCell.m */; };
+		8961E9D0218303C100B914FD /* FoundListRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8961E9CE218303C100B914FD /* FoundListRecordCell.m */; };
+		8961E9D3218306FB00B914FD /* ZSRunLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8961E9D2218306FB00B914FD /* ZSRunLabelView.m */; };
+		8961E9DB2183187500B914FD /* KKClassificationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8961E9D62183187500B914FD /* KKClassificationView.m */; };
+		8961E9DC2183187500B914FD /* KKSliderButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8961E9D82183187500B914FD /* KKSliderButtonView.m */; };
+		8961E9DD2183187500B914FD /* KKClassiflcationLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8961E9DA2183187500B914FD /* KKClassiflcationLayout.m */; };
+		8961E9E02183190D00B914FD /* BaseFoundController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8961E9DF2183190D00B914FD /* BaseFoundController.m */; };
+		8997797B2181986D00069C52 /* FoundNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8997797A2181986D00069C52 /* FoundNavView.m */; };
+		899779812181A11C00069C52 /* FoundListVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 899779802181A11C00069C52 /* FoundListVideoCell.m */; };
+		899779872181A1B000069C52 /* FoundListPositionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 899779862181A1B000069C52 /* FoundListPositionCell.m */; };
+		8997798B2181B81B00069C52 /* UILabel+String.m in Sources */ = {isa = PBXBuildFile; fileRef = 899779892181B81B00069C52 /* UILabel+String.m */; };
 		89B76C4D21815B27007D7202 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B76C4C21815B27007D7202 /* AppDelegate.m */; };
 		89B76C5021815B27007D7202 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B76C4F21815B27007D7202 /* ViewController.m */; };
 		89B76C5321815B27007D7202 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89B76C5121815B27007D7202 /* Main.storyboard */; };
@@ -15,6 +27,16 @@
 		89B76C5B21815B29007D7202 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B76C5A21815B29007D7202 /* main.m */; };
 		89B76C6521815B29007D7202 /* danerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B76C6421815B29007D7202 /* danerTests.m */; };
 		89B76C7021815B29007D7202 /* danerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B76C6F21815B29007D7202 /* danerUITests.m */; };
+		89B76C8321816A5A007D7202 /* DanerTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B76C8221816A5A007D7202 /* DanerTabBarItem.m */; };
+		89B76C8621816AE5007D7202 /* DanerTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B76C8521816AE5007D7202 /* DanerTabBarController.m */; };
+		89B76C8A21816BCA007D7202 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B76C8821816BCA007D7202 /* BaseViewController.m */; };
+		89B76C8E21816CC0007D7202 /* MessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B76C8D21816CC0007D7202 /* MessageController.m */; };
+		89B76C9121816CDB007D7202 /* FriendsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B76C9021816CDB007D7202 /* FriendsController.m */; };
+		89B76C9421816D0F007D7202 /* ReleaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B76C9321816D0F007D7202 /* ReleaseController.m */; };
+		89B76C9721816D2F007D7202 /* FoundController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B76C9621816D2F007D7202 /* FoundController.m */; };
+		89B76C9A21816D49007D7202 /* MineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B76C9921816D49007D7202 /* MineController.m */; };
+		89D7108C2182A935007B02E7 /* FoundListFouceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D7108B2182A935007B02E7 /* FoundListFouceCell.m */; };
+		89D7108F2182AB5D007B02E7 /* FoucePeopleCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D7108E2182AB5D007B02E7 /* FoucePeopleCollectionCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +57,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		609699645D51553CA644A01F /* Pods-daner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-daner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-daner/Pods-daner.debug.xcconfig"; sourceTree = "<group>"; };
+		8961E9CA2182BBA700B914FD /* FoundListMessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoundListMessageCell.h; sourceTree = "<group>"; };
+		8961E9CB2182BBA700B914FD /* FoundListMessageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoundListMessageCell.m; sourceTree = "<group>"; };
+		8961E9CE218303C100B914FD /* FoundListRecordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundListRecordCell.m; sourceTree = "<group>"; };
+		8961E9CF218303C100B914FD /* FoundListRecordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoundListRecordCell.h; sourceTree = "<group>"; };
+		8961E9D1218306FB00B914FD /* ZSRunLabelView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSRunLabelView.h; sourceTree = "<group>"; };
+		8961E9D2218306FB00B914FD /* ZSRunLabelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZSRunLabelView.m; sourceTree = "<group>"; };
+		8961E9D52183187500B914FD /* KKSliderButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKSliderButtonView.h; sourceTree = "<group>"; };
+		8961E9D62183187500B914FD /* KKClassificationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKClassificationView.m; sourceTree = "<group>"; };
+		8961E9D72183187500B914FD /* KKClassiflcationLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKClassiflcationLayout.h; sourceTree = "<group>"; };
+		8961E9D82183187500B914FD /* KKSliderButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSliderButtonView.m; sourceTree = "<group>"; };
+		8961E9D92183187500B914FD /* KKClassificationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKClassificationView.h; sourceTree = "<group>"; };
+		8961E9DA2183187500B914FD /* KKClassiflcationLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKClassiflcationLayout.m; sourceTree = "<group>"; };
+		8961E9DE2183190D00B914FD /* BaseFoundController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseFoundController.h; sourceTree = "<group>"; };
+		8961E9DF2183190D00B914FD /* BaseFoundController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseFoundController.m; sourceTree = "<group>"; };
+		899779792181986D00069C52 /* FoundNavView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoundNavView.h; sourceTree = "<group>"; };
+		8997797A2181986D00069C52 /* FoundNavView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoundNavView.m; sourceTree = "<group>"; };
+		8997797F2181A11C00069C52 /* FoundListVideoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoundListVideoCell.h; sourceTree = "<group>"; };
+		899779802181A11C00069C52 /* FoundListVideoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoundListVideoCell.m; sourceTree = "<group>"; };
+		899779852181A1B000069C52 /* FoundListPositionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoundListPositionCell.h; sourceTree = "<group>"; };
+		899779862181A1B000069C52 /* FoundListPositionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoundListPositionCell.m; sourceTree = "<group>"; };
+		899779892181B81B00069C52 /* UILabel+String.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+String.m"; sourceTree = "<group>"; };
+		8997798A2181B81B00069C52 /* UILabel+String.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+String.h"; sourceTree = "<group>"; };
 		89B76C4821815B27007D7202 /* daner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = daner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89B76C4B21815B27007D7202 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		89B76C4C21815B27007D7202 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +96,29 @@
 		89B76C6B21815B29007D7202 /* danerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = danerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89B76C6F21815B29007D7202 /* danerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = danerUITests.m; sourceTree = "<group>"; };
 		89B76C7121815B29007D7202 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89B76C8121816A5A007D7202 /* DanerTabBarItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DanerTabBarItem.h; sourceTree = "<group>"; };
+		89B76C8221816A5A007D7202 /* DanerTabBarItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DanerTabBarItem.m; sourceTree = "<group>"; };
+		89B76C8421816AE5007D7202 /* DanerTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DanerTabBarController.h; sourceTree = "<group>"; };
+		89B76C8521816AE5007D7202 /* DanerTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DanerTabBarController.m; sourceTree = "<group>"; };
+		89B76C8821816BCA007D7202 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		89B76C8921816BCA007D7202 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		89B76C8B21816BF9007D7202 /* ZSConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSConfig.h; sourceTree = "<group>"; };
+		89B76C8C21816CC0007D7202 /* MessageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageController.h; sourceTree = "<group>"; };
+		89B76C8D21816CC0007D7202 /* MessageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageController.m; sourceTree = "<group>"; };
+		89B76C8F21816CDB007D7202 /* FriendsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendsController.h; sourceTree = "<group>"; };
+		89B76C9021816CDB007D7202 /* FriendsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendsController.m; sourceTree = "<group>"; };
+		89B76C9221816D0F007D7202 /* ReleaseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReleaseController.h; sourceTree = "<group>"; };
+		89B76C9321816D0F007D7202 /* ReleaseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReleaseController.m; sourceTree = "<group>"; };
+		89B76C9521816D2F007D7202 /* FoundController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoundController.h; sourceTree = "<group>"; };
+		89B76C9621816D2F007D7202 /* FoundController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoundController.m; sourceTree = "<group>"; };
+		89B76C9821816D49007D7202 /* MineController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineController.h; sourceTree = "<group>"; };
+		89B76C9921816D49007D7202 /* MineController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineController.m; sourceTree = "<group>"; };
+		89D7108A2182A935007B02E7 /* FoundListFouceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoundListFouceCell.h; sourceTree = "<group>"; };
+		89D7108B2182A935007B02E7 /* FoundListFouceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoundListFouceCell.m; sourceTree = "<group>"; };
+		89D7108D2182AB5D007B02E7 /* FoucePeopleCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoucePeopleCollectionCell.h; sourceTree = "<group>"; };
+		89D7108E2182AB5D007B02E7 /* FoucePeopleCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoucePeopleCollectionCell.m; sourceTree = "<group>"; };
+		C5BC9AFCCF8292ECADDA3D7A /* Pods-daner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-daner.release.xcconfig"; path = "Pods/Target Support Files/Pods-daner/Pods-daner.release.xcconfig"; sourceTree = "<group>"; };
+		EB47334D33339E70E72E4161 /* libPods-daner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-daner.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83C363251E71C7C2972DF034 /* libPods-daner.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +147,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8961E9CD2182FFEC00B914FD /* Found */ = {
+			isa = PBXGroup;
+			children = (
+				8961E9D42183187500B914FD /* KKClassificationView */,
+				8961E9CF218303C100B914FD /* FoundListRecordCell.h */,
+				8961E9CE218303C100B914FD /* FoundListRecordCell.m */,
+				899779792181986D00069C52 /* FoundNavView.h */,
+				8997797A2181986D00069C52 /* FoundNavView.m */,
+				8997797F2181A11C00069C52 /* FoundListVideoCell.h */,
+				899779802181A11C00069C52 /* FoundListVideoCell.m */,
+				899779852181A1B000069C52 /* FoundListPositionCell.h */,
+				899779862181A1B000069C52 /* FoundListPositionCell.m */,
+				8961E9CA2182BBA700B914FD /* FoundListMessageCell.h */,
+				8961E9CB2182BBA700B914FD /* FoundListMessageCell.m */,
+				89D7108A2182A935007B02E7 /* FoundListFouceCell.h */,
+				89D7108B2182A935007B02E7 /* FoundListFouceCell.m */,
+				89D7108D2182AB5D007B02E7 /* FoucePeopleCollectionCell.h */,
+				89D7108E2182AB5D007B02E7 /* FoucePeopleCollectionCell.m */,
+				8961E9D1218306FB00B914FD /* ZSRunLabelView.h */,
+				8961E9D2218306FB00B914FD /* ZSRunLabelView.m */,
+			);
+			path = Found;
+			sourceTree = "<group>";
+		};
+		8961E9D42183187500B914FD /* KKClassificationView */ = {
+			isa = PBXGroup;
+			children = (
+				8961E9D52183187500B914FD /* KKSliderButtonView.h */,
+				8961E9D62183187500B914FD /* KKClassificationView.m */,
+				8961E9D72183187500B914FD /* KKClassiflcationLayout.h */,
+				8961E9D82183187500B914FD /* KKSliderButtonView.m */,
+				8961E9D92183187500B914FD /* KKClassificationView.h */,
+				8961E9DA2183187500B914FD /* KKClassiflcationLayout.m */,
+			);
+			path = KKClassificationView;
+			sourceTree = "<group>";
+		};
+		899779782181982A00069C52 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8961E9CD2182FFEC00B914FD /* Found */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		899779882181B80000069C52 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				8997798A2181B81B00069C52 /* UILabel+String.h */,
+				899779892181B81B00069C52 /* UILabel+String.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		89B76C3F21815B27007D7202 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +208,8 @@
 				89B76C6321815B29007D7202 /* danerTests */,
 				89B76C6E21815B29007D7202 /* danerUITests */,
 				89B76C4921815B27007D7202 /* Products */,
+				FB384B5C9FF97ED3EC4E2427 /* Pods */,
+				FDFA82D0D5CEE1C1F476EAAC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +230,10 @@
 				89B76C4C21815B27007D7202 /* AppDelegate.m */,
 				89B76C4E21815B27007D7202 /* ViewController.h */,
 				89B76C4F21815B27007D7202 /* ViewController.m */,
+				899779882181B80000069C52 /* Category */,
+				899779782181982A00069C52 /* View */,
+				89B76C8721816B8F007D7202 /* Controller */,
+				89B76C7D2181653C007D7202 /* Base */,
 				89B76C5121815B27007D7202 /* Main.storyboard */,
 				89B76C5421815B29007D7202 /* Assets.xcassets */,
 				89B76C5621815B29007D7202 /* LaunchScreen.storyboard */,
@@ -132,6 +261,56 @@
 			path = danerUITests;
 			sourceTree = "<group>";
 		};
+		89B76C7D2181653C007D7202 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				89B76C8921816BCA007D7202 /* BaseViewController.h */,
+				89B76C8821816BCA007D7202 /* BaseViewController.m */,
+				89B76C8421816AE5007D7202 /* DanerTabBarController.h */,
+				89B76C8521816AE5007D7202 /* DanerTabBarController.m */,
+				89B76C8121816A5A007D7202 /* DanerTabBarItem.h */,
+				89B76C8221816A5A007D7202 /* DanerTabBarItem.m */,
+				89B76C8B21816BF9007D7202 /* ZSConfig.h */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		89B76C8721816B8F007D7202 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				89B76C8C21816CC0007D7202 /* MessageController.h */,
+				89B76C8D21816CC0007D7202 /* MessageController.m */,
+				89B76C8F21816CDB007D7202 /* FriendsController.h */,
+				89B76C9021816CDB007D7202 /* FriendsController.m */,
+				89B76C9221816D0F007D7202 /* ReleaseController.h */,
+				89B76C9321816D0F007D7202 /* ReleaseController.m */,
+				89B76C9521816D2F007D7202 /* FoundController.h */,
+				89B76C9621816D2F007D7202 /* FoundController.m */,
+				8961E9DE2183190D00B914FD /* BaseFoundController.h */,
+				8961E9DF2183190D00B914FD /* BaseFoundController.m */,
+				89B76C9821816D49007D7202 /* MineController.h */,
+				89B76C9921816D49007D7202 /* MineController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FB384B5C9FF97ED3EC4E2427 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				609699645D51553CA644A01F /* Pods-daner.debug.xcconfig */,
+				C5BC9AFCCF8292ECADDA3D7A /* Pods-daner.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FDFA82D0D5CEE1C1F476EAAC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB47334D33339E70E72E4161 /* libPods-daner.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +318,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 89B76C7421815B29007D7202 /* Build configuration list for PBXNativeTarget "daner" */;
 			buildPhases = (
+				014D1CDF026D42DC3CC762CB /* [CP] Check Pods Manifest.lock */,
 				89B76C4421815B27007D7202 /* Sources */,
 				89B76C4521815B27007D7202 /* Frameworks */,
 				89B76C4621815B27007D7202 /* Resources */,
+				C43F117782A8B1E819064BE5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,14 +438,82 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		014D1CDF026D42DC3CC762CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-daner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C43F117782A8B1E819064BE5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-daner/Pods-daner-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-daner/Pods-daner-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		89B76C4421815B27007D7202 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89B76C9A21816D49007D7202 /* MineController.m in Sources */,
+				89B76C8621816AE5007D7202 /* DanerTabBarController.m in Sources */,
+				89B76C8A21816BCA007D7202 /* BaseViewController.m in Sources */,
+				89D7108F2182AB5D007B02E7 /* FoucePeopleCollectionCell.m in Sources */,
 				89B76C5021815B27007D7202 /* ViewController.m in Sources */,
+				8961E9CC2182BBA700B914FD /* FoundListMessageCell.m in Sources */,
+				899779812181A11C00069C52 /* FoundListVideoCell.m in Sources */,
+				89B76C9421816D0F007D7202 /* ReleaseController.m in Sources */,
+				8961E9D3218306FB00B914FD /* ZSRunLabelView.m in Sources */,
 				89B76C5B21815B29007D7202 /* main.m in Sources */,
 				89B76C4D21815B27007D7202 /* AppDelegate.m in Sources */,
+				8961E9E02183190D00B914FD /* BaseFoundController.m in Sources */,
+				89B76C9121816CDB007D7202 /* FriendsController.m in Sources */,
+				8961E9DB2183187500B914FD /* KKClassificationView.m in Sources */,
+				89B76C8321816A5A007D7202 /* DanerTabBarItem.m in Sources */,
+				8961E9D0218303C100B914FD /* FoundListRecordCell.m in Sources */,
+				8961E9DC2183187500B914FD /* KKSliderButtonView.m in Sources */,
+				8961E9DD2183187500B914FD /* KKClassiflcationLayout.m in Sources */,
+				8997798B2181B81B00069C52 /* UILabel+String.m in Sources */,
+				8997797B2181986D00069C52 /* FoundNavView.m in Sources */,
+				89B76C9721816D2F007D7202 /* FoundController.m in Sources */,
+				89B76C8E21816CC0007D7202 /* MessageController.m in Sources */,
+				89D7108C2182A935007B02E7 /* FoundListFouceCell.m in Sources */,
+				899779872181A1B000069C52 /* FoundListPositionCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,9 +682,11 @@
 		};
 		89B76C7521815B29007D7202 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 609699645D51553CA644A01F /* Pods-daner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GH8DJURR96;
 				INFOPLIST_FILE = daner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -449,9 +700,11 @@
 		};
 		89B76C7621815B29007D7202 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5BC9AFCCF8292ECADDA3D7A /* Pods-daner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GH8DJURR96;
 				INFOPLIST_FILE = daner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
