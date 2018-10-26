@@ -88,7 +88,7 @@
         _layout = [[KKClassiflcationLayout alloc] init];
         _layout.isAverage = YES;
         _layout.titleViewBgColor = [UIColor whiteColor];
-        _layout.lrMargin = SCREENWIDTH/2-280/2;
+        _layout.lrMargin = SCREENWIDTH/2-180/2;
         //控制滑块高度
         _layout.sliderHeight = 44;
         _layout.titleMargin = 0;

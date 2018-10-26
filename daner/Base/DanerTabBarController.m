@@ -48,13 +48,13 @@
 //    messageItem.selectedImage = [UIImage imageNamed:@"next_icon_selected"];
     
     friendItem = [[DanerTabBarItem alloc]initWithTitle:@"好友" image:nil selectedImage:nil];
-//    friendItem.image = [[UIImage imageNamed:@"sort_icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//    friendItem.selectedImage = [UIImage imageNamed:@"sort_icon_selected"];
-    
+    friendItem.image = [[UIImage imageNamed:@"sort_icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    friendItem.selectedImage = [UIImage imageNamed:@"sort_icon_selected"];
+    friendItem.imageInsets = UIEdgeInsetsMake(0, 30, 0, 0);
     releaseItem = [[DanerTabBarItem alloc]initWithTitle:@"" image:[UIImage imageNamed:@"add_tab"] selectedImage:[UIImage imageNamed:@"add_tab"]];
     releaseItem.image = [[UIImage imageNamed:@"add_tab"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     releaseItem.selectedImage = [UIImage imageNamed:@"add_tab"];
-    releaseItem.imageInsets = UIEdgeInsetsMake(30, 0, 0, 0);
+    releaseItem.imageInsets = UIEdgeInsetsMake(20, 0, 0, 0);
     foundItem = [[DanerTabBarItem alloc]initWithTitle:@"发现" image:[UIImage imageNamed:@"shopping_icon_selected"] selectedImage:[UIImage imageNamed:@"shopping_icon_selected"]];
     foundItem.image = [[UIImage imageNamed:@"shopping_icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     foundItem.selectedImage = [UIImage imageNamed:@"shopping_icon_selected"];
