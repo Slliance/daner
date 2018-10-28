@@ -1,0 +1,6 @@
+framework module Pods_daner {
+  umbrella header "Pods-daner-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F029F25F061BC8924B9EE7F /* Pods_daner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A3A91CA7FB2FDC006D5626 /* Pods_daner.framework */; };
 		5A35495A218464150085469B /* MineFriendController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A354959218464150085469B /* MineFriendController.m */; };
 		5A35495D218464F10085469B /* MyFouceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A35495C218464F10085469B /* MyFouceController.m */; };
 		5A354960218465220085469B /* AttentionMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A35495F218465220085469B /* AttentionMeController.m */; };
 		5A354963218465760085469B /* MightKnowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A354962218465760085469B /* MightKnowController.m */; };
 		5A354967218477E30085469B /* FriendHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A354966218477E30085469B /* FriendHeadView.m */; };
+		5A3549702185A3070085469B /* contactModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3549682185A3050085469B /* contactModel.m */; };
+		5A3549712185A3070085469B /* NSString+PinYing.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A35496A2185A3060085469B /* NSString+PinYing.m */; };
+		5A3549722185A3070085469B /* NSArray+ContactArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A35496D2185A3060085469B /* NSArray+ContactArray.m */; };
+		5A3549732185A3070085469B /* MJNIndexView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A35496E2185A3070085469B /* MJNIndexView.m */; };
+		5A3549762185A33C0085469B /* WPFSearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3549742185A33B0085469B /* WPFSearchResultViewController.m */; };
+		5A3549792185A7A20085469B /* MyFriendsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3549782185A7A20085469B /* MyFriendsCell.m */; };
 		5A7954A7218438A7004254BE /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7954A6218438A7004254BE /* BaseView.m */; };
 		5A7954AA218438C1004254BE /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7954A9218438C1004254BE /* BaseTableViewCell.m */; };
 		5A7954AD218438FD004254BE /* MessageNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7954AC218438FD004254BE /* MessageNavView.m */; };
-		83C363251E71C7C2972DF034 /* libPods-daner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB47334D33339E70E72E4161 /* libPods-daner.a */; };
 		8961E9CC2182BBA700B914FD /* FoundListMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8961E9CB2182BBA700B914FD /* FoundListMessageCell.m */; };
 		8961E9D0218303C100B914FD /* FoundListRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8961E9CE218303C100B914FD /* FoundListRecordCell.m */; };
 		8961E9D3218306FB00B914FD /* ZSRunLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8961E9D2218306FB00B914FD /* ZSRunLabelView.m */; };
@@ -75,6 +81,18 @@
 		5A354962218465760085469B /* MightKnowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MightKnowController.m; sourceTree = "<group>"; };
 		5A354965218477E20085469B /* FriendHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendHeadView.h; sourceTree = "<group>"; };
 		5A354966218477E30085469B /* FriendHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendHeadView.m; sourceTree = "<group>"; };
+		5A3549682185A3050085469B /* contactModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = contactModel.m; sourceTree = "<group>"; };
+		5A3549692185A3060085469B /* MJNIndexView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJNIndexView.h; sourceTree = "<group>"; };
+		5A35496A2185A3060085469B /* NSString+PinYing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PinYing.m"; sourceTree = "<group>"; };
+		5A35496B2185A3060085469B /* NSString+PinYing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PinYing.h"; sourceTree = "<group>"; };
+		5A35496C2185A3060085469B /* contactModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = contactModel.h; sourceTree = "<group>"; };
+		5A35496D2185A3060085469B /* NSArray+ContactArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+ContactArray.m"; sourceTree = "<group>"; };
+		5A35496E2185A3070085469B /* MJNIndexView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJNIndexView.m; sourceTree = "<group>"; };
+		5A35496F2185A3070085469B /* NSArray+ContactArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+ContactArray.h"; sourceTree = "<group>"; };
+		5A3549742185A33B0085469B /* WPFSearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPFSearchResultViewController.m; sourceTree = "<group>"; };
+		5A3549752185A33C0085469B /* WPFSearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPFSearchResultViewController.h; sourceTree = "<group>"; };
+		5A3549772185A7A20085469B /* MyFriendsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyFriendsCell.h; sourceTree = "<group>"; };
+		5A3549782185A7A20085469B /* MyFriendsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyFriendsCell.m; sourceTree = "<group>"; };
 		5A7954A5218438A7004254BE /* BaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseView.h; sourceTree = "<group>"; };
 		5A7954A6218438A7004254BE /* BaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseView.m; sourceTree = "<group>"; };
 		5A7954A8218438C1004254BE /* BaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
@@ -82,6 +100,7 @@
 		5A7954AB218438FD004254BE /* MessageNavView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageNavView.h; sourceTree = "<group>"; };
 		5A7954AC218438FD004254BE /* MessageNavView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageNavView.m; sourceTree = "<group>"; };
 		609699645D51553CA644A01F /* Pods-daner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-daner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-daner/Pods-daner.debug.xcconfig"; sourceTree = "<group>"; };
+		74A3A91CA7FB2FDC006D5626 /* Pods_daner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_daner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8961E9CA2182BBA700B914FD /* FoundListMessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoundListMessageCell.h; sourceTree = "<group>"; };
 		8961E9CB2182BBA700B914FD /* FoundListMessageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoundListMessageCell.m; sourceTree = "<group>"; };
 		8961E9CE218303C100B914FD /* FoundListRecordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundListRecordCell.m; sourceTree = "<group>"; };
@@ -142,7 +161,6 @@
 		89D7108D2182AB5D007B02E7 /* FoucePeopleCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoucePeopleCollectionCell.h; sourceTree = "<group>"; };
 		89D7108E2182AB5D007B02E7 /* FoucePeopleCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoucePeopleCollectionCell.m; sourceTree = "<group>"; };
 		C5BC9AFCCF8292ECADDA3D7A /* Pods-daner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-daner.release.xcconfig"; path = "Pods/Target Support Files/Pods-daner/Pods-daner.release.xcconfig"; sourceTree = "<group>"; };
-		EB47334D33339E70E72E4161 /* libPods-daner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-daner.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +168,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83C363251E71C7C2972DF034 /* libPods-daner.a in Frameworks */,
+				2F029F25F061BC8924B9EE7F /* Pods_daner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +201,8 @@
 		5A3549542184632C0085469B /* Friend */ = {
 			isa = PBXGroup;
 			children = (
+				5A3549752185A33C0085469B /* WPFSearchResultViewController.h */,
+				5A3549742185A33B0085469B /* WPFSearchResultViewController.m */,
 				89B76C8F21816CDB007D7202 /* FriendsController.h */,
 				89B76C9021816CDB007D7202 /* FriendsController.m */,
 				5A354958218464150085469B /* MineFriendController.h */,
@@ -231,6 +251,16 @@
 			children = (
 				5A354965218477E20085469B /* FriendHeadView.h */,
 				5A354966218477E30085469B /* FriendHeadView.m */,
+				5A3549772185A7A20085469B /* MyFriendsCell.h */,
+				5A3549782185A7A20085469B /* MyFriendsCell.m */,
+				5A35496C2185A3060085469B /* contactModel.h */,
+				5A3549682185A3050085469B /* contactModel.m */,
+				5A3549692185A3060085469B /* MJNIndexView.h */,
+				5A35496E2185A3070085469B /* MJNIndexView.m */,
+				5A35496F2185A3070085469B /* NSArray+ContactArray.h */,
+				5A35496D2185A3060085469B /* NSArray+ContactArray.m */,
+				5A35496B2185A3060085469B /* NSString+PinYing.h */,
+				5A35496A2185A3060085469B /* NSString+PinYing.m */,
 			);
 			path = Friend;
 			sourceTree = "<group>";
@@ -402,7 +432,7 @@
 		FDFA82D0D5CEE1C1F476EAAC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EB47334D33339E70E72E4161 /* libPods-daner.a */,
+				74A3A91CA7FB2FDC006D5626 /* Pods_daner.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -418,7 +448,7 @@
 				89B76C4421815B27007D7202 /* Sources */,
 				89B76C4521815B27007D7202 /* Frameworks */,
 				89B76C4621815B27007D7202 /* Resources */,
-				C43F117782A8B1E819064BE5 /* [CP] Copy Pods Resources */,
+				E717D553A92A91BB33066801 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -557,7 +587,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C43F117782A8B1E819064BE5 /* [CP] Copy Pods Resources */ = {
+		E717D553A92A91BB33066801 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -565,18 +595,30 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-daner/Pods-daner-resources.sh",
-				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${SRCROOT}/Pods/Target Support Files/Pods-daner/Pods-daner-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/HighlightedSearch/HighlightedSearch.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HighlightedSearch.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-daner/Pods-daner-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-daner/Pods-daner-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -595,6 +637,7 @@
 				89D7108F2182AB5D007B02E7 /* FoucePeopleCollectionCell.m in Sources */,
 				89B76C5021815B27007D7202 /* ViewController.m in Sources */,
 				8961E9CC2182BBA700B914FD /* FoundListMessageCell.m in Sources */,
+				5A3549732185A3070085469B /* MJNIndexView.m in Sources */,
 				899779812181A11C00069C52 /* FoundListVideoCell.m in Sources */,
 				5A7954A7218438A7004254BE /* BaseView.m in Sources */,
 				5A7954AA218438C1004254BE /* BaseTableViewCell.m in Sources */,
@@ -604,13 +647,18 @@
 				89B76C4D21815B27007D7202 /* AppDelegate.m in Sources */,
 				5A354967218477E30085469B /* FriendHeadView.m in Sources */,
 				8961E9E02183190D00B914FD /* BaseFoundController.m in Sources */,
+				5A3549792185A7A20085469B /* MyFriendsCell.m in Sources */,
 				89B76C9121816CDB007D7202 /* FriendsController.m in Sources */,
 				8961E9DB2183187500B914FD /* KKClassificationView.m in Sources */,
+				5A3549762185A33C0085469B /* WPFSearchResultViewController.m in Sources */,
 				89B76C8321816A5A007D7202 /* DanerTabBarItem.m in Sources */,
 				8961E9D0218303C100B914FD /* FoundListRecordCell.m in Sources */,
+				5A3549712185A3070085469B /* NSString+PinYing.m in Sources */,
 				8961E9DC2183187500B914FD /* KKSliderButtonView.m in Sources */,
+				5A3549702185A3070085469B /* contactModel.m in Sources */,
 				5A7954AD218438FD004254BE /* MessageNavView.m in Sources */,
 				8961E9DD2183187500B914FD /* KKClassiflcationLayout.m in Sources */,
+				5A3549722185A3070085469B /* NSArray+ContactArray.m in Sources */,
 				5A35495D218464F10085469B /* MyFouceController.m in Sources */,
 				8997798B2181B81B00069C52 /* UILabel+String.m in Sources */,
 				8997797B2181986D00069C52 /* FoundNavView.m in Sources */,

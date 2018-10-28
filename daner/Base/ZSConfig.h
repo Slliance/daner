@@ -19,9 +19,10 @@
 #define DSColorFromHex(rgb)     [UIColor colorWithRed:((float)((rgb & 0xFF0000) >> 16))/255.0 green:((float)((rgb & 0xFF00) >> 8))/255.0 blue:((float)(rgb & 0xFF))/255.0 alpha:1.0]
 #define DSColorAlphaFromHex(rgb,a)     [UIColor colorWithRed:((float)((rgb & 0xFF0000) >> 16))/255.0 green:((float)((rgb & 0xFF00) >> 8))/255.0 blue:((float)(rgb & 0xFF))/255.0 alpha:a]
 #define DSNavi  [UIColor whiteColor] //navigation的颜色
-#import <Masonry.h>
 
 
+
+#import <Masonry/Masonry.h>
 
 
 #endif /* ZSConfig_h */

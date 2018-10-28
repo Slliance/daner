@@ -8,5 +8,6 @@ target 'daner'do
   pod "MJRefresh"
   pod 'MBProgressHUD', '~> 1.0.0'
   pod 'Masonry'
-
+  use_frameworks!
+  pod'HighlightedSearch'
 end

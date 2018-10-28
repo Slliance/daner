@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - HighlightedSearch (0.1.0)
   - Masonry (1.1.0)
   - MBProgressHUD (1.0.0)
   - MJRefresh (3.1.15.7)
@@ -26,6 +27,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
+  - HighlightedSearch
   - Masonry
   - MBProgressHUD (~> 1.0.0)
   - MJRefresh
@@ -35,6 +37,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - HighlightedSearch
     - Masonry
     - MBProgressHUD
     - MJRefresh
@@ -43,12 +46,13 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  HighlightedSearch: adf759fa7c99be5a5bea6c351d37ea51ddfb0a4b
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 2ad4b984f065e010d197ca4868ea899f2c3dc094
+PODFILE CHECKSUM: d3b0f0cc61591e363b42aee7211628d990fab6eb
 
 COCOAPODS: 1.5.3
