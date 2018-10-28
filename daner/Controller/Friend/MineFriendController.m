@@ -1,18 +1,18 @@
 //
-//  FriendsController.m
+//  MineFriendController.m
 //  daner
 //
-//  Created by dnaer7 on 2018/10/25.
-//  Copyright © 2018 dnaer7. All rights reserved.
+//  Created by 张舒 on 2018/10/27.
+//  Copyright © 2018年 dnaer7. All rights reserved.
 //
 
-#import "FriendsController.h"
+#import "MineFriendController.h"
 
-@interface FriendsController ()
+@interface MineFriendController ()
 
 @end
 
-@implementation FriendsController
+@implementation MineFriendController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

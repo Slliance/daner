@@ -42,7 +42,7 @@
 -(UILabel *)commentLabel{
     if (!_commentLabel) {
         _commentLabel = [[UILabel alloc]init];
-        _commentLabel.text = @"我发现了一个很酷的软件，推荐给你试试";
+        _commentLabel.text = @"不悔于过去；不怠于当下";
         _commentLabel.font = [UIFont systemFontOfSize:14];
         _commentLabel.textAlignment = NSTextAlignmentLeft;
         _commentLabel.textColor = DSColorFromHex(0x464646);
@@ -66,6 +66,16 @@
     }
     return _lineLabel;
 }
+-(UIButton *)followBtn{
+    if (!_followBtn) {
+        _followBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_followBtn setImage:[UIImage imageNamed:@"tofollow_mes"] forState:UIControlStateNormal];
+         [_followBtn setImage:[UIImage imageNamed:@"follewed_mes"] forState:UIControlStateSelected];
+        [_followBtn addTarget:self action:@selector(pressFollow:) forControlEvents:UIControlEventTouchUpInside];
+        _followBtn.hidden = YES;
+    }
+    return _followBtn;
+}
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
@@ -74,6 +84,7 @@
         [self addSubview:self.reviewerName];
         [self addSubview:self.commentLabel];
         [self addSubview:self.dateLabel];
+        [self addSubview:self.followBtn];
         [self.lineLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self).offset(63);
             make.right.equalTo(self);
@@ -98,7 +109,18 @@
             make.right.equalTo(self).offset(-13);
             make.top.equalTo(self).offset(25);
         }];
+        [self.followBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(self).offset(-13);
+            make.width.mas_equalTo(50);
+            make.height.mas_equalTo(24);
+            make.centerY.equalTo(self);
+            
+        }];
+        
     }
     return self;
+}
+-(void)pressFollow:(UIButton*)sender{
+    sender.selected = !sender.selected;
 }
 @end

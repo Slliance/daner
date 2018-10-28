@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A35495A218464150085469B /* MineFriendController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A354959218464150085469B /* MineFriendController.m */; };
+		5A35495D218464F10085469B /* MyFouceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A35495C218464F10085469B /* MyFouceController.m */; };
+		5A354960218465220085469B /* AttentionMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A35495F218465220085469B /* AttentionMeController.m */; };
+		5A354963218465760085469B /* MightKnowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A354962218465760085469B /* MightKnowController.m */; };
+		5A354967218477E30085469B /* FriendHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A354966218477E30085469B /* FriendHeadView.m */; };
+		5A7954A7218438A7004254BE /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7954A6218438A7004254BE /* BaseView.m */; };
+		5A7954AA218438C1004254BE /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7954A9218438C1004254BE /* BaseTableViewCell.m */; };
+		5A7954AD218438FD004254BE /* MessageNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7954AC218438FD004254BE /* MessageNavView.m */; };
 		83C363251E71C7C2972DF034 /* libPods-daner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB47334D33339E70E72E4161 /* libPods-daner.a */; };
 		8961E9CC2182BBA700B914FD /* FoundListMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8961E9CB2182BBA700B914FD /* FoundListMessageCell.m */; };
 		8961E9D0218303C100B914FD /* FoundListRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8961E9CE218303C100B914FD /* FoundListRecordCell.m */; };
@@ -57,6 +65,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A354958218464150085469B /* MineFriendController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineFriendController.h; sourceTree = "<group>"; };
+		5A354959218464150085469B /* MineFriendController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineFriendController.m; sourceTree = "<group>"; };
+		5A35495B218464F10085469B /* MyFouceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyFouceController.h; sourceTree = "<group>"; };
+		5A35495C218464F10085469B /* MyFouceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyFouceController.m; sourceTree = "<group>"; };
+		5A35495E218465220085469B /* AttentionMeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AttentionMeController.h; sourceTree = "<group>"; };
+		5A35495F218465220085469B /* AttentionMeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AttentionMeController.m; sourceTree = "<group>"; };
+		5A354961218465760085469B /* MightKnowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MightKnowController.h; sourceTree = "<group>"; };
+		5A354962218465760085469B /* MightKnowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MightKnowController.m; sourceTree = "<group>"; };
+		5A354965218477E20085469B /* FriendHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendHeadView.h; sourceTree = "<group>"; };
+		5A354966218477E30085469B /* FriendHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendHeadView.m; sourceTree = "<group>"; };
+		5A7954A5218438A7004254BE /* BaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseView.h; sourceTree = "<group>"; };
+		5A7954A6218438A7004254BE /* BaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseView.m; sourceTree = "<group>"; };
+		5A7954A8218438C1004254BE /* BaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
+		5A7954A9218438C1004254BE /* BaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
+		5A7954AB218438FD004254BE /* MessageNavView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageNavView.h; sourceTree = "<group>"; };
+		5A7954AC218438FD004254BE /* MessageNavView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageNavView.m; sourceTree = "<group>"; };
 		609699645D51553CA644A01F /* Pods-daner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-daner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-daner/Pods-daner.debug.xcconfig"; sourceTree = "<group>"; };
 		8961E9CA2182BBA700B914FD /* FoundListMessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoundListMessageCell.h; sourceTree = "<group>"; };
 		8961E9CB2182BBA700B914FD /* FoundListMessageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoundListMessageCell.m; sourceTree = "<group>"; };
@@ -147,6 +171,79 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A3549532184631E0085469B /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				89B76C8C21816CC0007D7202 /* MessageController.h */,
+				89B76C8D21816CC0007D7202 /* MessageController.m */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		5A3549542184632C0085469B /* Friend */ = {
+			isa = PBXGroup;
+			children = (
+				89B76C8F21816CDB007D7202 /* FriendsController.h */,
+				89B76C9021816CDB007D7202 /* FriendsController.m */,
+				5A354958218464150085469B /* MineFriendController.h */,
+				5A354959218464150085469B /* MineFriendController.m */,
+				5A35495E218465220085469B /* AttentionMeController.h */,
+				5A35495F218465220085469B /* AttentionMeController.m */,
+				5A35495B218464F10085469B /* MyFouceController.h */,
+				5A35495C218464F10085469B /* MyFouceController.m */,
+				5A354961218465760085469B /* MightKnowController.h */,
+				5A354962218465760085469B /* MightKnowController.m */,
+			);
+			path = Friend;
+			sourceTree = "<group>";
+		};
+		5A3549552184633B0085469B /* Found */ = {
+			isa = PBXGroup;
+			children = (
+				89B76C9521816D2F007D7202 /* FoundController.h */,
+				89B76C9621816D2F007D7202 /* FoundController.m */,
+				8961E9DE2183190D00B914FD /* BaseFoundController.h */,
+				8961E9DF2183190D00B914FD /* BaseFoundController.m */,
+			);
+			path = Found;
+			sourceTree = "<group>";
+		};
+		5A3549562184634E0085469B /* Release */ = {
+			isa = PBXGroup;
+			children = (
+				89B76C9221816D0F007D7202 /* ReleaseController.h */,
+				89B76C9321816D0F007D7202 /* ReleaseController.m */,
+			);
+			path = Release;
+			sourceTree = "<group>";
+		};
+		5A3549572184635F0085469B /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				89B76C9821816D49007D7202 /* MineController.h */,
+				89B76C9921816D49007D7202 /* MineController.m */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		5A354964218477BF0085469B /* Friend */ = {
+			isa = PBXGroup;
+			children = (
+				5A354965218477E20085469B /* FriendHeadView.h */,
+				5A354966218477E30085469B /* FriendHeadView.m */,
+			);
+			path = Friend;
+			sourceTree = "<group>";
+		};
+		5A7954A421843827004254BE /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				5A7954AB218438FD004254BE /* MessageNavView.h */,
+				5A7954AC218438FD004254BE /* MessageNavView.m */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
 		8961E9CD2182FFEC00B914FD /* Found */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +284,8 @@
 		899779782181982A00069C52 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5A354964218477BF0085469B /* Friend */,
+				5A7954A421843827004254BE /* Message */,
 				8961E9CD2182FFEC00B914FD /* Found */,
 			);
 			path = View;
@@ -270,6 +369,10 @@
 				89B76C8521816AE5007D7202 /* DanerTabBarController.m */,
 				89B76C8121816A5A007D7202 /* DanerTabBarItem.h */,
 				89B76C8221816A5A007D7202 /* DanerTabBarItem.m */,
+				5A7954A5218438A7004254BE /* BaseView.h */,
+				5A7954A6218438A7004254BE /* BaseView.m */,
+				5A7954A8218438C1004254BE /* BaseTableViewCell.h */,
+				5A7954A9218438C1004254BE /* BaseTableViewCell.m */,
 				89B76C8B21816BF9007D7202 /* ZSConfig.h */,
 			);
 			path = Base;
@@ -278,18 +381,11 @@
 		89B76C8721816B8F007D7202 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				89B76C8C21816CC0007D7202 /* MessageController.h */,
-				89B76C8D21816CC0007D7202 /* MessageController.m */,
-				89B76C8F21816CDB007D7202 /* FriendsController.h */,
-				89B76C9021816CDB007D7202 /* FriendsController.m */,
-				89B76C9221816D0F007D7202 /* ReleaseController.h */,
-				89B76C9321816D0F007D7202 /* ReleaseController.m */,
-				89B76C9521816D2F007D7202 /* FoundController.h */,
-				89B76C9621816D2F007D7202 /* FoundController.m */,
-				8961E9DE2183190D00B914FD /* BaseFoundController.h */,
-				8961E9DF2183190D00B914FD /* BaseFoundController.m */,
-				89B76C9821816D49007D7202 /* MineController.h */,
-				89B76C9921816D49007D7202 /* MineController.m */,
+				5A3549572184635F0085469B /* Mine */,
+				5A3549562184634E0085469B /* Release */,
+				5A3549552184633B0085469B /* Found */,
+				5A3549542184632C0085469B /* Friend */,
+				5A3549532184631E0085469B /* Message */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -492,22 +588,30 @@
 			files = (
 				89B76C9A21816D49007D7202 /* MineController.m in Sources */,
 				89B76C8621816AE5007D7202 /* DanerTabBarController.m in Sources */,
+				5A354960218465220085469B /* AttentionMeController.m in Sources */,
+				5A354963218465760085469B /* MightKnowController.m in Sources */,
+				5A35495A218464150085469B /* MineFriendController.m in Sources */,
 				89B76C8A21816BCA007D7202 /* BaseViewController.m in Sources */,
 				89D7108F2182AB5D007B02E7 /* FoucePeopleCollectionCell.m in Sources */,
 				89B76C5021815B27007D7202 /* ViewController.m in Sources */,
 				8961E9CC2182BBA700B914FD /* FoundListMessageCell.m in Sources */,
 				899779812181A11C00069C52 /* FoundListVideoCell.m in Sources */,
+				5A7954A7218438A7004254BE /* BaseView.m in Sources */,
+				5A7954AA218438C1004254BE /* BaseTableViewCell.m in Sources */,
 				89B76C9421816D0F007D7202 /* ReleaseController.m in Sources */,
 				8961E9D3218306FB00B914FD /* ZSRunLabelView.m in Sources */,
 				89B76C5B21815B29007D7202 /* main.m in Sources */,
 				89B76C4D21815B27007D7202 /* AppDelegate.m in Sources */,
+				5A354967218477E30085469B /* FriendHeadView.m in Sources */,
 				8961E9E02183190D00B914FD /* BaseFoundController.m in Sources */,
 				89B76C9121816CDB007D7202 /* FriendsController.m in Sources */,
 				8961E9DB2183187500B914FD /* KKClassificationView.m in Sources */,
 				89B76C8321816A5A007D7202 /* DanerTabBarItem.m in Sources */,
 				8961E9D0218303C100B914FD /* FoundListRecordCell.m in Sources */,
 				8961E9DC2183187500B914FD /* KKSliderButtonView.m in Sources */,
+				5A7954AD218438FD004254BE /* MessageNavView.m in Sources */,
 				8961E9DD2183187500B914FD /* KKClassiflcationLayout.m in Sources */,
+				5A35495D218464F10085469B /* MyFouceController.m in Sources */,
 				8997798B2181B81B00069C52 /* UILabel+String.m in Sources */,
 				8997797B2181986D00069C52 /* FoundNavView.m in Sources */,
 				89B76C9721816D2F007D7202 /* FoundController.m in Sources */,
