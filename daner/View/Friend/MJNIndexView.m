@@ -555,6 +555,7 @@
                 [itemAttributes setObject:(__bridge_transfer id)CTFontCreateWithName((__bridge CFStringRef)self.selectedItemFont.fontName, fontSize, NULL) forKey:@"font"];
                 [itemAttributes setObject:self.selectedItemFontColor forKey:@"color"];
                 [itemAttributes setObject:@(10.0) forKey:@"zPosition"];
+                
                 if (!self.getSelectedItemsAfterPanGestureIsFinished && [self.section integerValue] != section) {
                     [self.dataSource sectionForSectionMJNIndexTitle:self.indexItems[section] atIndex:section];
                 }
@@ -969,7 +970,10 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
     
     // save context state first
-    CGContextSaveGState(context);
+     CGContextAddEllipseInRect(context, CGRectMake(50, 50, 100, 100));
+     CGContextSetRGBFillColor(context, 0, 0, 1, 1);
+     CGContextFillPath(context);
+     CGContextSaveGState(context);
     
     
     // obtain size of drawn label

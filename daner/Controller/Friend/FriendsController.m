@@ -12,20 +12,29 @@
 #import "AttentionMeController.h"
 #import "MyFouceController.h"
 #import "MightKnowController.h"
-
+#import "FriendAlertView.h"
 @interface FriendsController ()
 @property (nonatomic, strong) NSArray *titleArr;
 @property(strong, nonatomic) KKClassiflcationLayout *layout;
 @property(strong, nonatomic) KKClassificationView *managerView;
 @property(copy, nonatomic) NSMutableArray *viewControllers;
 @property(nonatomic,strong)UIButton *cameraBtn;
+@property(nonatomic,strong)FriendAlertView *alertView;
 @end
 
 @implementation FriendsController
+-(FriendAlertView *)alertView{
+    if (!_alertView) {
+        _alertView = [[FriendAlertView alloc]initWithFrame:CGRectMake(SCREENWIDTH-120, [self navHeightWithHeight]+3, 110, 168)];
+        _alertView.hidden = YES;
+    }
+    return _alertView;
+}
 -(UIButton *)cameraBtn{
     if (!_cameraBtn) {
         _cameraBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [_cameraBtn setImage:[UIImage imageNamed:@"more_black"] forState:UIControlStateNormal];
+        [_cameraBtn addTarget:self action:@selector(pressMore:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _cameraBtn;
 }
@@ -33,9 +42,10 @@
     [super viewDidLoad];
     [self.view addSubview:self.managerView];
     [self.view addSubview:self.cameraBtn];
+    [self.view addSubview:self.alertView];
     
     [self.cameraBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.view).offset(-13);
+        make.right.equalTo(self.view).offset(-20);
         make.top.equalTo(self.view).offset([self navHeightWithHeight]-22-13);
         make.width.mas_equalTo(7);
         make.height.mas_equalTo(22);
@@ -48,6 +58,11 @@
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     self.navigationController.navigationBar.hidden = NO;
+}
+-(void)pressMore:(UIButton*)sender{
+    sender.selected = !sender.selected;
+    self.alertView.hidden = !sender.selected;
+    
 }
 #pragma mark - 懒加载
 -(KKClassificationView *)managerView

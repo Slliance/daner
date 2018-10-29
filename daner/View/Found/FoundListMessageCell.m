@@ -23,11 +23,25 @@
 -(UIButton *)reviewerBtn{
     if (!_reviewerBtn) {
         _reviewerBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_reviewerBtn setImage:[UIImage imageNamed:@"head_icon"] forState:UIControlStateNormal];
-        [_reviewerBtn.layer setCornerRadius:20];
+        [_reviewerBtn setImage:[UIImage imageNamed:@"head2"] forState:UIControlStateNormal];
+        [_reviewerBtn.layer setCornerRadius:25];
         [_reviewerBtn.layer setMasksToBounds:YES];
     }
     return _reviewerBtn;
+}
+-(UILabel *)countLabel{
+    if (!_countLabel) {
+        _countLabel = [[UILabel alloc]init];
+        _countLabel.backgroundColor = DSColorFromHex(0xFF4141);
+        _countLabel.textColor = [UIColor whiteColor];
+        _countLabel.font = [UIFont systemFontOfSize:10];
+        _countLabel.textAlignment = NSTextAlignmentCenter;
+        _countLabel.text = @"12";
+        [_countLabel.layer setMasksToBounds:YES];
+        [_countLabel.layer setCornerRadius:7.5];
+        _countLabel.hidden = YES;
+    }
+    return _countLabel;
 }
 -(UILabel *)reviewerName{
     if (!_reviewerName) {
@@ -45,7 +59,7 @@
         _commentLabel.text = @"不悔于过去；不怠于当下";
         _commentLabel.font = [UIFont systemFontOfSize:14];
         _commentLabel.textAlignment = NSTextAlignmentLeft;
-        _commentLabel.textColor = DSColorFromHex(0x464646);
+        _commentLabel.textColor = DSColorFromHex(0x969696);
     }
     return _commentLabel;
 }
@@ -85,6 +99,7 @@
         [self addSubview:self.commentLabel];
         [self addSubview:self.dateLabel];
         [self addSubview:self.followBtn];
+        [self addSubview:self.countLabel];
         [self.lineLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self).offset(63);
             make.right.equalTo(self);
@@ -95,6 +110,12 @@
             make.left.equalTo(self).offset(13);
             make.width.height.mas_equalTo(50);
             make.centerY.equalTo(self);
+            
+        }];
+        [self.countLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.height.mas_equalTo(15);
+            make.right.equalTo(self.reviewerBtn.mas_right).offset(1);
+            make.top.equalTo(self.reviewerBtn.mas_top).offset(-3);
             
         }];
         [self.reviewerName mas_makeConstraints:^(MASConstraintMaker *make) {

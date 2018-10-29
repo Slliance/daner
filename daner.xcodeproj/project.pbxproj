@@ -29,6 +29,8 @@
 		8961E9DC2183187500B914FD /* KKSliderButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8961E9D82183187500B914FD /* KKSliderButtonView.m */; };
 		8961E9DD2183187500B914FD /* KKClassiflcationLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8961E9DA2183187500B914FD /* KKClassiflcationLayout.m */; };
 		8961E9E02183190D00B914FD /* BaseFoundController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8961E9DF2183190D00B914FD /* BaseFoundController.m */; };
+		8961E9E32186E5B000B914FD /* ScreenFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8961E9E22186E5B000B914FD /* ScreenFriendCell.m */; };
+		8961E9E62186FDA000B914FD /* FriendAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8961E9E52186FDA000B914FD /* FriendAlertView.m */; };
 		8997797B2181986D00069C52 /* FoundNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8997797A2181986D00069C52 /* FoundNavView.m */; };
 		899779812181A11C00069C52 /* FoundListVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 899779802181A11C00069C52 /* FoundListVideoCell.m */; };
 		899779872181A1B000069C52 /* FoundListPositionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 899779862181A1B000069C52 /* FoundListPositionCell.m */; };
@@ -115,6 +117,10 @@
 		8961E9DA2183187500B914FD /* KKClassiflcationLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKClassiflcationLayout.m; sourceTree = "<group>"; };
 		8961E9DE2183190D00B914FD /* BaseFoundController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseFoundController.h; sourceTree = "<group>"; };
 		8961E9DF2183190D00B914FD /* BaseFoundController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseFoundController.m; sourceTree = "<group>"; };
+		8961E9E12186E5B000B914FD /* ScreenFriendCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScreenFriendCell.h; sourceTree = "<group>"; };
+		8961E9E22186E5B000B914FD /* ScreenFriendCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScreenFriendCell.m; sourceTree = "<group>"; };
+		8961E9E42186FDA000B914FD /* FriendAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendAlertView.h; sourceTree = "<group>"; };
+		8961E9E52186FDA000B914FD /* FriendAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendAlertView.m; sourceTree = "<group>"; };
 		899779792181986D00069C52 /* FoundNavView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoundNavView.h; sourceTree = "<group>"; };
 		8997797A2181986D00069C52 /* FoundNavView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoundNavView.m; sourceTree = "<group>"; };
 		8997797F2181A11C00069C52 /* FoundListVideoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoundListVideoCell.h; sourceTree = "<group>"; };
@@ -253,6 +259,10 @@
 				5A354966218477E30085469B /* FriendHeadView.m */,
 				5A3549772185A7A20085469B /* MyFriendsCell.h */,
 				5A3549782185A7A20085469B /* MyFriendsCell.m */,
+				8961E9E12186E5B000B914FD /* ScreenFriendCell.h */,
+				8961E9E22186E5B000B914FD /* ScreenFriendCell.m */,
+				8961E9E42186FDA000B914FD /* FriendAlertView.h */,
+				8961E9E52186FDA000B914FD /* FriendAlertView.m */,
 				5A35496C2185A3060085469B /* contactModel.h */,
 				5A3549682185A3050085469B /* contactModel.m */,
 				5A3549692185A3060085469B /* MJNIndexView.h */,
@@ -659,8 +669,10 @@
 				5A7954AD218438FD004254BE /* MessageNavView.m in Sources */,
 				8961E9DD2183187500B914FD /* KKClassiflcationLayout.m in Sources */,
 				5A3549722185A3070085469B /* NSArray+ContactArray.m in Sources */,
+				8961E9E62186FDA000B914FD /* FriendAlertView.m in Sources */,
 				5A35495D218464F10085469B /* MyFouceController.m in Sources */,
 				8997798B2181B81B00069C52 /* UILabel+String.m in Sources */,
+				8961E9E32186E5B000B914FD /* ScreenFriendCell.m in Sources */,
 				8997797B2181986D00069C52 /* FoundNavView.m in Sources */,
 				89B76C9721816D2F007D7202 /* FoundController.m in Sources */,
 				89B76C8E21816CC0007D7202 /* MessageController.m in Sources */,

@@ -14,6 +14,9 @@
 @property(nonatomic,strong)UITableView *tableview;
 @property(nonatomic,strong)MessageNavView *navView;
 @property (strong, nonatomic) NSIndexPath* editingIndexPath;
+@property(nonatomic,strong)NSArray *iconArr;
+@property(nonatomic,strong)NSArray *titleArr;
+@property(nonatomic,strong)NSArray *detailArr;
 @end
 
 @implementation MessageController
@@ -36,6 +39,9 @@
     [super viewDidLoad];
     [self.view addSubview:self.navView];
     [self.view addSubview:self.tableview];
+    self.iconArr = @[@"1",@"2",@"3"];
+    self.titleArr = @[@"海的另一边",@"DNAER小助手",@"简单"];
+    self.detailArr = @[@"我发现了一个很酷的软件，推荐给你试试",@"又发现了一些您可能认识的朋友",@"[文件]DNAER 原型图"];
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -53,7 +59,7 @@
     return 1;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 3;
+    return self.iconArr.count;
 }
 - (NSArray*)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
     //title不设为nil 而是空字符串 理由为啥 ？   自己实践 跑到ios11以下的机器上就知道为啥了
@@ -194,8 +200,6 @@
 }
 
 
-
-
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     
@@ -204,6 +208,14 @@
         if (!mescell) {
             mescell = [[FoundListMessageCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:message];
         }
+    if (indexPath.row ==2) {
+        mescell.countLabel.hidden = NO;
+    }else{
+        mescell.countLabel.hidden = YES;
+    }
+    [mescell.reviewerBtn setImage:[UIImage imageNamed:self.iconArr[indexPath.row]] forState:UIControlStateNormal];
+    mescell.reviewerName = self.titleArr[indexPath.row];
+    mescell.commentLabel.text = self.detailArr[indexPath.row];
         mescell.selectionStyle = UITableViewCellSelectionStyleNone;
         return mescell;
    

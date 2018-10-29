@@ -12,6 +12,9 @@
 @interface MyFouceController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *tableview;
 @property(nonatomic,strong)FriendHeadView *headView;
+@property(nonatomic,strong)  NSArray *iconArr;
+@property(nonatomic,strong)  NSArray *iconTitleArr;
+@property(nonatomic,strong)  NSArray *detailArr;
 
 @end
 
@@ -35,6 +38,9 @@
     [super viewDidLoad];
     [self.view addSubview:self.tableview];
      self.tableview.tableHeaderView = self.headView;
+    self.iconArr = @[@"1",@"4",@"5",@"head_icon"];
+    self.iconTitleArr = @[@"海的另一边",@"DNAER小助手",@"简单",@"一切随风"];
+    self.detailArr = @[@"不悔于过去；不怠于当下…",@"您在DNAER的第一个好朋友",@"连续打了6个喷嚏，我知道…",@"流云向晚弄新晴，雨过柳梢青"];
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -52,7 +58,7 @@
     return 1;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 3;
+    return 4;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -63,6 +69,9 @@
     if (!mescell) {
         mescell = [[FoundListMessageCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:message];
     }
+    [mescell.reviewerBtn setImage:[UIImage imageNamed:self.iconArr[indexPath.row]] forState:UIControlStateNormal];
+    mescell.reviewerName.text = self.iconTitleArr[indexPath.row];
+    mescell.commentLabel.text = self.detailArr[indexPath.row];
     mescell.selectionStyle = UITableViewCellSelectionStyleNone;
     mescell.dateLabel.hidden = YES;
     return mescell;

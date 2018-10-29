@@ -14,24 +14,37 @@
 #import "WPFPinYinDataManager.h"
 #import "WPFSearchResultViewController.h"
 #import "MyFriendsCell.h"
+#import "FriendHeadView.h"
+#import "ScreenFriendCell.h"
+
 @interface MineFriendController ()<UITableViewDataSource,UITableViewDelegate,UISearchControllerDelegate, UISearchResultsUpdating, UISearchBarDelegate,MJNIndexViewDataSource>{
     NSArray *defineDataArray;
 }
 @property (nonatomic, strong) UIFont *font;
 @property(nonatomic,strong)  UITableView *tableView;
 @property(nonatomic,strong)  NSMutableArray     *dataArray;
+@property(nonatomic,strong)  NSArray *iconArr;
+@property(nonatomic,strong)  NSArray *iconTitleArr;
 @property(nonatomic,strong)  NSArray     *indexArray;
 @property (nonatomic, strong) UISearchController *searchVC;
 @property(nonatomic,strong) NSMutableArray    *filteredPersons;         //搜索过滤后  搜索结果
 @property (nonatomic, strong) WPFSearchResultViewController *searchResultVC;
 @property(nonatomic, strong) MJNIndexView *indexView;
+@property(nonatomic,strong)FriendHeadView *headView;
 
 @end
 
 @implementation MineFriendController
-
+-(FriendHeadView *)headView{
+    if (!_headView) {
+        _headView = [[FriendHeadView alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, 50)];
+    }
+    return _headView;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.iconArr = @[@"invite_firend",@"group_friend",@"label_friend",@"find_friend"];
+    self.iconTitleArr = @[@"邀请好友",@"群聊",@"分组与标签管理",@"发现好友"];
    [self setData];
 }
 #pragma mark--- UITableViewDataSource and UITableViewDelegate Methods---
@@ -39,13 +52,18 @@
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     if (tableView==self.tableView) {
-        return self.indexArray.count;
+        return self.indexArray.count+2;
     }
     return 1;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSDictionary *dict = self.indexArray[section];
+    if (section ==0) {
+        return self.iconArr.count+1;
+    }else if (section ==1){
+        return 1;
+    }
+    NSDictionary *dict = self.indexArray[section-2];
     return [dict[@"content"] count];
 }
 
@@ -59,11 +77,31 @@
         cell = [[MyFriendsCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                       reuseIdentifier:CellIdentifier];
     }
-    contactModel *model;
-    NSDictionary *dict = self.indexArray[indexPath.section];
-    model=dict[@"content"][indexPath.row];
-    cell.reviewerName.text=model.contactName;
-//    cell.commentLabel.text=model.contactUrl;
+    
+    if (indexPath.section ==0) {
+        if (indexPath.row<4) {
+             [cell.reviewerBtn setImage:[UIImage imageNamed:self.iconArr[indexPath.row]] forState:UIControlStateNormal];
+            cell.reviewerName.text = self.iconTitleArr[indexPath.row];
+        }else{
+            static NSString *identify = @"ScreenFriendCell";
+            ScreenFriendCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+            if (!cell) {
+                cell = [[ScreenFriendCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
+            }
+            return cell;
+        }
+       
+    }else if (indexPath.section ==1){
+          [cell.reviewerBtn setImage:[UIImage imageNamed:@"1"] forState:UIControlStateNormal];
+         cell.reviewerName.text = @"海的另一边";
+    }else{
+        contactModel *model;
+        NSDictionary *dict = self.indexArray[indexPath.section-2];
+        model=dict[@"content"][indexPath.row];
+        cell.reviewerName.text=model.contactName;
+        [cell.reviewerBtn setImage:[UIImage imageNamed:model.contactUrl] forState:UIControlStateNormal];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
     return cell;
 }
 
@@ -72,6 +110,9 @@
     return 60;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    if (section ==0) {
+        return 60;
+    }
     return 16;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
@@ -79,11 +120,28 @@
 }
 - (UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    UITableViewHeaderFooterView *headerView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"header"];
-    headerView.textLabel.font = [UIFont fontWithName:self.indexView.selectedItemFont.fontName size:headerView.textLabel.font.pointSize];
-    headerView.backgroundColor = DSColorFromHex(0xFAFAFA);
-    [[headerView textLabel] setText:[NSString stringWithFormat:@"%@",self.indexArray[section][@"firstLetter"]]];
-    return headerView;
+    
+    UIView *view = [[UIView alloc]init];
+   
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(20, 0, SCREENWIDTH-40, 16)];
+    label.font = [UIFont systemFontOfSize:12];
+    label.textColor = DSColorFromHex(0x969696);
+    [view addSubview:label];
+    if (section==0) {
+        view.frame = CGRectMake(0, 0, SCREENWIDTH, 60);
+        view.backgroundColor = [UIColor whiteColor];
+       FriendHeadView* headView = [[FriendHeadView alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, 50)];
+        [view addSubview:headView];
+    }else if (section ==1){
+        view.frame =  CGRectMake(0, 0, SCREENWIDTH, 16);
+        label.text = @"特别好友";
+         view.backgroundColor = DSColorFromHex(0xFAFAFA);
+    }else{
+     label.text = [NSString stringWithFormat:@"%@",self.indexArray[section-2][@"firstLetter"]];
+         view.backgroundColor = DSColorFromHex(0xFAFAFA);
+         view.frame =  CGRectMake(0, 0, SCREENWIDTH, 16);
+    }
+    return view;
 }
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
     return nil;
@@ -164,14 +222,15 @@
 -(UITableView *)tableView
 {
     if (!_tableView) {
-        _tableView = [[UITableView  alloc] initWithFrame:CGRectMake(0,64,SCREENWIDTH, SCREENHEIGHT) style:UITableViewStyleGrouped];
+        _tableView = [[UITableView  alloc] initWithFrame:CGRectMake(0,0,SCREENWIDTH, SCREENHEIGHT) style:UITableViewStyleGrouped];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         [_tableView registerClass:[MyFriendsCell class] forCellReuseIdentifier:@"REUSE_CELLID"];
         [self.tableView registerClass:[UITableViewHeaderFooterView class] forHeaderFooterViewReuseIdentifier:@"header"];
         _tableView.contentSize=CGSizeMake(SCREENWIDTH,SCREENHEIGHT*2);
-        _tableView.contentInset = UIEdgeInsetsMake(0, 0, 64, 0);
+        _tableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
         _tableView.sectionIndexBackgroundColor=[UIColor clearColor];//索引背景色
+        _tableView.separatorColor = [UIColor whiteColor];
         _tableView.sectionIndexColor=[UIColor redColor];//索引背景色
     }
     return _tableView;
@@ -205,23 +264,23 @@
 - (void)firstAttributesForMJNIndexView
 {
     self.indexView.getSelectedItemsAfterPanGestureIsFinished = NO;
-    self.indexView.font = [UIFont fontWithName:@"HelveticaNeue" size:13.0];
+    self.indexView.font = [UIFont boldSystemFontOfSize:10];
     self.indexView.selectedItemFont = [UIFont fontWithName:@"HelveticaNeue-Bold" size:40.0];
     self.indexView.backgroundColor = [UIColor clearColor];
-    self.indexView.curtainColor = nil;
+    self.indexView.curtainColor = [UIColor whiteColor];
     self.indexView.curtainFade = 0.0;
     self.indexView.curtainStays = NO;
     self.indexView.curtainMoves = YES;
     self.indexView.curtainMargins = NO;
     self.indexView.ergonomicHeight = NO;
-    self.indexView.upperMargin = 30.0;
-    self.indexView.lowerMargin = 124.0;
+    self.indexView.upperMargin = 126;
+    self.indexView.lowerMargin = 220;
     self.indexView.rightMargin = 10.0;
     self.indexView.itemsAligment = NSTextAlignmentCenter;
     self.indexView.maxItemDeflection = 80.0;
     self.indexView.rangeOfDeflection = 3;
-    self.indexView.fontColor = [UIColor colorWithRed:0.3 green:0.3 blue:0.3 alpha:1.0];
-    self.indexView.selectedItemFontColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1.0];
+    self.indexView.fontColor = DSColorFromHex(0x969696);
+    self.indexView.selectedItemFontColor = [UIColor whiteColor];
     self.indexView.darkening = NO;
     self.indexView.fading = YES;
     
@@ -264,48 +323,54 @@
 }
 - (void)setData{
     defineDataArray=@[
-                      @{ @"contact":@"张三",
-                         @"conatctUrl":@"1836065332"},
+                      @{ @"contact":@"简单",
+                         @"conatctUrl":@"5"},
+                      @{ @"contact":@"DNAER小助手",
+                         @"conatctUrl":@"4"},
                       @{ @"contact":@"王二",
-                         @"conatctUrl":@"1536065332"},
+                         @"conatctUrl":@"3"},
                       @{ @"contact":@"jake",
-                         @"conatctUrl":@"1736235332"},
+                         @"conatctUrl":@"4"},
                       @{ @"contact":@"preyy2",
-                         @"conatctUrl":@"183683325332"},
+                         @"conatctUrl":@"5"},
                       @{ @"contact":@"杰西",
-                         @"conatctUrl":@"147360992452"},
+                         @"conatctUrl":@"4"},
                       @{ @"contact":@"lulu",
-                         @"conatctUrl":@"147456140992"},
+                         @"conatctUrl":@"3"},
                       @{ @"contact":@"哈尼",
-                         @"conatctUrl":@"189234342"},
+                         @"conatctUrl":@"2"},
                       @{ @"contact":@"陆军",
-                         @"conatctUrl":@"15475654785"},
+                         @"conatctUrl":@"1"},
                       @{ @"contact":@"是的",
-                         @"conatctUrl":@"1873895343"},
+                         @"conatctUrl":@"1"},
                       @{ @"contact":@"身份",
-                         @"conatctUrl":@"15688382345"},
+                         @"conatctUrl":@"2"},
                       @{ @"contact":@"爱德华",
-                         @"conatctUrl":@"14754565443"},
+                         @"conatctUrl":@"4"},
+                      @{ @"contact":@"阿花",
+                         @"conatctUrl":@"5"},
                       @{ @"contact":@"梅长苏",
-                         @"conatctUrl":@"1836065332"},
+                         @"conatctUrl":@"5"},
                       @{ @"contact":@"杨戬",
-                         @"conatctUrl":@"1836065332"},
-                      @{ @"contact":@"大B哥",
-                         @"conatctUrl":@"1836065332"},
+                         @"conatctUrl":@"2"},
+                      @{ @"contact":@"大V哥",
+                         @"conatctUrl":@"1"},
                       @{ @"contact":@"C罗",
-                         @"conatctUrl":@"1836065332"},
+                         @"conatctUrl":@"1"},
                       @{ @"contact":@"Edison 陈冠希",
-                         @"conatctUrl":@"1836065332"},
+                         @"conatctUrl":@"3"},
                       @{ @"contact":@"方杰",
-                         @"conatctUrl":@"1836065332"},
+                         @"conatctUrl":@"4"},
                       @{ @"contact":@"GAI",
-                         @"conatctUrl":@"1836065332"},
+                         @"conatctUrl":@"5"},
                       @{ @"contact":@"Nike",
-                         @"conatctUrl":@"1836065332"},
+                         @"conatctUrl":@"2"},
                       @{ @"contact":@"Mery",
-                         @"conatctUrl":@"1836065332"},
+                         @"conatctUrl":@"1"},
                       @{ @"contact":@"西西",
-                         @"conatctUrl":@"1836065332"},
+                         @"conatctUrl":@"5"},
+                      @{ @"contact":@"501房东",
+                         @"conatctUrl":@"5"},
                       ];
     [self.view addSubview:[UIView new]];
     _filteredPersons = [NSMutableArray array];
