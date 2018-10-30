@@ -16,6 +16,7 @@
 #import "MyFriendsCell.h"
 #import "FriendHeadView.h"
 #import "ScreenFriendCell.h"
+#import "FriendDetailController.h"
 
 @interface MineFriendController ()<UITableViewDataSource,UITableViewDelegate,UISearchControllerDelegate, UISearchResultsUpdating, UISearchBarDelegate,MJNIndexViewDataSource>{
     NSArray *defineDataArray;
@@ -148,9 +149,17 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [self.searchVC.searchBar resignFirstResponder];
-    [self.searchVC.searchBar setShowsCancelButton:NO animated:YES];
+//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+//    [self.searchVC.searchBar resignFirstResponder];
+//    [self.searchVC.searchBar setShowsCancelButton:NO animated:YES];
+    if (indexPath.section==0) {
+       
+    }else{
+        FriendDetailController *friendVC = [[FriendDetailController alloc]init];
+        friendVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:friendVC animated:YES];
+    }
+   
 }
 
 #pragma mark - MJNIndexViewDataSource

@@ -8,7 +8,7 @@
 
 #import "FoundListVideoCell.h"
 #import "ZSConfig.h"
-#import "UILabel+String.h"
+
 @implementation FoundListVideoCell
 
 - (void)awakeFromNib {
@@ -263,6 +263,32 @@
     }
     return _commentLabel;
 }
+- (void)praiseAction:(PraiseButton *)button {
+    if (button.selected) {
+        [button popInsideWithDuration:0.4f];
+    }
+    else {
+        [button popOutsideWithDuration:0.5f];
+        [button animate];
+    }
+    button.selected = !button.selected;
+}
+
+- (PraiseButton *)praiseButton {
+    if (!_praiseButton) {
+        _praiseButton = [[PraiseButton alloc] init];
+        _praiseButton.frame = CGRectMake(0.f, 0.f, 60.f, 60.f);
+        _praiseButton.particleImage = [UIImage imageNamed:@"like_selected"];
+        _praiseButton.particleScale = 0.05f;
+        _praiseButton.particleScaleRange = 0.02f;
+        [_praiseButton addTarget:self action:@selector(praiseAction:) forControlEvents:UIControlEventTouchUpInside];
+        [_praiseButton setImage:[UIImage imageNamed:@"like_found"] forState:UIControlStateNormal];
+        [_praiseButton setImage:[UIImage imageNamed:@"like_selected"] forState:UIControlStateSelected];
+    }
+    return _praiseButton;
+}
+
+
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
@@ -272,7 +298,7 @@
         [self.BGImage addSubview:self.dateLabel];
         [self  addSubview:self.titleLabel];
         [self  addSubview:self.contentLabel];
-        [self  addSubview:self.likeBtn];
+        [self  addSubview:self.praiseButton];
         [self  addSubview:self.likeLabel];
         [self  addSubview:self.hateBtn];
         [self  addSubview:self.hateLabel];
@@ -327,47 +353,47 @@
         make.right.equalTo(self).offset(-20);
         make.top.equalTo(self.titleLabel.mas_bottom).offset(13);
     }];
-    [self.likeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self).offset(13);
-        make.top.equalTo(self.contentLabel.mas_bottom).offset(20);
-        make.width.mas_equalTo(19);
-        make.height.mas_equalTo(16);
+    [self.praiseButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self).offset(10);
+        make.top.equalTo(self.contentLabel.mas_bottom).offset(15);
+        make.width.mas_equalTo(30);
+        make.height.mas_equalTo(30);
     }];
     [self.likeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.likeBtn.mas_right).offset(6);
-        make.centerY.equalTo(self.likeBtn);
-        make.width.mas_equalTo(60);
+        make.left.equalTo(self.praiseButton.mas_right);
+        make.centerY.equalTo(self.praiseButton);
+        make.width.mas_equalTo(58);
     }];
     [self.hateBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.likeLabel.mas_right).offset(5);
-        make.top.equalTo(self.contentLabel.mas_bottom).offset(20);
-        make.width.mas_equalTo(17);
-        make.height.mas_equalTo(17);
+        make.left.equalTo(self.likeLabel.mas_right);
+        make.top.equalTo(self.contentLabel.mas_bottom).offset(15);
+        make.width.mas_equalTo(30);
+        make.height.mas_equalTo(30);
     }];
     [self.hateLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.hateBtn.mas_right).offset(6);
+        make.left.equalTo(self.hateBtn.mas_right);
         make.centerY.equalTo(self.hateBtn);
-        make.width.mas_equalTo(60);
+        make.width.mas_equalTo(58);
     }];
     [self.shareBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.hateLabel.mas_right).offset(5);
-        make.top.equalTo(self.contentLabel.mas_bottom).offset(20);
-        make.width.mas_equalTo(17);
-        make.height.mas_equalTo(17);
+        make.left.equalTo(self.hateLabel.mas_right);
+        make.top.equalTo(self.contentLabel.mas_bottom).offset(15);
+        make.width.mas_equalTo(30);
+        make.height.mas_equalTo(30);
     }];
     [self.shareLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.shareBtn.mas_right).offset(6);
+        make.left.equalTo(self.shareBtn.mas_right);
         make.centerY.equalTo(self.shareBtn);
-        make.width.mas_equalTo(60);
+        make.width.mas_equalTo(58);
     }];
     [self.messageBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.shareLabel.mas_right).offset(5);
-        make.top.equalTo(self.contentLabel.mas_bottom).offset(20);
-        make.width.mas_equalTo(17);
-        make.height.mas_equalTo(16);
+        make.left.equalTo(self.shareLabel.mas_right);
+        make.top.equalTo(self.contentLabel.mas_bottom).offset(15);
+        make.width.mas_equalTo(30);
+        make.height.mas_equalTo(30);
     }];
     [self.messageLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.messageBtn.mas_right).offset(6);
+        make.left.equalTo(self.messageBtn.mas_right).offset(2);
         make.centerY.equalTo(self.messageBtn);
         make.width.mas_equalTo(60);
     }];

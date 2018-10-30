@@ -51,6 +51,14 @@
 		89B76C9421816D0F007D7202 /* ReleaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B76C9321816D0F007D7202 /* ReleaseController.m */; };
 		89B76C9721816D2F007D7202 /* FoundController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B76C9621816D2F007D7202 /* FoundController.m */; };
 		89B76C9A21816D49007D7202 /* MineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B76C9921816D49007D7202 /* MineController.m */; };
+		89BDB4A52187E59400FE61FD /* FriendInformationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BDB4A42187E59400FE61FD /* FriendInformationController.m */; };
+		89BDB4A92187E73400FE61FD /* FriendInfoHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BDB4A82187E73400FE61FD /* FriendInfoHeadView.m */; };
+		89BDB4AD2187F07200FE61FD /* UIView+CTExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BDB4AC2187F07200FE61FD /* UIView+CTExtensions.m */; };
+		89BDB4B1218839D500FE61FD /* FireworksView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BDB4B0218839D500FE61FD /* FireworksView.m */; };
+		89BDB4B421883A2400FE61FD /* PraiseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BDB4B321883A2400FE61FD /* PraiseButton.m */; };
+		89BDB4B7218854C900FE61FD /* FriendDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BDB4B6218854C900FE61FD /* FriendDetailController.m */; };
+		89BDB4BA21885C8E00FE61FD /* FriendDetailHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BDB4B921885C8E00FE61FD /* FriendDetailHeadView.m */; };
+		89BDB4BD2188693500FE61FD /* FriendDetailFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BDB4BC2188693500FE61FD /* FriendDetailFootView.m */; };
 		89D7108C2182A935007B02E7 /* FoundListFouceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D7108B2182A935007B02E7 /* FoundListFouceCell.m */; };
 		89D7108F2182AB5D007B02E7 /* FoucePeopleCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D7108E2182AB5D007B02E7 /* FoucePeopleCollectionCell.m */; };
 /* End PBXBuildFile section */
@@ -162,6 +170,22 @@
 		89B76C9621816D2F007D7202 /* FoundController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoundController.m; sourceTree = "<group>"; };
 		89B76C9821816D49007D7202 /* MineController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineController.h; sourceTree = "<group>"; };
 		89B76C9921816D49007D7202 /* MineController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineController.m; sourceTree = "<group>"; };
+		89BDB4A32187E59400FE61FD /* FriendInformationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendInformationController.h; sourceTree = "<group>"; };
+		89BDB4A42187E59400FE61FD /* FriendInformationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendInformationController.m; sourceTree = "<group>"; };
+		89BDB4A72187E73400FE61FD /* FriendInfoHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendInfoHeadView.h; sourceTree = "<group>"; };
+		89BDB4A82187E73400FE61FD /* FriendInfoHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendInfoHeadView.m; sourceTree = "<group>"; };
+		89BDB4AB2187F07200FE61FD /* UIView+CTExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CTExtensions.h"; sourceTree = "<group>"; };
+		89BDB4AC2187F07200FE61FD /* UIView+CTExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CTExtensions.m"; sourceTree = "<group>"; };
+		89BDB4AF218839D500FE61FD /* FireworksView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FireworksView.h; sourceTree = "<group>"; };
+		89BDB4B0218839D500FE61FD /* FireworksView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FireworksView.m; sourceTree = "<group>"; };
+		89BDB4B221883A2400FE61FD /* PraiseButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PraiseButton.h; sourceTree = "<group>"; };
+		89BDB4B321883A2400FE61FD /* PraiseButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PraiseButton.m; sourceTree = "<group>"; };
+		89BDB4B5218854C900FE61FD /* FriendDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendDetailController.h; sourceTree = "<group>"; };
+		89BDB4B6218854C900FE61FD /* FriendDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendDetailController.m; sourceTree = "<group>"; };
+		89BDB4B821885C8E00FE61FD /* FriendDetailHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendDetailHeadView.h; sourceTree = "<group>"; };
+		89BDB4B921885C8E00FE61FD /* FriendDetailHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendDetailHeadView.m; sourceTree = "<group>"; };
+		89BDB4BB2188693500FE61FD /* FriendDetailFootView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendDetailFootView.h; sourceTree = "<group>"; };
+		89BDB4BC2188693500FE61FD /* FriendDetailFootView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendDetailFootView.m; sourceTree = "<group>"; };
 		89D7108A2182A935007B02E7 /* FoundListFouceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoundListFouceCell.h; sourceTree = "<group>"; };
 		89D7108B2182A935007B02E7 /* FoundListFouceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoundListFouceCell.m; sourceTree = "<group>"; };
 		89D7108D2182AB5D007B02E7 /* FoucePeopleCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoucePeopleCollectionCell.h; sourceTree = "<group>"; };
@@ -219,6 +243,10 @@
 				5A35495C218464F10085469B /* MyFouceController.m */,
 				5A354961218465760085469B /* MightKnowController.h */,
 				5A354962218465760085469B /* MightKnowController.m */,
+				89BDB4B5218854C900FE61FD /* FriendDetailController.h */,
+				89BDB4B6218854C900FE61FD /* FriendDetailController.m */,
+				89BDB4A32187E59400FE61FD /* FriendInformationController.h */,
+				89BDB4A42187E59400FE61FD /* FriendInformationController.m */,
 			);
 			path = Friend;
 			sourceTree = "<group>";
@@ -255,6 +283,7 @@
 		5A354964218477BF0085469B /* Friend */ = {
 			isa = PBXGroup;
 			children = (
+				89BDB4A62187E70400FE61FD /* MJNIndexView */,
 				5A354965218477E20085469B /* FriendHeadView.h */,
 				5A354966218477E30085469B /* FriendHeadView.m */,
 				5A3549772185A7A20085469B /* MyFriendsCell.h */,
@@ -263,14 +292,12 @@
 				8961E9E22186E5B000B914FD /* ScreenFriendCell.m */,
 				8961E9E42186FDA000B914FD /* FriendAlertView.h */,
 				8961E9E52186FDA000B914FD /* FriendAlertView.m */,
-				5A35496C2185A3060085469B /* contactModel.h */,
-				5A3549682185A3050085469B /* contactModel.m */,
-				5A3549692185A3060085469B /* MJNIndexView.h */,
-				5A35496E2185A3070085469B /* MJNIndexView.m */,
-				5A35496F2185A3070085469B /* NSArray+ContactArray.h */,
-				5A35496D2185A3060085469B /* NSArray+ContactArray.m */,
-				5A35496B2185A3060085469B /* NSString+PinYing.h */,
-				5A35496A2185A3060085469B /* NSString+PinYing.m */,
+				89BDB4A72187E73400FE61FD /* FriendInfoHeadView.h */,
+				89BDB4A82187E73400FE61FD /* FriendInfoHeadView.m */,
+				89BDB4B821885C8E00FE61FD /* FriendDetailHeadView.h */,
+				89BDB4B921885C8E00FE61FD /* FriendDetailHeadView.m */,
+				89BDB4BB2188693500FE61FD /* FriendDetailFootView.h */,
+				89BDB4BC2188693500FE61FD /* FriendDetailFootView.m */,
 			);
 			path = Friend;
 			sourceTree = "<group>";
@@ -287,6 +314,7 @@
 		8961E9CD2182FFEC00B914FD /* Found */ = {
 			isa = PBXGroup;
 			children = (
+				89BDB4AE218839C300FE61FD /* FireworksView */,
 				8961E9D42183187500B914FD /* KKClassificationView */,
 				8961E9CF218303C100B914FD /* FoundListRecordCell.h */,
 				8961E9CE218303C100B914FD /* FoundListRecordCell.m */,
@@ -336,6 +364,8 @@
 			children = (
 				8997798A2181B81B00069C52 /* UILabel+String.h */,
 				899779892181B81B00069C52 /* UILabel+String.m */,
+				89BDB4AB2187F07200FE61FD /* UIView+CTExtensions.h */,
+				89BDB4AC2187F07200FE61FD /* UIView+CTExtensions.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -428,6 +458,32 @@
 				5A3549532184631E0085469B /* Message */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		89BDB4A62187E70400FE61FD /* MJNIndexView */ = {
+			isa = PBXGroup;
+			children = (
+				5A35496C2185A3060085469B /* contactModel.h */,
+				5A3549682185A3050085469B /* contactModel.m */,
+				5A3549692185A3060085469B /* MJNIndexView.h */,
+				5A35496E2185A3070085469B /* MJNIndexView.m */,
+				5A35496F2185A3070085469B /* NSArray+ContactArray.h */,
+				5A35496D2185A3060085469B /* NSArray+ContactArray.m */,
+				5A35496B2185A3060085469B /* NSString+PinYing.h */,
+				5A35496A2185A3060085469B /* NSString+PinYing.m */,
+			);
+			path = MJNIndexView;
+			sourceTree = "<group>";
+		};
+		89BDB4AE218839C300FE61FD /* FireworksView */ = {
+			isa = PBXGroup;
+			children = (
+				89BDB4AF218839D500FE61FD /* FireworksView.h */,
+				89BDB4B0218839D500FE61FD /* FireworksView.m */,
+				89BDB4B221883A2400FE61FD /* PraiseButton.h */,
+				89BDB4B321883A2400FE61FD /* PraiseButton.m */,
+			);
+			path = FireworksView;
 			sourceTree = "<group>";
 		};
 		FB384B5C9FF97ED3EC4E2427 /* Pods */ = {
@@ -640,10 +696,12 @@
 			files = (
 				89B76C9A21816D49007D7202 /* MineController.m in Sources */,
 				89B76C8621816AE5007D7202 /* DanerTabBarController.m in Sources */,
+				89BDB4B421883A2400FE61FD /* PraiseButton.m in Sources */,
 				5A354960218465220085469B /* AttentionMeController.m in Sources */,
 				5A354963218465760085469B /* MightKnowController.m in Sources */,
 				5A35495A218464150085469B /* MineFriendController.m in Sources */,
 				89B76C8A21816BCA007D7202 /* BaseViewController.m in Sources */,
+				89BDB4A92187E73400FE61FD /* FriendInfoHeadView.m in Sources */,
 				89D7108F2182AB5D007B02E7 /* FoucePeopleCollectionCell.m in Sources */,
 				89B76C5021815B27007D7202 /* ViewController.m in Sources */,
 				8961E9CC2182BBA700B914FD /* FoundListMessageCell.m in Sources */,
@@ -651,6 +709,8 @@
 				899779812181A11C00069C52 /* FoundListVideoCell.m in Sources */,
 				5A7954A7218438A7004254BE /* BaseView.m in Sources */,
 				5A7954AA218438C1004254BE /* BaseTableViewCell.m in Sources */,
+				89BDB4BD2188693500FE61FD /* FriendDetailFootView.m in Sources */,
+				89BDB4BA21885C8E00FE61FD /* FriendDetailHeadView.m in Sources */,
 				89B76C9421816D0F007D7202 /* ReleaseController.m in Sources */,
 				8961E9D3218306FB00B914FD /* ZSRunLabelView.m in Sources */,
 				89B76C5B21815B29007D7202 /* main.m in Sources */,
@@ -658,6 +718,9 @@
 				5A354967218477E30085469B /* FriendHeadView.m in Sources */,
 				8961E9E02183190D00B914FD /* BaseFoundController.m in Sources */,
 				5A3549792185A7A20085469B /* MyFriendsCell.m in Sources */,
+				89BDB4B1218839D500FE61FD /* FireworksView.m in Sources */,
+				89BDB4AD2187F07200FE61FD /* UIView+CTExtensions.m in Sources */,
+				89BDB4B7218854C900FE61FD /* FriendDetailController.m in Sources */,
 				89B76C9121816CDB007D7202 /* FriendsController.m in Sources */,
 				8961E9DB2183187500B914FD /* KKClassificationView.m in Sources */,
 				5A3549762185A33C0085469B /* WPFSearchResultViewController.m in Sources */,
@@ -675,6 +738,7 @@
 				8961E9E32186E5B000B914FD /* ScreenFriendCell.m in Sources */,
 				8997797B2181986D00069C52 /* FoundNavView.m in Sources */,
 				89B76C9721816D2F007D7202 /* FoundController.m in Sources */,
+				89BDB4A52187E59400FE61FD /* FriendInformationController.m in Sources */,
 				89B76C8E21816CC0007D7202 /* MessageController.m in Sources */,
 				89D7108C2182A935007B02E7 /* FoundListFouceCell.m in Sources */,
 				899779872181A1B000069C52 /* FoundListPositionCell.m in Sources */,

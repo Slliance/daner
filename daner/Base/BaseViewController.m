@@ -69,7 +69,7 @@
     //去掉返回按钮上的字
     [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, 0)
                                                          forBarMetrics:UIBarMetricsDefault];
-    [UIBarButtonItem appearance].tintColor = [UIColor lightGrayColor];
+    [UIBarButtonItem appearance].tintColor = DSColorFromHex(0x464646);
     NSArray *viewControllerArray = [self.navigationController viewControllers];
     long previousViewControllerIndex = [viewControllerArray indexOfObject:self] - 1;
     UIViewController *previous;

@@ -10,27 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "daner/Controller/Friend/MineFriendController.m"
-            timestampString = "562500085.363848"
+            timestampString = "562590114.154376"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "385"
-            endingLineNumber = "385"
-            landmarkName = "-setData"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "daner/Controller/Friend/MineFriendController.m"
-            timestampString = "562500085.363922"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "160"
-            endingLineNumber = "160"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
             landmarkName = "-sectionIndexTitlesForMJNIndexView:"
             landmarkType = "7">
             <Locations>
@@ -42,11 +26,11 @@
                   moduleName = "daner"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/dnaer7/Documents/%E5%85%AC%E5%8F%B8/daner/daner/Controller/Friend/MineFriendController.m"
-                  timestampString = "562494637.9360909"
+                  timestampString = "562586589.354787"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "160"
-                  endingLineNumber = "160"
+                  startingLineNumber = "169"
+                  endingLineNumber = "169"
                   offsetFromSymbolStart = "116">
                </Location>
                <Location
@@ -57,11 +41,11 @@
                   moduleName = "daner"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/dnaer7/Documents/%E5%85%AC%E5%8F%B8/daner/daner/Controller/Friend/MineFriendController.m"
-                  timestampString = "562494637.937744"
+                  timestampString = "562586589.356295"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "160"
-                  endingLineNumber = "160"
+                  startingLineNumber = "169"
+                  endingLineNumber = "169"
                   offsetFromSymbolStart = "124">
                </Location>
             </Locations>
@@ -74,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "daner/Controller/Friend/MineFriendController.m"
-            timestampString = "562500085.3639669"
+            timestampString = "562590114.154429"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "170"
-            endingLineNumber = "170"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
             landmarkName = "-sectionForSectionMJNIndexTitle:atIndex:"
             landmarkType = "7">
          </BreakpointContent>
@@ -161,38 +145,6 @@
             endingLineNumber = "450"
             landmarkName = "-resetPosition"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[MJNIndexView resetPosition]"
-                  moduleName = "daner"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dnaer7/Documents/%E5%85%AC%E5%8F%B8/daner/daner/View/Friend/MJNIndexView.m"
-                  timestampString = "562494637.96459"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "454"
-                  endingLineNumber = "454"
-                  offsetFromSymbolStart = "55">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[MJNIndexView resetPosition]"
-                  moduleName = "daner"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dnaer7/Documents/%E5%85%AC%E5%8F%B8/daner/daner/View/Friend/MJNIndexView.m"
-                  timestampString = "562494637.966282"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "454"
-                  endingLineNumber = "454"
-                  offsetFromSymbolStart = "65">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -209,38 +161,6 @@
             endingLineNumber = "622"
             landmarkName = "-drawIndex"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[MJNIndexView drawIndex]"
-                  moduleName = "daner"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dnaer7/Documents/%E5%85%AC%E5%8F%B8/daner/daner/View/Friend/MJNIndexView.m"
-                  timestampString = "562494637.970526"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "622"
-                  endingLineNumber = "622"
-                  offsetFromSymbolStart = "55">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[MJNIndexView drawIndex]"
-                  moduleName = "daner"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dnaer7/Documents/%E5%85%AC%E5%8F%B8/daner/daner/View/Friend/MJNIndexView.m"
-                  timestampString = "562494637.972154"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "622"
-                  endingLineNumber = "622"
-                  offsetFromSymbolStart = "65">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -272,6 +192,38 @@
             startingLineNumber = "630"
             endingLineNumber = "630"
             landmarkName = "-drawIndex"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "daner/Controller/Friend/MineFriendController.m"
+            timestampString = "562590114.154614"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "daner/View/Friend/FriendDetailHeadView.m"
+            timestampString = "562590114.1546561"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "-initWithFrame:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

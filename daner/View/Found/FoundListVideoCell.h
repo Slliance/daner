@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ZSRunLabelView.h"
+#import "PraiseButton.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FoundListVideoCell : UITableViewCell
@@ -22,6 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong)UILabel *titleLabel;
 @property(nonatomic,strong)UILabel *contentLabel;
 @property(nonatomic,strong)UIButton *likeBtn;
+@property (nonatomic, strong) PraiseButton *praiseButton;
 @property(nonatomic,strong)UIButton *hateBtn;
 @property(nonatomic,strong)UIButton *shareBtn;
 @property(nonatomic,strong)UIButton *messageBtn;
