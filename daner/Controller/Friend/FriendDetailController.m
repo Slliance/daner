@@ -9,6 +9,7 @@
 #import "FriendDetailController.h"
 #import "FriendDetailHeadView.h"
 #import "FriendDetailFootView.h"
+#import "FriendInformationController.h"
 
 @interface FriendDetailController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)FriendDetailHeadView *headView;
@@ -102,6 +103,9 @@
     
     return cell;
 }
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    FriendInformationController *friendVC = [[FriendInformationController alloc]init];
+    [self.navigationController pushViewController:friendVC animated:YES];
+}
 
 @end
