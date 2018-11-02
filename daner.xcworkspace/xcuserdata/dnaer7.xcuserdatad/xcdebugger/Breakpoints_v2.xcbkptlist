@@ -138,7 +138,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "daner/Controller/Message/MessageController.m"
-            timestampString = "562846970.545833"
+            timestampString = "562847869.7200201"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "94"
@@ -170,7 +170,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "daner/Controller/Message/ChatDetailsController.m"
-            timestampString = "562846970.545927"
+            timestampString = "562847869.720122"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "84"
@@ -186,7 +186,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "daner/Tool/KeyBoard/Class/MoreButtonView.m"
-            timestampString = "562846970.545995"
+            timestampString = "562847869.720192"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "86"
@@ -234,7 +234,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "daner/Tool/KeyBoard/Class/MoreButtonView.m"
-            timestampString = "562846970.546052"
+            timestampString = "562847869.72025"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "101"
@@ -250,7 +250,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "daner/Tool/KeyBoard/Class/MoreButtonView.m"
-            timestampString = "562846970.546096"
+            timestampString = "562847869.7203079"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "108"
@@ -266,7 +266,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "daner/Tool/KeyBoard/Class/MoreButtonView.m"
-            timestampString = "562846970.54614"
+            timestampString = "562847869.7203701"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "96"
@@ -282,12 +282,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "daner/Tool/KeyBoard/Class/InputToolbar.m"
-            timestampString = "562846970.5461839"
+            timestampString = "562847869.72043"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "130"
             endingLineNumber = "130"
             landmarkName = "-keyboardWillShow:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "daner/Tool/KeyBoard/Class/InputToolbar.m"
+            timestampString = "562847869.720794"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "298"
+            endingLineNumber = "298"
+            landmarkName = "-emojiButtonView:sendButtonClick:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

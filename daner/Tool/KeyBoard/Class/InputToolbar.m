@@ -155,7 +155,7 @@ static InputToolbar* _instance = nil;
     }
 
     
-    if (!self.inputView) {
+    if (!self.textInput) {
         self.textInput = [[UITextView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.voiceButton.frame) + 5, 10, SCREEN_WIDTH - 115, 30)];
         self.textInput.font = [UIFont systemFontOfSize:18];
         self.textInput.layer.cornerRadius = 15;
