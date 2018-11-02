@@ -30,7 +30,7 @@
 }
 -(FriendHeadView *)headView{
     if (!_headView) {
-        _headView = [[FriendHeadView alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, 50)];
+        _headView = [[FriendHeadView alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, 60)];
     }
     return _headView;
 }
@@ -45,7 +45,7 @@
         self.navigationController.navigationBar.translucent = NO;
         self.automaticallyAdjustsScrollViewInsets = NO;
     }
-    self.iconArr = @[@"1",@"4",@"5",@"head_icon"];
+    self.iconArr = @[@"1",@"4",@"5",@"3"];
     self.iconTitleArr = @[@"海的另一边",@"DNAER小助手",@"简单",@"一切随风"];
     self.detailArr = @[@"不悔于过去；不怠于当下…",@"您在DNAER的第一个好朋友",@"连续打了6个喷嚏，我知道…",@"流云向晚弄新晴，雨过柳梢青"];
 }
@@ -69,6 +69,9 @@
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 4;
 }
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 60;
+}
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
@@ -88,6 +91,7 @@
     mescell.reviewerName.text = self.iconTitleArr[indexPath.row];
     mescell.commentLabel.text = self.detailArr[indexPath.row];
     [mescell.followBtn setImage:[UIImage imageNamed:@"mutual_firend"] forState:UIControlStateSelected];
+    [mescell.followBtn setImage:[UIImage imageNamed:@"mutual_hight"] forState:UIControlStateHighlighted];
     return mescell;
     
 }

@@ -38,16 +38,23 @@
     }
     return _reviewerName;
 }
+-(UILabel *)lineLabel{
+    if (!_lineLabel) {
+        _lineLabel = [[UILabel alloc]init];
+        _lineLabel.backgroundColor = DSColorFromHex(0xF0F0F0);
+    }
+    return _lineLabel;
+}
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         
         [self addSubview:self.reviewerBtn];
         [self addSubview:self.reviewerName];
-        
+        [self addSubview:self.lineLabel];
         
         [self.reviewerBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.right.equalTo(self).offset(-30);
+            make.right.equalTo(self).offset(-19);
             make.width.height.mas_equalTo(40);
             make.centerY.equalTo(self);
             
@@ -55,6 +62,12 @@
         [self.reviewerName mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self).offset(20);
             make.centerY.equalTo(self);
+        }];
+        [self.lineLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self).offset(60);
+            make.right.equalTo(self);
+            make.top.equalTo(self).offset(0);
+            make.height.mas_equalTo(0.3);
         }];
         
         

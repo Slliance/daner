@@ -207,7 +207,7 @@
     if (!_detailLabel) {
         _detailLabel = [[UILabel alloc]init];
         _detailLabel.text = @"DNAER ID: 423-652";
-        _detailLabel.font = [UIFont boldSystemFontOfSize:10];
+        _detailLabel.font = [UIFont systemFontOfSize:10];
         _detailLabel.textAlignment = NSTextAlignmentLeft;
         _detailLabel.textColor = DSColorFromHex(0x959595);
     }
@@ -338,42 +338,88 @@
         [self addSubview:self.fouceBtn];
         [self addSubview:self.sendBtn];
         [self.fouceBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.bgImage.mas_bottom).offset(47);
+            make.top.equalTo(self.bgImage.mas_bottom).offset(10);
             make.right.equalTo(self).offset(-20);
             
         }];
         [self.sendBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.bgImage.mas_bottom).offset(47);
+            make.top.equalTo(self.bgImage.mas_bottom).offset(10);
             make.right.equalTo(self.fouceBtn.mas_left).offset(-10);
             make.width.mas_equalTo(60);
             make.height.mas_equalTo(30);
         }];
         
         self.nameLabel.frame = CGRectMake(20, self.headImage.ctBottom+17, 85, 15);
-        self.vImage.frame = CGRectMake(self.nameLabel.ctRight+7, self.headImage.ctBottom+17, 14, 14);
+        self.vImage.frame = CGRectMake(self.nameLabel.ctRight+5, self.headImage.ctBottom+17, 14, 14);
         self.detailLabel.frame = CGRectMake(20, self.nameLabel.ctBottom+10, 200, 10);
         self.originalBtn.frame = CGRectMake(20, self.detailLabel.ctBottom+21, 73, 20);
         self.sexBtn.frame = CGRectMake(self.originalBtn.ctRight+6, self.detailLabel.ctBottom+21, 57, 20);
         self.constellateBtn.frame = CGRectMake(self.sexBtn.ctRight+7, self.detailLabel.ctBottom+21, 57, 20);
         self.cityBtn.frame = CGRectMake(self.constellateBtn.ctRight+6, self.detailLabel.ctBottom+21, 72, 20);
         self.contentLabel.frame = CGRectMake(20, self.originalBtn.ctBottom+11, SCREENWIDTH-50, 62);
-        self.line1.frame = CGRectMake(20, self.contentLabel.ctBottom+21, SCREENWIDTH-39, 0.5);
-        self.line2.frame = CGRectMake(20, self.line1.ctBottom+78, SCREENWIDTH-39, 0.5);
-        self.line3.frame = CGRectMake(20, self.line2.ctBottom+40, SCREENWIDTH-39, 0.5);
-        self.line4.frame = CGRectMake(20, self.line3.ctBottom+40, SCREENWIDTH-39, 0.5);
-        self.fouceNumLabel.frame = CGRectMake(0, self.line1.ctBottom+20, SCREENWIDTH/4, 15);
+        [self.line1 mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self).offset(20);
+            make.top.equalTo(self.contentLabel.mas_bottom).offset(20);
+            make.right.equalTo(self).offset(-20);
+            make.height.mas_equalTo(0.5);
+        }];
+        [self.line2 mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self).offset(20);
+            make.top.equalTo(self.line1.mas_bottom).offset(78);
+            make.right.equalTo(self).offset(-20);
+            make.height.mas_equalTo(0.5);
+        }];
+        [self.line3 mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self).offset(20);
+            make.top.equalTo(self.line2.mas_bottom).offset(40);
+            make.right.equalTo(self).offset(-20);
+            make.height.mas_equalTo(0.5);
+        }];
+        [self.line4 mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self).offset(20);
+            make.top.equalTo(self.line3.mas_bottom).offset(40);
+            make.right.equalTo(self).offset(-20);
+            make.height.mas_equalTo(0.5);
+        }];
+        
+        self.fouceNumLabel.frame = CGRectMake(0, self.contentLabel.ctBottom+40, SCREENWIDTH/4, 15);
         self.fouceTitleLabel.frame = CGRectMake(0, self.fouceNumLabel.ctBottom+10, SCREENWIDTH/4, 15);
-        self.fansNumLabel.frame = CGRectMake(SCREENWIDTH/4, self.line1.ctBottom+20, SCREENWIDTH/4, 15);
+        self.fansNumLabel.frame = CGRectMake(SCREENWIDTH/4, self.contentLabel.ctBottom+40, SCREENWIDTH/4, 15);
         self.fansTitleLabel.frame = CGRectMake(SCREENWIDTH/4, self.fansNumLabel.ctBottom+10, SCREENWIDTH/4, 15);
-        self.zanNumLabel.frame = CGRectMake(SCREENWIDTH/2, self.line1.ctBottom+20, SCREENWIDTH/4, 15);
+        self.zanNumLabel.frame = CGRectMake(SCREENWIDTH/2, self.contentLabel.ctBottom+40, SCREENWIDTH/4, 15);
         self.zanTitleLabel.frame = CGRectMake(SCREENWIDTH/2, self.zanNumLabel.ctBottom+10, SCREENWIDTH/4, 15);
-        self.hateNumLabel.frame = CGRectMake(SCREENWIDTH*3/4, self.line1.ctBottom+20, SCREENWIDTH/4, 15);
+        self.hateNumLabel.frame = CGRectMake(SCREENWIDTH*3/4, self.contentLabel.ctBottom+40, SCREENWIDTH/4, 15);
         self.hateTitleLabel.frame = CGRectMake(SCREENWIDTH*3/4, self.hateNumLabel.ctBottom+10, SCREENWIDTH/4, 15);
-        self.ambryImage.frame = CGRectMake(21, self.line2.ctBottom+14, 11, 10);
-        self.urlImage.frame = CGRectMake(20, self.line3.ctBottom+14, 12, 12);
-        self.ambryLabel.frame = CGRectMake(self.ambryImage.ctRight+8, self.line2.ctBottom+13, 100, 12);
-        self.urlLabel.frame = CGRectMake(self.urlImage.ctRight+9, self.line3.ctBottom+15, 100, 10);
-         self.rightImage.frame = CGRectMake(SCREENWIDTH-26, self.line2.ctBottom+14, 6, 11);
+        [self.ambryImage mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self).offset(21);
+            make.top.equalTo(self.line2.mas_bottom).offset(14);
+            make.width.mas_equalTo(11);
+            make.height.mas_equalTo(10);
+        }];
+        [self.urlImage mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self).offset(20);
+            make.top.equalTo(self.line3.mas_bottom).offset(14);
+            make.width.mas_equalTo(12);
+            make.height.mas_equalTo(12);
+        }];
+        [self.ambryLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.ambryImage.mas_right).offset(8);
+            make.top.equalTo(self.line2.mas_bottom).offset(13);
+            make.width.mas_equalTo(100);
+            make.height.mas_equalTo(12);
+        }];
+        [self.urlLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.urlImage.mas_right).offset(9);
+            make.top.equalTo(self.line3.mas_bottom).offset(15);
+            make.width.mas_equalTo(100);
+            make.height.mas_equalTo(10);
+        }];
+        [self.rightImage mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self).offset(SCREENWIDTH-26);
+            make.top.equalTo(self.line2.mas_bottom).offset(14);
+            make.width.mas_equalTo(6);
+            make.height.mas_equalTo(11);
+        }];
         
     }
     return self;

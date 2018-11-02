@@ -66,7 +66,7 @@
     if (!_titleLabel) {
         _titleLabel = [[UILabel alloc]init];
         _titleLabel.text = @"上海·人民广场";
-        _titleLabel.font = [UIFont boldSystemFontOfSize:12];
+        _titleLabel.font = [UIFont systemFontOfSize:12];
         _titleLabel.textAlignment = NSTextAlignmentLeft;
         _titleLabel.textColor = DSColorFromHex(0x969595);
     }
@@ -219,9 +219,17 @@
 }
 -(UIImageView *)lineImage{
     if (!_lineImage) {
-        _lineImage = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"message_line"]];
+        _lineImage = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"comment_up"]];
     }
     return _lineImage;
+}
+-(UILabel *)lineLabel{
+    if (!_lineLabel) {
+        _lineLabel = [[UILabel alloc]init];
+        _lineLabel.backgroundColor = DSColorFromHex(0xDCDCDC);
+    }
+    
+    return  _lineLabel;
 }
 -(UIButton *)reviewerBtn{
     if (!_reviewerBtn) {
@@ -296,8 +304,8 @@
         [self addSubview:self.zanBtn];
         [self addSubview:self.zanLabel];
          [self addSubview:self.fouceBtn];
-//        [self.BGView addSubview:self.musicLabel];
-//        [self.BGView addSubview:self.playBtn];
+        [self addSubview:self.lineLabel];
+        [self addSubview:self.lineImage];
         [self addSubview:self.moreBtn];
         [self setContentLayout];
     }
@@ -306,7 +314,8 @@
 -(void)setContentLayout{
     
     [self.headBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.top.equalTo(self).offset(13);
+        make.left.equalTo(self).offset(13);
+         make.top.equalTo(self).offset(13);
         make.width.height.mas_equalTo(40);
     }];
     [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -338,7 +347,7 @@
     [self.contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(13);
         make.right.equalTo(self).offset(-20);
-        make.top.equalTo(self.titleLabel.mas_bottom).offset(13);
+        make.top.equalTo(self.titleLabel.mas_bottom).offset(7);
     }];
     [self.likeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(13);
@@ -384,15 +393,21 @@
         make.centerY.equalTo(self.messageBtn);
         make.width.mas_equalTo(60);
     }];
-    [self.lineImage mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.lineLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(13);
         make.right.equalTo(self).offset(-13);
+        make.height.mas_equalTo(0.3);
+        make.top.equalTo(self.messageBtn.mas_bottom).offset(16);
+    }];
+    [self.lineImage mas_makeConstraints:^(MASConstraintMaker *make) {
+        
         make.top.equalTo(self.messageBtn.mas_bottom).offset(12);
         make.height.mas_equalTo(5);
+        make.centerX.equalTo(self.messageBtn);
     }];
     [self.reviewerBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(13);;
-        make.top.equalTo(self.lineImage.mas_bottom).offset(13);
+        make.top.equalTo(self.lineLabel.mas_bottom).offset(13);
         make.width.height.mas_equalTo(40);
     }];
     [self.reviewerName mas_makeConstraints:^(MASConstraintMaker *make) {

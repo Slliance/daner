@@ -66,7 +66,7 @@
     if (!_detailLabel) {
         _detailLabel = [[UILabel alloc]init];
         _detailLabel.text = @"DNAER ID: 423-652";
-        _detailLabel.font = [UIFont systemFontOfSize:13];
+        _detailLabel.font = [UIFont systemFontOfSize:10];
         _detailLabel.textAlignment = NSTextAlignmentLeft;
         _detailLabel.textColor = DSColorFromHex(0x959595);
     }
@@ -106,27 +106,27 @@
         }];
         [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.headImage.mas_right).offset(11);
-            make.top.equalTo(self).offset(20);
+            make.top.equalTo(self).offset(19);
         }];
         [self.detailLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.headImage.mas_right).offset(11);
-            make.top.equalTo(self.nameLabel.mas_bottom).offset(10);
+            make.top.equalTo(self.nameLabel.mas_bottom).offset(5);
         }];
         [self.sexBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.headImage.mas_right).offset(11);
-            make.top.equalTo(self.detailLabel.mas_bottom).offset(10);
+            make.top.equalTo(self.detailLabel.mas_bottom).offset(8);
             make.width.mas_equalTo(57);
             make.height.mas_equalTo(20);
         }];
         [self.constellateBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self.sexBtn.mas_right).offset(17);
-            make.top.equalTo(self.detailLabel.mas_bottom).offset(10);
+            make.left.equalTo(self.sexBtn.mas_right).offset(7);
+            make.top.equalTo(self.detailLabel.mas_bottom).offset(8);
             make.width.mas_equalTo(57);
             make.height.mas_equalTo(20);
         }];
         [self.cityBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self.constellateBtn.mas_right).offset(16);
-            make.top.equalTo(self.detailLabel.mas_bottom).offset(10);
+            make.left.equalTo(self.constellateBtn.mas_right).offset(6);
+            make.top.equalTo(self.detailLabel.mas_bottom).offset(8);
             make.width.mas_equalTo(72);
             make.height.mas_equalTo(20);
         }];
@@ -139,7 +139,7 @@
         [self.line1 mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.right.equalTo(self);
             make.bottom.equalTo(self).offset(0);
-            make.height.mas_equalTo(0.5);
+            make.height.mas_equalTo(0.3);
         }];
         
     }

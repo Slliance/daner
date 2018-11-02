@@ -27,12 +27,12 @@ static NSString *cellId = @"FoucePeopleCollectionCell";
     if (self) {
         [self addSubview:self.collectionView];
         [self addSubview:self.lineLabel];
-        [self.lineLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self).offset(63);
-            make.right.equalTo(self);
-            make.bottom.equalTo(self);
-            make.height.mas_equalTo(0.5);
-        }];
+//        [self.lineLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.left.equalTo(self).offset(63);
+//            make.right.equalTo(self);
+//            make.bottom.equalTo(self);
+//            make.height.mas_equalTo(0.5);
+//        }];
     }
     return self;
 }
@@ -48,7 +48,7 @@ static NSString *cellId = @"FoucePeopleCollectionCell";
         UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
         layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         layout.minimumLineSpacing = 2;
-        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0,0, SCREENWIDTH, 180) collectionViewLayout:layout];
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0,0, SCREENWIDTH, 200) collectionViewLayout:layout];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
         _collectionView.scrollsToTop = NO;

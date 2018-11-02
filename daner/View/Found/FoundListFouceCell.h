@@ -15,6 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong)UICollectionView *collectionView;
 @property(nonatomic,strong)NSMutableArray *dataArr;
 @property(nonatomic,strong)UILabel *lineLabel;
+@property(nonatomic,copy)void(^headBlock)(void);
+
+
 @end
 
 NS_ASSUME_NONNULL_END

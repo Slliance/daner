@@ -30,7 +30,7 @@
 }
 -(FriendHeadView *)headView{
     if (!_headView) {
-        _headView = [[FriendHeadView alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, 50)];
+        _headView = [[FriendHeadView alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, 60)];
     }
     return _headView;
 }
@@ -38,9 +38,16 @@
     [super viewDidLoad];
     [self.view addSubview:self.tableview];
     self.tableview.tableHeaderView = self.headView;
-    self.iconArr = @[@"1",@"4",@"5",@"head_icon"];
+    self.iconArr = @[@"1",@"4",@"5",@"3"];
     self.iconTitleArr = @[@"海的另一边",@"DNAER小助手",@"简单",@"一切随风"];
     self.detailArr = @[@"不悔于过去；不怠于当下…",@"您在DNAER的第一个好朋友",@"连续打了6个喷嚏，我知道…",@"流云向晚弄新晴，雨过柳梢青"];
+    if (@available(iOS 11.0, *)) {
+        _tableview.contentInsetAdjustmentBehavior = NO;
+        
+    } else {
+        self.navigationController.navigationBar.translucent = NO;
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];

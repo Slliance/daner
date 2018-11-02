@@ -32,13 +32,14 @@
 @property (nonatomic, strong) WPFSearchResultViewController *searchResultVC;
 @property(nonatomic, strong) MJNIndexView *indexView;
 @property(nonatomic,strong)FriendHeadView *headView;
+@property (strong, nonatomic) NSIndexPath* editingIndexPath;
 
 @end
 
 @implementation MineFriendController
 -(FriendHeadView *)headView{
     if (!_headView) {
-        _headView = [[FriendHeadView alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, 50)];
+        _headView = [[FriendHeadView alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, 60)];
     }
     return _headView;
 }
@@ -47,6 +48,13 @@
     self.iconArr = @[@"invite_firend",@"group_friend",@"label_friend",@"find_friend"];
     self.iconTitleArr = @[@"邀请好友",@"群聊",@"分组与标签管理",@"发现好友"];
    [self setData];
+    if (@available(iOS 11.0, *)) {
+        _tableView.contentInsetAdjustmentBehavior = NO;
+        
+    } else {
+        self.navigationController.navigationBar.translucent = NO;
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
 }
 #pragma mark--- UITableViewDataSource and UITableViewDelegate Methods---
 //在tableview中有多少个分组
@@ -80,6 +88,11 @@
     }
     
     if (indexPath.section ==0) {
+        if (indexPath.row ==0) {
+            cell.lineLabel.hidden = YES;
+        }else{
+            cell.lineLabel.hidden = NO;
+        }
         if (indexPath.row<4) {
              [cell.reviewerBtn setImage:[UIImage imageNamed:self.iconArr[indexPath.row]] forState:UIControlStateNormal];
             cell.reviewerName.text = self.iconTitleArr[indexPath.row];
@@ -89,20 +102,31 @@
             if (!cell) {
                 cell = [[ScreenFriendCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
             }
+             cell.lineLabel.hidden = NO;
+             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             return cell;
         }
        
     }else if (indexPath.section ==1){
           [cell.reviewerBtn setImage:[UIImage imageNamed:@"1"] forState:UIControlStateNormal];
          cell.reviewerName.text = @"海的另一边";
+        
+        cell.lineLabel.hidden = YES;
     }else{
+        if (indexPath.row ==0) {
+            cell.lineLabel.hidden = YES;
+        }else{
+            cell.lineLabel.hidden = NO;
+        }
         contactModel *model;
         NSDictionary *dict = self.indexArray[indexPath.section-2];
         model=dict[@"content"][indexPath.row];
         cell.reviewerName.text=model.contactName;
         [cell.reviewerBtn setImage:[UIImage imageNamed:model.contactUrl] forState:UIControlStateNormal];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
     }
+    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
@@ -125,13 +149,13 @@
     UIView *view = [[UIView alloc]init];
    
     UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(20, 0, SCREENWIDTH-40, 16)];
-    label.font = [UIFont systemFontOfSize:12];
+    label.font = [UIFont boldSystemFontOfSize:12];
     label.textColor = DSColorFromHex(0x969696);
     [view addSubview:label];
     if (section==0) {
         view.frame = CGRectMake(0, 0, SCREENWIDTH, 60);
         view.backgroundColor = [UIColor whiteColor];
-       FriendHeadView* headView = [[FriendHeadView alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, 50)];
+       FriendHeadView* headView = [[FriendHeadView alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, 60)];
         [view addSubview:headView];
     }else if (section ==1){
         view.frame =  CGRectMake(0, 0, SCREENWIDTH, 16);
@@ -149,9 +173,7 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-//    [self.searchVC.searchBar resignFirstResponder];
-//    [self.searchVC.searchBar setShowsCancelButton:NO animated:YES];
+
     if (indexPath.section==0) {
        
     }else{
@@ -231,9 +253,11 @@
 -(UITableView *)tableView
 {
     if (!_tableView) {
-        _tableView = [[UITableView  alloc] initWithFrame:CGRectMake(0,0,SCREENWIDTH, SCREENHEIGHT) style:UITableViewStyleGrouped];
+        _tableView = [[UITableView  alloc] initWithFrame:CGRectMake(0,0,SCREENWIDTH, SCREENHEIGHT-[self navHeightWithHeight]) style:UITableViewStyleGrouped];
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        _tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, 100)];
+        _tableView.backgroundColor = DSColorFromHex(0xFAFAFA);
         [_tableView registerClass:[MyFriendsCell class] forCellReuseIdentifier:@"REUSE_CELLID"];
         [self.tableView registerClass:[UITableViewHeaderFooterView class] forHeaderFooterViewReuseIdentifier:@"header"];
         _tableView.contentSize=CGSizeMake(SCREENWIDTH,SCREENHEIGHT*2);
@@ -282,12 +306,12 @@
     self.indexView.curtainMoves = YES;
     self.indexView.curtainMargins = NO;
     self.indexView.ergonomicHeight = NO;
-    self.indexView.upperMargin = 126;
-    self.indexView.lowerMargin = 220;
+    self.indexView.upperMargin = 156;
+    self.indexView.lowerMargin = 300;
     self.indexView.rightMargin = 10.0;
     self.indexView.itemsAligment = NSTextAlignmentCenter;
-    self.indexView.maxItemDeflection = 80.0;
-    self.indexView.rangeOfDeflection = 3;
+    self.indexView.maxItemDeflection = 30.0;
+    self.indexView.rangeOfDeflection = 1;
     self.indexView.fontColor = DSColorFromHex(0x969696);
     self.indexView.selectedItemFontColor = [UIColor whiteColor];
     self.indexView.darkening = NO;
@@ -409,14 +433,130 @@
     [self.view addSubview:self.indexView];
     self.navigationItem.titleView = self.searchVC.searchBar;
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+- (NSArray*)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
+    
+    //title不设为nil 而是空字符串 理由为啥 ？   自己实践 跑到ios11以下的机器上就知道为啥了
+    UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"删除" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
+        
+        [tableView setEditing:NO animated:YES];  // 这句很重要，退出编辑模式，隐藏左滑菜单
+    }];
+    UITableViewRowAction *topAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"置顶" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
+        
+        [tableView setEditing:NO animated:YES];  // 这句很重要，退出编辑模式，隐藏左滑菜单
+    }];
+    return @[deleteAction,topAction];
 }
-*/
+
+- (void)tableView:(UITableView *)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.editingIndexPath = indexPath;
+    [self.view setNeedsLayout];   // 触发-(void)viewDidLayoutSubviews
+}
+
+- (void)tableView:(UITableView *)tableView didEndEditingRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.editingIndexPath = nil;
+}
+-(void)viewWillLayoutSubviews{
+    [super viewWillLayoutSubviews];
+    if (self.editingIndexPath)
+    {
+        [self configSwipeButtons];
+        [self configSwipeButtons];
+    }
+}
+
+- (void)configSwipeButtons
+{
+    // 获取选项按钮的reference
+    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"11.0"))
+    {
+        // iOS 11层级 (Xcode 9编译): UITableView -> UISwipeActionPullView
+        for (UIView *subview in self.tableView.subviews)
+        {
+            if ([subview isKindOfClass:NSClassFromString(@"UISwipeActionPullView")] && [subview.subviews count] >= 2)
+            {
+                // 和iOS 10的按钮顺序相反
+                UIButton *deleteButton = subview.subviews[1];
+                UIButton *readButton = subview.subviews[0];
+                
+                [self configDeleteButton:deleteButton];
+                [self configReadButton:readButton];
+            }
+        }
+    }
+    else
+    {
+        // iOS 8-10层级: UITableView -> UITableViewCell -> UITableViewCellDeleteConfirmationView
+        MyFriendsCell *tableCell = [self.tableView cellForRowAtIndexPath:self.editingIndexPath];
+        for (UIView *subview in tableCell.subviews)
+        {
+            if ([subview isKindOfClass:NSClassFromString(@"UITableViewCellDeleteConfirmationView")] && [subview.subviews count] >= 2)
+            {
+                UIButton *deleteButton = subview.subviews[0];
+                UIButton *readButton = subview.subviews[1];
+                
+                [self configDeleteButton:deleteButton];
+                [self configReadButton:readButton];
+                [subview setBackgroundColor:DSColorFromHex(0xF0F0F0)];
+            }
+        }
+    }
+    
+    
+}
+
+- (void)configDeleteButton:(UIButton*)deleteButton
+{
+    if (deleteButton)
+    {
+        
+        deleteButton.titleLabel.font = [UIFont systemFontOfSize:12];
+        deleteButton.titleLabel.textColor = DSColorFromHex(0X787878);
+        deleteButton.titleLabel.text = @"删除";
+        [deleteButton setTitleColor:DSColorFromHex(0X787878) forState:UIControlStateNormal];
+        [deleteButton setImage:[UIImage imageNamed:@"delete_message"] forState:UIControlStateNormal];
+        [deleteButton setBackgroundColor:DSColorFromHex(0xF0F0F0)];
+        // 调整按钮上图片和文字的相对位置（该方法的实现在下面）
+        [self centerImageAndTextOnButton:deleteButton];
+    }
+}
+
+- (void)configReadButton:(UIButton*)readButton
+{
+    if (readButton)
+    {
+        readButton.titleLabel.font = [UIFont systemFontOfSize:12];
+        readButton.titleLabel.textColor = DSColorFromHex(0X787878);
+        readButton.titleLabel.text = @"置顶";
+        [readButton setTitleColor:DSColorFromHex(0X787878) forState:UIControlStateNormal];
+        // 根据当前状态选择不同图片
+        BOOL isRead = NO;
+        UIImage *readButtonImage = [UIImage imageNamed:@"top_message"];
+        [readButton setImage:readButtonImage forState:UIControlStateNormal];
+        
+        [readButton setBackgroundColor:DSColorFromHex(0xF0F0F0)];
+        // 调整按钮上图片和文字的相对位置（该方法的实现在下面）
+        [self centerImageAndTextOnButton:readButton];
+    }
+}
+- (void)centerImageAndTextOnButton:(UIButton*)button
+{
+    
+    button.titleEdgeInsets = UIEdgeInsetsMake(40, 10, 0, 0);
+    button.imageEdgeInsets = UIEdgeInsetsMake(0, 0.0, -30,0);
+    button.contentEdgeInsets = UIEdgeInsetsMake(0, 0.0, 10, 0.0);
+    if (SYSTEM_VERSION_LESS_THAN(@"11.0"))
+    {
+        CGRect btnFrame = button.frame;
+        btnFrame.origin.y = -10;
+        button.frame = btnFrame;
+    }
+    
+}
+
+
 
 @end

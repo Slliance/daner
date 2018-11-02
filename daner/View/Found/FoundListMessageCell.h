@@ -15,10 +15,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong)UILabel *reviewerName;
 @property(nonatomic,strong)UILabel *commentLabel;
 @property(nonatomic,strong)UILabel *lineLabel;
+@property(nonatomic,strong)UILabel *lineLabel1;
+@property(nonatomic,strong)UILabel *lineLabel2;
+@property(nonatomic,strong)UILabel *lineLabel3;
 @property(nonatomic,strong)UILabel *dateLabel;
 @property(nonatomic,strong)UIButton *followBtn;
 @property(nonatomic,strong)UILabel *countLabel;
-
+@property(nonatomic,copy)void(^headBlock)(void);
 @end
 
 NS_ASSUME_NONNULL_END

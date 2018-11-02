@@ -11,6 +11,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FriendDetailFootView : BaseView
+@property(nonatomic,strong)UIButton *sendBtn;
+@property(nonatomic,strong)UIButton *vidieoBtn;
+@property(nonatomic,strong)UIButton *encrypteBtn;
+
+
 
 @end
 

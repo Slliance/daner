@@ -69,7 +69,7 @@
         _dateLabel.text = @"12:30";
         _dateLabel.font = [UIFont systemFontOfSize:12];
         _dateLabel.textAlignment = NSTextAlignmentRight;
-        _dateLabel.textColor = DSColorFromHex(0x797979);
+        _dateLabel.textColor = DSColorFromHex(0x969696);
     }
     return _dateLabel;
 }
@@ -79,6 +79,27 @@
         _lineLabel.backgroundColor = DSColorFromHex(0xF0F0F0);
     }
     return _lineLabel;
+}
+-(UILabel *)lineLabel1{
+    if (!_lineLabel1) {
+        _lineLabel1 = [[UILabel alloc]init];
+        _lineLabel1.backgroundColor = DSColorFromHex(0xF0F0F0);
+    }
+    return _lineLabel1;
+}
+-(UILabel *)lineLabel2{
+    if (!_lineLabel2) {
+        _lineLabel2 = [[UILabel alloc]init];
+        _lineLabel2.backgroundColor = DSColorFromHex(0xF0F0F0);
+    }
+    return _lineLabel2;
+}
+-(UILabel *)lineLabel3{
+    if (!_lineLabel3) {
+        _lineLabel3 = [[UILabel alloc]init];
+        _lineLabel3.backgroundColor = DSColorFromHex(0xF0F0F0);
+    }
+    return _lineLabel3;
 }
 -(UIButton *)followBtn{
     if (!_followBtn) {
@@ -100,10 +121,31 @@
         [self addSubview:self.dateLabel];
         [self addSubview:self.followBtn];
         [self addSubview:self.countLabel];
+        [self addSubview:self.lineLabel1];
+        [self addSubview:self.lineLabel2];
+        [self addSubview:self.lineLabel3];
         [self.lineLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self).offset(63);
             make.right.equalTo(self);
             make.bottom.equalTo(self);
+            make.height.mas_equalTo(0.5);
+        }];
+        [self.lineLabel2 mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self).offset(0);
+            make.right.equalTo(self);
+            make.bottom.equalTo(self);
+            make.height.mas_equalTo(0.5);
+        }];
+        [self.lineLabel1 mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self).offset(63);
+            make.right.equalTo(self);
+            make.top.equalTo(self);
+            make.height.mas_equalTo(0.5);
+        }];
+        [self.lineLabel3 mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self).offset(0);
+            make.right.equalTo(self);
+            make.top.equalTo(self);
             make.height.mas_equalTo(0.5);
         }];
         [self.reviewerBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -124,7 +166,7 @@
         }];
         [self.commentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.reviewerBtn.mas_right).offset(10);
-            make.top.equalTo(self.reviewerName.mas_bottom).offset(9);
+            make.top.equalTo(self.reviewerName.mas_bottom).offset(5);
         }];
         [self.dateLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.equalTo(self).offset(-13);

@@ -13,6 +13,8 @@
 #import "FoundListRecordCell.h"
 
 #import "FoundListPositionCell.h"
+#import "FriendInformationController.h"
+
 @interface BaseFoundController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *tableview;
 
@@ -21,9 +23,10 @@
 @implementation BaseFoundController
 -(UITableView *)tableview{
     if (!_tableview) {
-        _tableview = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT) style:UITableViewStylePlain];
+        _tableview = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT-[self navHeightWithHeight]) style:UITableViewStylePlain];
         _tableview.delegate = self;
         _tableview.dataSource = self;
+        _tableview.tableFooterView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, 50)];
         _tableview.separatorStyle = UITableViewCellSeparatorStyleNone;
     }
     return _tableview;
@@ -34,26 +37,36 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row ==1) {
+    if (indexPath.section ==1) {
         return 200;
-    }else if (indexPath.row ==2||indexPath.row ==3){
+    }else if (indexPath.section ==2){
         return 90;
-    }else if (indexPath.row ==4){
+    }else if (indexPath.section ==3){
         return 420;
-    }else if (indexPath.row ==5){
+    }else if (indexPath.section ==4){
         return 386;
     }
-    return 616;
+    return 656;
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
+    return 9;
+}
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, 30)];
+    return view;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 30;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    if (section ==2) {
+        return 2;
+    }
+    return 1;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    if (indexPath.row ==1) {
+    if (indexPath.section ==1) {
         static NSString *fouce = @"FoundListFouceCell";
         FoundListFouceCell *foucecell = [tableView dequeueReusableCellWithIdentifier:fouce];
         if (!foucecell) {
@@ -61,15 +74,26 @@
         }
         foucecell.selectionStyle = UITableViewCellSelectionStyleNone;
         return foucecell;
-    }else if (indexPath.row ==2||indexPath.row ==3){
+    }else if (indexPath.section ==2){
         static NSString *message = @"FoundListMessageCell";
         FoundListMessageCell *mescell = [tableView dequeueReusableCellWithIdentifier:message];
         if (!mescell) {
             mescell = [[FoundListMessageCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:message];
         }
+        if (indexPath.row ==0) {
+            mescell.lineLabel.hidden = NO;
+            mescell.lineLabel3.hidden = NO;
+            mescell.lineLabel1.hidden = YES;
+            mescell.lineLabel2.hidden = YES;
+        }else{
+            mescell.lineLabel.hidden = YES;
+            mescell.lineLabel3.hidden = YES;
+            mescell.lineLabel1.hidden = YES;
+            mescell.lineLabel2.hidden = NO;
+        }
         mescell.selectionStyle = UITableViewCellSelectionStyleNone;
         return mescell;
-    }else if (indexPath.row ==4){
+    }else if (indexPath.section ==3){
         static NSString *message = @"FoundListRecordCell";
         FoundListRecordCell *cell = [tableView dequeueReusableCellWithIdentifier:message];
         if (!cell) {
@@ -77,7 +101,7 @@
         }
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
-    }else if (indexPath.row ==5){
+    }else if (indexPath.section ==4){
         static NSString *message = @"FoundListPositionCell";
         FoundListPositionCell *cell = [tableView dequeueReusableCellWithIdentifier:message];
         if (!cell) {
@@ -91,6 +115,11 @@
     if (!videocell) {
         videocell = [[FoundListVideoCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:video];
     }
+    [videocell setHeadBlock:^{
+        FriendInformationController *friend = [[FriendInformationController alloc]init];
+        friend.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:friend animated:YES];
+    }];
     videocell.selectionStyle = UITableViewCellSelectionStyleNone;
     return videocell;
     

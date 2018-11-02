@@ -32,6 +32,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong)UILabel *shareLabel;
 @property(nonatomic,strong)UILabel *messageLabel;
 @property(nonatomic,strong)UIImageView *lineImage;
+@property(nonatomic,strong)UILabel *lineLabel;
+
+
 @property(nonatomic,strong)UIButton *reviewerBtn;
 @property(nonatomic,strong)UILabel *reviewerName;
 @property(nonatomic,strong)UILabel *commentLabel;
@@ -42,6 +45,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong)UIButton *fouceBtn;
 
 
+@property(nonatomic,copy)void(^headBlock)(void);
 
 @end
 

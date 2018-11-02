@@ -37,7 +37,6 @@
 {
     
     [self addSubview:self.collection];
-    
     _sliderView = [[KKSliderButtonView alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.layout.sliderHeight) layout:self.layout];
     _sliderView.delegate = self;
     [self addSubview:_sliderView];

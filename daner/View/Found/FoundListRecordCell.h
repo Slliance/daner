@@ -40,8 +40,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong)UILabel *locLabel;
 @property(nonatomic,strong)UILabel *mentionLabel;
 @property(nonatomic,strong)UIButton *fouceBtn;
+@property(nonatomic,strong)UILabel *lineLabel;
 
 
+@property(nonatomic,copy)void(^headBlock)(void);
 @end
 
 NS_ASSUME_NONNULL_END

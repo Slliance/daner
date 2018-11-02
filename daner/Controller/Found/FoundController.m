@@ -18,17 +18,18 @@
 @property(strong, nonatomic) KKClassiflcationLayout *layout;
 @property(strong, nonatomic) KKClassificationView *managerView;
 @property(copy, nonatomic) NSMutableArray *viewControllers;
-@property(nonatomic,strong)UIButton *cameraBtn;
+@property(nonatomic,strong)UIButton *screenBtn;
 @property(nonatomic,strong)UIButton *searchBtn;
+@property(nonatomic,strong)UIButton *trillBtn;
 @end
 
 @implementation FoundController
--(UIButton *)cameraBtn{
-    if (!_cameraBtn) {
-        _cameraBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_cameraBtn setImage:[UIImage imageNamed:@"camera_found"] forState:UIControlStateNormal];
+-(UIButton *)screenBtn{
+    if (!_screenBtn) {
+        _screenBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_screenBtn setImage:[UIImage imageNamed:@"screen_found"] forState:UIControlStateNormal];
     }
-    return _cameraBtn;
+    return _screenBtn;
 }
 -(UIButton *)searchBtn{
     if (!_searchBtn) {
@@ -36,6 +37,13 @@
         [_searchBtn setImage:[UIImage imageNamed:@"search_found"] forState:UIControlStateNormal];
     }
     return _searchBtn;
+}
+-(UIButton *)trillBtn{
+    if (!_trillBtn) {
+        _trillBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_trillBtn setImage:[UIImage imageNamed:@"trill_found"] forState:UIControlStateNormal];
+    }
+    return _trillBtn;
 }
 -(FoundNavView *)navView{
     if (!_navView) {
@@ -47,19 +55,26 @@
     [super viewDidLoad];
     [self.view addSubview:self.navView];
      [self.view addSubview:self.managerView];
-    [self.view addSubview:self.cameraBtn];
+    [self.view addSubview:self.screenBtn];
     [self.view addSubview:self.searchBtn];
-    [self.cameraBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.view).offset(13);
-        make.top.equalTo(self.view).offset([self navHeightWithHeight]-17-13);
-        make.width.mas_equalTo(20);
-        make.height.mas_equalTo(17);
-    }];
+    [self.view addSubview:self.trillBtn];
     [self.searchBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.view).offset(-13);
-        make.top.equalTo(self.view).offset([self navHeightWithHeight]-18-13);
-        make.width.mas_equalTo(17);
-        make.height.mas_equalTo(18);
+        make.left.equalTo(self.view).offset(0);
+        make.top.equalTo(self.view).offset([self navHeightWithHeight]-44);
+        make.width.mas_equalTo(44);
+        make.height.mas_equalTo(44);
+    }];
+    [self.screenBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.view).offset(0);
+        make.top.equalTo(self.view).offset([self navHeightWithHeight]-44);
+        make.width.mas_equalTo(44);
+        make.height.mas_equalTo(44);
+    }];
+    [self.trillBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.screenBtn.mas_left).offset(0);
+        make.top.equalTo(self.view).offset([self navHeightWithHeight]-44);
+        make.width.mas_equalTo(44);
+        make.height.mas_equalTo(44);
     }];
     
 }
@@ -95,7 +110,7 @@
         _layout.titleSelectColor = DSColorFromHex(0x464646);
         _layout.titleColor = DSColorFromHex(0x969696);
         _layout.titleFont = [UIFont systemFontOfSize:13];
-        _layout.titleSelectFont = [UIFont boldSystemFontOfSize:20];
+        _layout.titleSelectFont = [UIFont boldSystemFontOfSize:16];
         _layout.titles = self.titleArr;
         _layout.viewControllers = self.viewControllers;
         _layout.LinkColor = [UIColor whiteColor];

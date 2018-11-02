@@ -44,8 +44,10 @@
         btn.adjustsImageWhenHighlighted = NO;
         btn.tag = i + 100;
         if (!self.layout.isAverage) {
-            CGSize size = [title boundingRectWithSize:CGSizeMake(SCREENWIDTH, self.layout.sliderHeight) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName: self.layout.titleFont} context:nil].size;
+            
+            CGSize size = [title boundingRectWithSize:CGSizeMake(SCREENWIDTH, self.layout.sliderHeight) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName: self.layout.titleSelectFont} context:nil].size;
             CGFloat margin = i == 0 ? self.layout.lrMargin : self.layout.titleMargin;
+            
             btn.frame = CGRectMake(leftBtn.frame.origin.x + leftBtn.frame.size.width + margin, 0, size.width, self.layout.sliderHeight);
         }else{
             CGFloat width = (SCREENWIDTH - self.layout.lrMargin * 2) / self.layout.titles.count;

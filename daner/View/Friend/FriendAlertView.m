@@ -112,8 +112,8 @@
         [_qrBtn addTarget:self action:@selector(pressBtn:) forControlEvents:UIControlEventTouchUpInside];
         [_qrBtn setTitle:@"扫一扫" forState:UIControlStateNormal];
         [_qrBtn setTitleColor:DSColorFromHex(0x464646) forState:UIControlStateNormal];
-        _qrBtn.imageEdgeInsets = UIEdgeInsetsMake(0, -5, 0, 0);
-        _qrBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 0);
+        _qrBtn.imageEdgeInsets = UIEdgeInsetsMake(0, -20, 0, 0);
+        _qrBtn.titleEdgeInsets = UIEdgeInsetsMake(0, -8, 0, 0);
         _qrBtn.titleLabel.font = [UIFont systemFontOfSize:13];
          _qrBtn.tag =3;
         

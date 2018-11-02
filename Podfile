@@ -10,4 +10,5 @@ target 'daner'do
   pod 'Masonry'
   use_frameworks!
   pod'HighlightedSearch'
+  pod 'LTScrollView', '~> 0.1.7'
 end

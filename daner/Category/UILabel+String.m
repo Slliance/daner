@@ -9,6 +9,7 @@
 #import "UILabel+String.h"
 
 @implementation UILabel (String)
+
 -(void)setText:(NSString*)text lineSpacing:(CGFloat)lineSpacing {
     if (!text || lineSpacing < 0.01) {
         self.text = text;

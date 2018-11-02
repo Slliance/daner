@@ -45,6 +45,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong)UILabel *line4;
 @property(nonatomic,strong)UIImageView *rightImage;
 @property(nonatomic,copy)void (^backBlcok)(void);
+
+
 @end
 
 NS_ASSUME_NONNULL_END

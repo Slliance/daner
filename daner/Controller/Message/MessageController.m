@@ -9,6 +9,9 @@
 #import "MessageController.h"
 #import "FoundListMessageCell.h"
 #import "MessageNavView.h"
+#import "ChatDetailsController.h"
+
+
 
 @interface MessageController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *tableview;
@@ -84,16 +87,15 @@
 {
     self.editingIndexPath = nil;
 }
-
--(void)viewDidLayoutSubviews
-{
-    [super viewDidLayoutSubviews];
-    
+-(void)viewWillLayoutSubviews{
+    [super viewWillLayoutSubviews];
     if (self.editingIndexPath)
     {
         [self configSwipeButtons];
+        [self configSwipeButtons];
     }
 }
+
 - (void)configSwipeButtons
 {
     // 获取选项按钮的reference
@@ -180,23 +182,20 @@
     
     // raise the image and push it right so it appears centered above the text
     CGSize titleSize = [button.titleLabel.text sizeWithAttributes:@{NSFontAttributeName: button.titleLabel.font}];
-    button.imageEdgeInsets = UIEdgeInsetsMake(0, 0.0, 30,0);
+    button.imageEdgeInsets = UIEdgeInsetsMake(0, 0.0, -30,0);
     
     // increase the content height to avoid clipping
     CGFloat edgeOffset = (titleSize.height - imageSize.height) / 2.0;
-    button.contentEdgeInsets = UIEdgeInsetsMake(edgeOffset, 0.0, edgeOffset, 0.0);
+    button.contentEdgeInsets = UIEdgeInsetsMake(0, 0.0, 10, 0.0);
     
     // move whole button down, apple placed the button too high in iOS 10
     if (SYSTEM_VERSION_LESS_THAN(@"11.0"))
     {
         CGRect btnFrame = button.frame;
-        btnFrame.origin.y = 18;
+        btnFrame.origin.y = -10;
         button.frame = btnFrame;
     }
-    CGRect btnFrame = button.frame;
-    btnFrame.origin.y = -18;
-    button.frame = btnFrame;
-    button.frame = btnFrame;
+
 }
 
 
@@ -213,6 +212,10 @@
     }else{
         mescell.countLabel.hidden = YES;
     }
+    mescell.lineLabel.hidden = NO;
+    mescell.lineLabel3.hidden = YES;
+    mescell.lineLabel1.hidden = YES;
+    mescell.lineLabel2.hidden = YES;
     [mescell.reviewerBtn setImage:[UIImage imageNamed:self.iconArr[indexPath.row]] forState:UIControlStateNormal];
     mescell.reviewerName = self.titleArr[indexPath.row];
     mescell.commentLabel.text = self.detailArr[indexPath.row];
@@ -220,7 +223,11 @@
         return mescell;
    
 }
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    ChatDetailsController *chatVC = [[ChatDetailsController alloc]init];
+    chatVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:chatVC animated:YES];
+}
 /*
 #pragma mark - Navigation
 

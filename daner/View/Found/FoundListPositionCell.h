@@ -38,6 +38,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong)UIButton *zanBtn;
 @property(nonatomic,strong)UILabel *zanLabel;
 @property(nonatomic,strong)UIButton *fouceBtn;
+@property(nonatomic,copy)void(^headBlock)(void);
+@property(nonatomic,strong)UILabel *lineLabel;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -19,10 +19,19 @@
 #define DSColorFromHex(rgb)     [UIColor colorWithRed:((float)((rgb & 0xFF0000) >> 16))/255.0 green:((float)((rgb & 0xFF00) >> 8))/255.0 blue:((float)(rgb & 0xFF))/255.0 alpha:1.0]
 #define DSColorAlphaFromHex(rgb,a)     [UIColor colorWithRed:((float)((rgb & 0xFF0000) >> 16))/255.0 green:((float)((rgb & 0xFF00) >> 8))/255.0 blue:((float)(rgb & 0xFF))/255.0 alpha:a]
 #define DSNavi  [UIColor whiteColor] //navigation的颜色
-
+#define FONT_PingFangSC_Medium(x) [UIFont fontWithName:@"PingFangSC-Regular" size:x]?[UIFont fontWithName:@"PingFangSC-Regular" size:x]:[UIFont systemFontOfSize:x]
+#define FONT_PingFang_SC_Medium(x) [UIFont fontWithName:@"PingFangSC-Regular" size:x]?[UIFont fontWithName:@"PingFangSC-Regular" size:x]:[UIFont systemFontOfSize:x]
+#define FONT_PingFangSC_Bold(x) [UIFont fontWithName:@"PingFangSC-Semibold" size:x]?[UIFont fontWithName:@"PingFangSC-Semibold" size:x]:[UIFont boldSystemFontOfSize:x]
+#define FONT_PingFang_SC_Bold(x) [UIFont fontWithName:@"PingFangSC-Semibold" size:x]?[UIFont fontWithName:@"PingFangSC-Semibold" size:x]:[UIFont boldSystemFontOfSize:x]
+#define FONT_PingFang_SC(x) [UIFont fontWithName:@"PingFangSC-Light" size:x]?[UIFont fontWithName:@"PingFangSC-Light" size:x]:[UIFont systemFontOfSize:x]
+#define FONT_PingFang_SC_Regular(x) [UIFont fontWithName:@"PingFangSC-Light" size:x]?[UIFont fontWithName:@"PingFangSC-Light" size:x]:[UIFont systemFontOfSize:x]
 
 
 #import <Masonry/Masonry.h>
 #import "UIView+CTExtensions.h"
 #import "UILabel+String.h"
+#import "MJRefresh.h"
+
+
+
 #endif /* ZSConfig_h */

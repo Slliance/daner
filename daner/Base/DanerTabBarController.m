@@ -54,7 +54,7 @@
     releaseItem = [[DanerTabBarItem alloc]initWithTitle:@"" image:[UIImage imageNamed:@"add_tab"] selectedImage:[UIImage imageNamed:@"add_tab"]];
     releaseItem.image = [[UIImage imageNamed:@"add_tab"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     releaseItem.selectedImage = [UIImage imageNamed:@"add_tab"];
-    releaseItem.imageInsets = UIEdgeInsetsMake(20, 0, 0, 0);
+    releaseItem.imageInsets = UIEdgeInsetsMake(0, 0, -20, 0);
     foundItem = [[DanerTabBarItem alloc]initWithTitle:@"发现" image:[UIImage imageNamed:@"shopping_icon_selected"] selectedImage:[UIImage imageNamed:@"shopping_icon_selected"]];
     foundItem.image = [[UIImage imageNamed:@"shopping_icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     foundItem.selectedImage = [UIImage imageNamed:@"shopping_icon_selected"];

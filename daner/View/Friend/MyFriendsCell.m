@@ -55,7 +55,7 @@
         [self addSubview:self.lineLabel];
        
         [self.reviewerBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self).offset(13);
+            make.left.equalTo(self).offset(20);
             make.width.height.mas_equalTo(40);
             make.centerY.equalTo(self);
             
@@ -67,8 +67,8 @@
         [self.lineLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self).offset(60);
             make.right.equalTo(self);
-            make.bottom.equalTo(self).offset(-0.5);
-            make.height.mas_equalTo(0.5);
+            make.top.equalTo(self).offset(0);
+            make.height.mas_equalTo(0.3);
         }];
         
     }

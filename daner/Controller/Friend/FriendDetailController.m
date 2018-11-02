@@ -10,6 +10,8 @@
 #import "FriendDetailHeadView.h"
 #import "FriendDetailFootView.h"
 #import "FriendInformationController.h"
+#import "PersonalFriendsCell.h"
+#import "FriendDetailComCell.h"
 
 @interface FriendDetailController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)FriendDetailHeadView *headView;
@@ -46,6 +48,7 @@
     self.tableview.tableHeaderView = self.headView;
     self.tableview.tableFooterView = self.footView;
     [self.view addSubview:self.tableview];
+    [self setRightButtonWithIcon:[UIImage imageNamed:@"more_message"]];
 }
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
@@ -69,43 +72,56 @@
     return 53;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *identify = @"UITableViewCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
-    if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identify];
+    
+    
+    if (indexPath.row ==4) {
+        static NSString *identify = @"PersonalFriendsCell";
+        PersonalFriendsCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[PersonalFriendsCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identify];
+        }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
     }
-    cell.textLabel.textColor = DSColorFromHex(0x464646);
-    cell.textLabel.font = [UIFont systemFontOfSize:14];
-    cell.detailTextLabel.textColor = DSColorFromHex(0x979797);
-    cell.detailTextLabel.font = [UIFont systemFontOfSize:14];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    if (indexPath.row ==0) {
-        cell.textLabel.text = @"分组";
-        cell.detailTextLabel.text = @"同学";
-    }else if (indexPath.row ==1){
-        cell.textLabel.text = @"标签";
-        cell.detailTextLabel.text = @"大学室友";
-    }else if (indexPath.row ==2){
-        cell.textLabel.text = @"电话号码";
-        cell.detailTextLabel.text = @"13645678861";
-        cell.detailTextLabel.textColor = DSColorFromHex(0x4282BD);
-         cell.accessoryType = UITableViewCellAccessoryNone;
-    }else if (indexPath.row ==3){
-        cell.textLabel.text = @"地区";
-        cell.detailTextLabel.text = @"上海 浦东新区";
-    }else if (indexPath.row ==5){
-        cell.textLabel.text = @"更多";
-        cell.detailTextLabel.text = @"";
-    }else if (indexPath.row ==4){
-        cell.textLabel.text = @"个人主页";
-        cell.detailTextLabel.text = @"";
+    static NSString *identify = @"FriendDetailComCell";
+    FriendDetailComCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+    if (!cell) {
+        cell = [[FriendDetailComCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identify];
     }
     
+    if (indexPath.row ==0) {
+        cell.titleLabel.text = @"分组";
+        cell.detailLabel.text = @"同学";
+        [cell setImageName:@"icon_right"];
+    }else if (indexPath.row ==1){
+        cell.titleLabel.text = @"标签";
+        cell.detailLabel.text = @"大学室友  ";
+        [cell setImageName:@"icon_right"];
+    }else if (indexPath.row ==2){
+        cell.titleLabel.text = @"电话号码";
+        cell.detailLabel.text = @"13645678861";
+        cell.detailLabel.textColor = DSColorFromHex(0x4282BD);
+        cell.detailLabel.font = [UIFont boldSystemFontOfSize:14];
+        [cell setImageName:@""];
+       
+    }else if (indexPath.row ==3){
+        cell.titleLabel.text = @"地区";
+        cell.detailLabel.text = @"上海 浦东新区";
+        [cell setImageName:@""];
+    }else if (indexPath.row ==5){
+        cell.titleLabel.text = @"更多";
+        cell.detailLabel.text = @"";
+        [cell setImageName:@"icon_right"];
+    }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    FriendInformationController *friendVC = [[FriendInformationController alloc]init];
-    [self.navigationController pushViewController:friendVC animated:YES];
+    if (indexPath.row ==4) {
+        FriendInformationController *friendVC = [[FriendInformationController alloc]init];
+        [self.navigationController pushViewController:friendVC animated:YES];
+    }
+    
 }
 
 @end

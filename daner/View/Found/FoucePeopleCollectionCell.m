@@ -43,7 +43,7 @@
     if (!_detailLabel) {
         _detailLabel = [[UILabel alloc]init];
         _detailLabel.text = @"可能感兴趣的人";
-        _detailLabel.font = [UIFont boldSystemFontOfSize:12];
+        _detailLabel.font = [UIFont systemFontOfSize:12];
         _detailLabel.textAlignment = NSTextAlignmentCenter;
         _detailLabel.textColor = DSColorFromHex(0x777777);
     }
@@ -54,10 +54,12 @@
         _fouceBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         _fouceBtn.backgroundColor = DSColorFromHex(0x464646);
         [_fouceBtn setTitle:@"关注" forState:UIControlStateNormal];
+        [_fouceBtn setTitle:@"已关注" forState:UIControlStateSelected];
         [_fouceBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         _fouceBtn.titleLabel.font = [UIFont systemFontOfSize:12];
         [_fouceBtn.layer setCornerRadius:3];
         [_fouceBtn.layer setMasksToBounds:YES];
+        [_fouceBtn addTarget:self action:@selector(pressFouce:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _fouceBtn;
 }
@@ -113,4 +115,13 @@
         make.right.equalTo(self.BGView);
     }];
 }
+-(void)pressFouce:(UIButton*)sender{
+    sender.selected = !sender.selected;
+    if (sender.selected ==YES) {
+        _fouceBtn.backgroundColor = DSColorFromHex(0xDCDCDC);
+    }else{
+        _fouceBtn.backgroundColor = DSColorFromHex(0x464646);
+    }
+}
+
 @end

@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ScreenFriendCell : BaseTableViewCell
 @property(nonatomic,strong)UIButton *reviewerBtn;
 @property(nonatomic,strong)UILabel *reviewerName;
+@property(nonatomic,strong)UILabel *lineLabel;
 @end
 
 NS_ASSUME_NONNULL_END

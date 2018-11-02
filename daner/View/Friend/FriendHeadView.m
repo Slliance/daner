@@ -16,7 +16,8 @@
         [self addSubview:self.searchBtn];
 
         [self.searchBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.bottom.equalTo(self).offset(10);
+            make.left.equalTo(self).offset(10);
+            make.bottom.equalTo(self);
             make.right.equalTo(self).offset(-10);
             make.height.mas_equalTo(30);
         }];

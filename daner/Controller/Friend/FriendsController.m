@@ -45,10 +45,10 @@
     [self.view addSubview:self.alertView];
     
     [self.cameraBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.view).offset(-20);
-        make.top.equalTo(self.view).offset([self navHeightWithHeight]-22-13);
-        make.width.mas_equalTo(7);
-        make.height.mas_equalTo(22);
+        make.right.equalTo(self.view).offset(0);
+        make.top.equalTo(self.view).offset([self navHeightWithHeight]-46);
+        make.width.mas_equalTo(47);
+        make.height.mas_equalTo(44);
     }];
 }
 -(void)viewWillAppear:(BOOL)animated{
@@ -79,12 +79,12 @@
 {
     if (!_layout) {
         _layout = [[KKClassiflcationLayout alloc] init];
-        _layout.isAverage = YES;
+        _layout.isAverage = NO;
         _layout.titleViewBgColor = [UIColor whiteColor];
-        _layout.lrMargin = 30;
+        _layout.lrMargin = 20;
         //控制滑块高度
         _layout.sliderHeight = 44;
-        _layout.titleMargin = 20;
+        _layout.titleMargin = 10;
         _layout.titleSelectColor = DSColorFromHex(0x464646);
         _layout.titleColor = DSColorFromHex(0x969696);
         _layout.titleFont = [UIFont systemFontOfSize:13];

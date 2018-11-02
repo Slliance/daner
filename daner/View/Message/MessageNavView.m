@@ -42,7 +42,7 @@
 -(instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = DSColorFromHex(0xFAFAFA);
         [self addSubview:self.cameraBtn];
         [self addSubview:self.searchBtn];
         [self setContentLayout];
@@ -51,7 +51,7 @@
 }
 -(UILabel *)lineLabel{
     if (!_lineLabel) {
-        _lineLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, self.frame.size.height-1, SCREENWIDTH, 0.5)];
+        _lineLabel = [[UILabel alloc]init];
         _lineLabel.backgroundColor = DSColorFromHex(0xDCDCDC);
     }
     return _lineLabel;
@@ -79,7 +79,11 @@
         [self addSubview:btn];
     }
     [self addSubview:self.lineLabel];
-    
+    [self.lineLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(self);
+        make.height.mas_equalTo(0.5);
+        make.bottom.equalTo(self);
+    }];
    
 }
 
