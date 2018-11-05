@@ -122,7 +122,7 @@ static InputToolbar* _instance = nil;
     [UIView setAnimationBeginsFromCurrentState:YES];
     [UIView setAnimationDuration:duration];
     [UIView setAnimationCurve:7];
-    self.y = keyboardFrame.origin.y - self.height;
+    self.y = keyboardFrame.origin.y - 49;
     [UIView commitAnimations];
     _inputToolbarFrameChange(self.height,self.y);
     NSLog(@"###%f",self.height);
@@ -136,7 +136,7 @@ static InputToolbar* _instance = nil;
     CGRect keyboardFrame = [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
     CGFloat duration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     [UIView animateWithDuration:duration animations:^{
-        self.y = keyboardFrame.origin.y - self.height;
+        self.y = keyboardFrame.origin.y - InputToolbarHeight;
     }];
     _inputToolbarFrameChange(self.height,self.y);
     self.keyboardIsVisiable = NO;

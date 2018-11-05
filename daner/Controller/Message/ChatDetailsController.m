@@ -47,7 +47,7 @@
     [self.view addSubview:self.inputToolbar];
     self.inputToolbar.textViewMaxVisibleLine = 4;
     self.inputToolbar.width = self.view.width;
-    self.inputToolbar.height = 49;
+    self.inputToolbar.height = [self navHeightWithHeight];
     self.inputToolbar.y = SCREENHEIGHT - [self navHeightWithHeight];
     [self.inputToolbar setMorebuttonViewDelegate:self];
     

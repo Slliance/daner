@@ -73,8 +73,8 @@
         [_sendBtn setTitle:@"6421 币" forState:UIControlStateNormal];
         [_sendBtn setTitleColor:DSColorFromHex(0x464646) forState:UIControlStateNormal];
         _sendBtn.titleLabel.font = [UIFont boldSystemFontOfSize:12];
-        [_sendBtn.layer setBorderColor:DSColorFromHex(0x969696).CGColor];
-        [_sendBtn.layer setBorderWidth:0.5];
+//        [_sendBtn.layer setBorderColor:DSColorFromHex(0x969696).CGColor];
+//        [_sendBtn.layer setBorderWidth:0.5];
         [UIButton changeTextBtn:self.sendBtn
                     stringArray:@[@"6421",@"币"] colorArray:@[DSColorFromHex(0x464646),DSColorFromHex(0x464646)]
                       fontArray:@[[UIFont boldSystemFontOfSize:16],[UIFont systemFontOfSize:12]]];
@@ -90,8 +90,8 @@
         [_integralBtn setTitle:@"560 积分" forState:UIControlStateNormal];
         [_integralBtn setTitleColor:DSColorFromHex(0x464646) forState:UIControlStateNormal];
         _integralBtn.titleLabel.font = [UIFont boldSystemFontOfSize:12];
-        [_integralBtn.layer setBorderColor:DSColorFromHex(0x969696).CGColor];
-        [_integralBtn.layer setBorderWidth:0.5];
+//        [_integralBtn.layer setBorderColor:DSColorFromHex(0x969696).CGColor];
+//        [_integralBtn.layer setBorderWidth:0.5];
         [UIButton changeTextBtn:self.integralBtn
                     stringArray:@[@"560",@"积分"] colorArray:@[DSColorFromHex(0x464646),DSColorFromHex(0x464646)]
                       fontArray:@[[UIFont boldSystemFontOfSize:16],[UIFont systemFontOfSize:12]]];
