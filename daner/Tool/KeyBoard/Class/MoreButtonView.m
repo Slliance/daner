@@ -54,9 +54,11 @@
     [self addButtonWithIcon:@"red_keyboard" highIcon:@"red_keyboard" tag:MoreButtonViewButtonTypeSeal title:@"红包"];
     [self addButtonWithIcon:@"transfer_keyboard" highIcon:@"transfer_keyboard" tag:MoreButtonViewButtonTypeEmail title:@"转账"];
      [self addButtonWithIcon:@"bum_keyboard" highIcon:@"bum_keyboard" tag:MoreButtonViewButtonTypeEmail title:@"阅后即焚"];
-    [self addButtonWithIcon:@"red_keyboard" highIcon:@"red_keyboard" tag:MoreButtonViewButtonTypeSeal title:@"位置"];
-    [self addButtonWithIcon:@"transfer_keyboard" highIcon:@"transfer_keyboard" tag:MoreButtonViewButtonTypeEmail title:@"我的收藏"];
-    [self addButtonWithIcon:@"bum_keyboard" highIcon:@"bum_keyboard" tag:MoreButtonViewButtonTypeEmail title:@"分享"];
+    [self addButtonWithIcon:@"collection_message" highIcon:@"collection_message" tag:MoreButtonViewButtonTypeSeal title:@"我的收藏"];
+    [self addButtonWithIcon:@"like_message" highIcon:@"like_message" tag:MoreButtonViewButtonTypeEmail title:@"我喜欢的"];
+    [self addButtonWithIcon:@"file_message" highIcon:@"file_message" tag:MoreButtonViewButtonTypeEmail title:@"文件"];
+    [self addButtonWithIcon:@"card_message" highIcon:@"card_message" tag:MoreButtonViewButtonTypeEmail title:@"名片"];
+    [self addButtonWithIcon:@"location_message" highIcon:@"location_message" tag:MoreButtonViewButtonTypeEmail title:@"位置"];
     
 }
 
