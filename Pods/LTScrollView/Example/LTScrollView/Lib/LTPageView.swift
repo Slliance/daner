@@ -24,9 +24,10 @@ public class LTLayout: NSObject {
     
     /* 标题选中颜色，请使用RGB赋值 */
     @objc public var titleSelectColor: UIColor? = SELECT_BASE_COLOR
-    
+    /* 选中标题字号 */
+    @objc public var titleSelectFont: UIFont? = UIFont.boldSystemFont(ofSize: 13)
     /* 标题字号 */
-    @objc public var titleFont: UIFont? = UIFont.systemFont(ofSize: 16)
+    @objc public var titleFont: UIFont? = UIFont.systemFont(ofSize: 13)
     
     /* 滑块底部线的颜色 - UIColor.blue */
     @objc public var bottomLineColor: UIColor? = UIColor.red
@@ -269,7 +270,7 @@ extension LTPageView {
                 }
             }
             
-            let textW = text.boundingRect(with: CGSize(width: CGFloat(MAXFLOAT), height: 8), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font : layout.titleFont ?? UIFont.systemFont(ofSize: 16)], context: nil).size.width
+            let textW = text.boundingRect(with: CGSize(width: CGFloat(MAXFLOAT), height: 8), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font : layout.titleSelectFont ?? UIFont.boldSystemFont(ofSize: 13)], context: nil).size.width
             
             if !layout.isAverage {
                 glt_textWidths.append(textW)
@@ -294,6 +295,11 @@ extension LTPageView {
             if index == 0 {
                 button.setTitleColor(layout.titleSelectColor, for: .normal)
                 createViewController(0)
+                button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 13)
+            }else{
+                
+                button.titleLabel?.font = UIFont.systemFont(ofSize: 13)
+                
             }
             
             upX = button.frame.origin.x + subW + layout.titleMargin
@@ -502,6 +508,7 @@ extension LTPageView {
                     button.transform = CGAffineTransform(scaleX: layout.scale , y: layout.scale)
                 }
                 button.setTitleColor(self.layout.titleSelectColor, for: .normal)
+                
             }else {
                 if layout.isNeedScale {
                     button.transform = CGAffineTransform(scaleX: 1.0 , y: 1.0)
@@ -751,6 +758,7 @@ extension LTPageView {
         button.tag = flag
         button.setTitle(title, for: .normal)
         button.addTarget(self, action: #selector(titleSelectIndex(_:)), for: .touchUpInside)
+        
         button.titleLabel?.font = layout.titleFont
         parentView.addSubview(button)
         return button

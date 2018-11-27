@@ -19,38 +19,15 @@
     }
     return _headImage;
 }
--(UIButton *)sexBtn{
-    if (!_sexBtn) {
-        _sexBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_sexBtn setImage:[UIImage imageNamed:@"sex_other"] forState:UIControlStateNormal];
-        _sexBtn.backgroundColor = DSColorFromHex(0xFAFAFA);
-        [_sexBtn setTitle:@"25岁" forState:UIControlStateNormal];
-        _sexBtn.imageEdgeInsets = UIEdgeInsetsMake(0, -5, 0, 0);
-        _sexBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 0);
-        [_sexBtn setTitleColor:DSColorFromHex(0x979797) forState:UIControlStateNormal];
-        _sexBtn.titleLabel.font = [UIFont systemFontOfSize:11];
+-(UILabel *)nikeNameLabel{
+    if (!_nikeNameLabel) {
+        _nikeNameLabel = [[UILabel alloc]init];
+        _nikeNameLabel.text = @"昵称：大海";
+        _nikeNameLabel.font = [UIFont systemFontOfSize:10];
+        _nikeNameLabel.textAlignment = NSTextAlignmentLeft;
+        _nikeNameLabel.textColor = DSColorFromHex(0x959595);
     }
-    return _sexBtn;
-}
--(UIButton *)constellateBtn{
-    if (!_constellateBtn) {
-        _constellateBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        _constellateBtn.backgroundColor = DSColorFromHex(0xFAFAFA);
-        [_constellateBtn setTitle:@"摩羯座" forState:UIControlStateNormal];
-        [_constellateBtn setTitleColor:DSColorFromHex(0x979797) forState:UIControlStateNormal];
-        _constellateBtn.titleLabel.font = [UIFont systemFontOfSize:11];
-    }
-    return _constellateBtn;
-}
--(UIButton *)cityBtn{
-    if (!_cityBtn) {
-        _cityBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        _cityBtn.backgroundColor = DSColorFromHex(0xFAFAFA);
-        [_cityBtn setTitle:@"上海·闵行" forState:UIControlStateNormal];
-        [_cityBtn setTitleColor:DSColorFromHex(0x979797) forState:UIControlStateNormal];
-        _cityBtn.titleLabel.font = [UIFont systemFontOfSize:11];
-    }
-    return _cityBtn;
+    return _nikeNameLabel;
 }
 -(UILabel *)nameLabel{
     if (!_nameLabel) {
@@ -94,9 +71,7 @@
         [self addSubview:self.headImage];
         [self addSubview:self.nameLabel];
         [self addSubview:self.detailLabel];
-        [self addSubview:self.sexBtn];
-        [self addSubview:self.constellateBtn];
-        [self addSubview:self.cityBtn];
+        [self addSubview:self.nikeNameLabel];
         [self addSubview:self.vImage];
         [self addSubview:self.line1];
         [self.headImage mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -110,26 +85,14 @@
         }];
         [self.detailLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.headImage.mas_right).offset(11);
-            make.top.equalTo(self.nameLabel.mas_bottom).offset(5);
+            make.top.equalTo(self.nameLabel.mas_bottom).offset(8);
         }];
-        [self.sexBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        [self.nikeNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.headImage.mas_right).offset(11);
-            make.top.equalTo(self.detailLabel.mas_bottom).offset(8);
-            make.width.mas_equalTo(57);
-            make.height.mas_equalTo(20);
+            make.top.equalTo(self.detailLabel.mas_bottom).offset(9);
+            make.height.mas_equalTo(9);
         }];
-        [self.constellateBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self.sexBtn.mas_right).offset(7);
-            make.top.equalTo(self.detailLabel.mas_bottom).offset(8);
-            make.width.mas_equalTo(57);
-            make.height.mas_equalTo(20);
-        }];
-        [self.cityBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self.constellateBtn.mas_right).offset(6);
-            make.top.equalTo(self.detailLabel.mas_bottom).offset(8);
-            make.width.mas_equalTo(72);
-            make.height.mas_equalTo(20);
-        }];
+       
         [self.vImage mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.equalTo(self).offset(-20);
             make.top.equalTo(self).offset(20);

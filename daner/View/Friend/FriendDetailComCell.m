@@ -47,6 +47,13 @@
     }
     return _detailLabel;
 }
+-(UILabel *)line1{
+    if (!_line1) {
+        _line1 = [[UILabel alloc]init];
+        _line1.backgroundColor = DSColorFromHex(0xF0F0F0);
+    }
+    return _line1;
+}
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
@@ -57,8 +64,9 @@
         
         [self.line1 mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self).offset(20);
-            make.bottom.equalTo(self.mas_bottom);
-            make.height.mas_equalTo(0.5);
+            make.right.equalTo(self);
+            make.bottom.equalTo(self.mas_bottom).offset(-0.3);
+            make.height.mas_equalTo(0.3);
         }];
        
         [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {

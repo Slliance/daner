@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong)UILabel *line1;
 @property(nonatomic,strong)UILabel *nameLabel;
 @property(nonatomic,strong)UIImageView *rightBtn;
+
 @end
 
 NS_ASSUME_NONNULL_END

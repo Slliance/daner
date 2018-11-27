@@ -8,20 +8,22 @@
 
 #import "MineController.h"
 #import "MineHeadView.h"
-#import "KKClassificationView.h"
-#import "BaseFoundController.h"
+#import "FriendVideoCell.h"
+#import "FriendLocationCell.h"
+#import "FriendRecordCell.h"
+#import "FriendTextCell.h"
+#import "FriendMusicCell.h"
+#import "FriendPictureCell.h"
+#import "FriendCircleDetailController.h"
+#import "DNMineCellHeadView.h"
+#import "DNTaskCenterCell.h"
+#import "FriendInfoCell.h"
+#import "DNMineAboutHeadView.h"
 
-#import "LTScrollView-Swift.h"
-#import "MJRefresh.h"
-#import "BaseInformationController.h"
-@interface MineController ()<LTSimpleScrollViewDelegate>
+@interface MineController ()<UITableViewDelegate,UITableViewDataSource>
+@property(nonatomic,strong)UITableView *tableview;
 @property(nonatomic,strong)MineHeadView *headView;
 
-
-@property(strong, nonatomic) LTLayout *layout;
-@property(strong, nonatomic) LTSimpleManager *managerView;
-@property(copy, nonatomic) NSArray <UIViewController *> *viewControllers;
-@property(copy, nonatomic) NSArray <NSString *> *titles;
 
 @end
 
@@ -29,22 +31,11 @@
 
 -(MineHeadView *)headView{
     if (!_headView) {
-        _headView = [[MineHeadView alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, 440)];
+        _headView = [[MineHeadView alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, 800)];
     }
     return _headView;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
-    self.automaticallyAdjustsScrollViewInsets = NO;
-    [self setupSubViews];
-    __weak typeof(self)weakself = self;
-    [self.headView setBackBlcok:^{
-        [weakself.navigationController popViewControllerAnimated:YES];
-    }];
-    
-}
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden = YES;
@@ -54,115 +45,185 @@
     self.navigationController.navigationBar.hidden = NO;
 }
 
--(void)setupSubViews {
-    
-    [self.view addSubview:self.managerView];
-    
-    __weak typeof(self) weakSelf = self;
-    
-    //配置headerView
-    [self.managerView configHeaderView:^UIView * _Nullable{
-        return [weakSelf setupHeaderView];
+-(UITableView *)tableview{
+    if (!_tableview) {
+        _tableview = [[UITableView alloc]initWithFrame:CGRectMake(0,0, SCREENWIDTH, SCREENHEIGHT-[self tabBarHeight]) style:UITableViewStylePlain];
+        _tableview.separatorColor = [UIColor whiteColor];
+        self.tableview.backgroundColor = DSColorFromHex(0xF0F0F0);
+        _tableview.delegate = self;
+        _tableview.dataSource = self;
+    }
+    return _tableview;
+}
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self.view addSubview:self.tableview];
+    if (@available(iOS 11.0, *)) {
+        self.tableview.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+    [self.view addSubview:self.tableview];
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.tableview.tableHeaderView = self.headView;
+    __weak typeof(self)weakself = self;
+    [self.headView setBackBlcok:^{
+        [weakself.navigationController popViewControllerAnimated:YES];
     }];
     
-    //pageView点击事件
-    [self.managerView didSelectIndexHandle:^(NSInteger index) {
-        NSLog(@"点击了 -> %ld", index);
-    }];
-    
-    //控制器刷新事件
-    [self.managerView refreshTableViewHandle:^(UIScrollView * _Nonnull scrollView, NSInteger index) {
-        __weak typeof(scrollView) weakScrollView = scrollView;
-        scrollView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-            __strong typeof(weakScrollView) strongScrollView = weakScrollView;
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                NSLog(@"对应控制器的刷新自己玩吧，这里就不做处理了🙂-----%ld", index);
-                [strongScrollView.mj_header endRefreshing];
-            });
-        }];
-    }];
-    
 }
--(MineHeadView *)setupHeaderView {
-    
-    return self.headView;
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 3;
 }
-
--(void)tapGesture:(UITapGestureRecognizer *)gesture {
-    NSLog(@"tapGesture");
-    
-}
-
--(void)glt_scrollViewDidScroll:(UIScrollView *)scrollView {
-    NSLog(@"---> %lf", scrollView.contentOffset.y);
-}
-
--(LTSimpleManager *)managerView {
-    if (!_managerView) {
-        _managerView = [[LTSimpleManager alloc] initWithFrame:CGRectMake(0,0, self.view.bounds.size.width, SCREENHEIGHT) viewControllers:self.viewControllers titles:self.titles currentViewController:self layout:self.layout];
-        
-        /* 设置代理 监听滚动 */
-        _managerView.delegate = self;
-        
-        /* 设置悬停位置 */
-        //        _managerView.hoverY = 64;
-        
-        /* 点击切换滚动过程动画 */
-        //        _managerView.isClickScrollAnimation = YES;
-        
-        /* 代码设置滚动到第几个位置 */
-        //        [_managerView scrollToIndexWithIndex:self.viewControllers.count - 1];
-        
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    if (section ==0) {
+        return 3;
+    }else if (section ==1){
+        return 2;
     }
-    return _managerView;
+    return 6;
 }
-
--(LTLayout *)layout {
-    if (!_layout) {
-        _layout = [[LTLayout alloc] init];
-        _layout.bottomLineHeight = 0.0;
-        _layout.isHiddenSlider = YES;
-        _layout.bottomLineCornerRadius = 2.0;
-        _layout.isAverage = true;
-        _layout.titleViewBgColor = [UIColor whiteColor];
-        _layout.titleColor = DSColorFromHex(0x969696);
-        _layout.titleSelectColor = DSColorFromHex(0x454545);
-        _layout.titleFont = [UIFont systemFontOfSize:13];
-        _layout.scale = 1.25;
-        _layout.sliderHeight = [self navHeightWithHeight];
-        /* 更多属性设置请参考 LTLayout 中 public 属性说明 */
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section ==2) {
+        if (indexPath.row ==0) {
+            return 33+SCREENWIDTH;
+        }else if (indexPath.row ==1){
+            return 120;
+        }else if (indexPath.row ==2){
+            return 130;
+        }else if (indexPath.row ==3){
+            return 130;
+        }else if (indexPath.row ==4){
+            return 137;
+        }else if (indexPath.row ==5){
+            return SCREENWIDTH*100/265-11000/265+80;
+        }
+    }else if (indexPath.section ==1){
+        return 51;
     }
-    return _layout;
+    
+    return 77;
 }
-
-
-- (NSArray <NSString *> *)titles {
-    if (!_titles) {
-        _titles = @[@"时光机", @"视频", @"音乐", @"图片",@"语音"];
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    if (section ==0) {
+        return 51;
+    }else if (section ==2){
+        return 51;
     }
-    return _titles;
+    return 133;
 }
-
-
--(NSArray <UIViewController *> *)viewControllers {
-    if (!_viewControllers) {
-        _viewControllers = [self setupViewControllers];
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIView *bgView = [[UIView alloc]init];
+    bgView.backgroundColor = COLHEX(@"#F0F0F0");
+    if (section ==0) {
+        bgView.frame = CGRectMake(0, 0, App_Frame_Width, 51);
+        DNMineCellHeadView* sectionView = [[DNMineCellHeadView alloc]init];
+        sectionView.frame = CGRectMake(0, 6, App_Frame_Width, 45);
+        sectionView.titleLabel.text = @"任务中心";
+        [bgView addSubview:sectionView];
+    }else if (section ==2){
+        bgView.frame = CGRectMake(0, 0, App_Frame_Width, 51);
+        DNMineCellHeadView* sectionView = [[DNMineCellHeadView alloc]init];
+        sectionView.frame = CGRectMake(0, 6, App_Frame_Width, 45);
+        sectionView.titleLabel.text = @"我的时光机";
+        [bgView addSubview:sectionView];
+    }else{
+        bgView.frame = CGRectMake(0, 0, App_Frame_Width, 133);
+        DNMineAboutHeadView *aboutView = [[DNMineAboutHeadView alloc]init];
+        aboutView.frame = CGRectMake(0, 6, App_Frame_Width, 127);
+        [bgView addSubview:aboutView];
     }
-    return _viewControllers;
+    return bgView;
 }
-
-
--(NSArray <UIViewController *> *)setupViewControllers {
-    NSMutableArray <UIViewController *> *testVCS = [NSMutableArray arrayWithCapacity:0];
-    [self.titles enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        BaseInformationController *testVC = [[BaseInformationController alloc] init];
-        [testVCS addObject:testVC];
-    }];
-    return testVCS.copy;
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section ==0) {
+        
+        static NSString *identify = @"DNTaskCenterCell";
+        DNTaskCenterCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[DNTaskCenterCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
+        }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        NSArray *titleArr = @[@"完善个人资料",@"邀请好友",@""];
+        NSArray *detailArr = @[@"完善全部个人资料获得950积分",@"邀请好友获得200积分",@"查看更多任务"];
+        cell.titleLabel.text = titleArr[indexPath.row];
+        cell.detailLabel.text = detailArr[indexPath.row];
+        if (indexPath.row ==2) {
+            cell.detailLabel.font = [UIFont systemFontOfSize:14];
+        }
+        return cell;
+    }else if (indexPath.section ==1){
+        static NSString *identify = @"FriendInfoCell";
+        FriendInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[FriendInfoCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
+        }
+        if (indexPath.row ==1) {
+            [cell.ambryImage setImage:[UIImage imageNamed:@"link_other"] forState:UIControlStateNormal];
+            cell.ambryLabel.text = @"www.dnaer.com";
+            cell.ambryLabel.textColor = COLHEX(@"#18609C");
+            cell.rightImage.hidden = YES;
+        }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+         return cell;
+    }
+    if (indexPath.row ==0) {
+        static NSString *identify = @"FriendVideoCell";
+        FriendVideoCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[FriendVideoCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
+        }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
+    }else if (indexPath.row ==1){
+        static NSString *identify = @"FriendRecordCell";
+        FriendRecordCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[FriendRecordCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
+        }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
+    }else if (indexPath.row ==2){
+        static NSString *identify = @"FriendPictureCell";
+        FriendPictureCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[FriendPictureCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
+        }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
+        
+    }else if (indexPath.row ==3){
+        static NSString *identify = @"FriendMusicCell";
+        FriendMusicCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[FriendMusicCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
+        }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
+        
+    }else if (indexPath.row ==4){
+        static NSString *identify = @"FriendTextCell";
+        FriendTextCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[FriendTextCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
+        }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
+    }
+    static NSString *identify = @"FriendLocationCell";
+    FriendLocationCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+    if (!cell) {
+        cell = [[FriendLocationCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
+    }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    return cell;
 }
-
--(void)dealloc {
-    NSLog(@"%s",__func__);
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    FriendCircleDetailController*circleVc = [[FriendCircleDetailController alloc]init];
+    [circleVc setType:indexPath.row];
+    circleVc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:circleVc animated:YES];
 }
 
 

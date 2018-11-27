@@ -11,4 +11,19 @@ target 'daner'do
   use_frameworks!
   pod'HighlightedSearch'
   pod 'LTScrollView', '~> 0.1.7'
+#  pod 'YYText'
+  pod 'SJBaseVideoPlayer'
+  
+  # 便捷的创建 NSAttributedString
+  pod 'SJAttributesFactory'
+  
+  # 全屏手势
+  pod 'SJFullscreenPopGesture'
+  
+  pod 'SJScrollEntriesView'
+  pod 'SJUIKit/Refresh'
+  pod 'SJUIFactory'
+  pod 'SJRouter'
+  pod 'SJScrollEntriesView'
+  
 end

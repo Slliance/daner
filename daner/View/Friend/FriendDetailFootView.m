@@ -35,6 +35,7 @@
             make.right.equalTo(self).offset(-20);
             make.height.mas_equalTo(40);
         }];
+        
     }
     return self;
 }

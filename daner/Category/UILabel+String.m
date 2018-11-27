@@ -24,6 +24,30 @@
     [attributedString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [text length])];
     self.attributedText = attributedString;
 }
-
+-(void)setTotal:(NSString *)text stringArray:(NSArray *)strArray colorArray:(NSArray *)colorArray fontArray:(NSArray *)fontArray{
+    NSMutableAttributedString *mutAttStr = [[NSMutableAttributedString alloc] initWithString:text];;
+    
+    NSString* _str = nil;
+    UIFont*  _font = nil;
+    NSRange _range = NSMakeRange(0, 0);
+    
+    for (int i=0; i<strArray.count; i++) {
+        //NSLog(@"---> strArray.count = %ld",strArray.count);
+        _str = strArray[i];
+        NSUInteger location = [[mutAttStr string] rangeOfString:_str].location;
+        NSUInteger length   = [[mutAttStr string] rangeOfString:_str].length;
+        _range = NSMakeRange(location, length);
+        // 改变颜色
+        if (colorArray.count >= (i+1)) {
+            [mutAttStr addAttribute:NSForegroundColorAttributeName value:colorArray[i] range:_range];
+        }
+        // 改变字体大小
+        if (fontArray.count >= (i+1)) {
+            _font = fontArray[i];
+            [mutAttStr addAttribute:NSFontAttributeName value:_font range:_range];
+        }
+    }
+    self.attributedText = mutAttStr;
+}
 
 @end

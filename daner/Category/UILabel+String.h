@@ -16,4 +16,7 @@
  @param lineSpacing 行间距
  */
 -(void)setText:(NSString*)text lineSpacing:(CGFloat)lineSpacing;
+-(void)setTotal:(NSString*)text stringArray:(NSArray *)strArray
+     colorArray:(NSArray *)colorArray
+      fontArray:(NSArray *)fontArray;
 @end

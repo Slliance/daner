@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F029F25F061BC8924B9EE7F /* Pods_daner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A3A91CA7FB2FDC006D5626 /* Pods_daner.framework */; };
 		5A35495A218464150085469B /* MineFriendController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A354959218464150085469B /* MineFriendController.m */; };
 		5A35495D218464F10085469B /* MyFouceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A35495C218464F10085469B /* MyFouceController.m */; };
 		5A354960218465220085469B /* AttentionMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A35495F218465220085469B /* AttentionMeController.m */; };
@@ -25,6 +24,10 @@
 		891BB07B218ADCE00032CE77 /* ChatInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 891BB07A218ADCE00032CE77 /* ChatInputView.m */; };
 		891BB080218ADFE10032CE77 /* UIPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 891BB07F218ADFE10032CE77 /* UIPlaceHolderTextView.m */; };
 		891BB083218B14220032CE77 /* FriendDetailComCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 891BB082218B14220032CE77 /* FriendDetailComCell.m */; };
+		895B658C21A4FD1B0044C2F6 /* DNTaskCenterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 895B658B21A4FD1B0044C2F6 /* DNTaskCenterCell.m */; };
+		895B658F21A51F2B0044C2F6 /* DNMineAboutHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 895B658E21A51F2B0044C2F6 /* DNMineAboutHeadView.m */; };
+		895B65B821A533F90044C2F6 /* DNHisBaseInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 895B65B721A533F90044C2F6 /* DNHisBaseInfoController.m */; };
+		895B65BB21A539900044C2F6 /* DNHisBaseInfoHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 895B65BA21A539900044C2F6 /* DNHisBaseInfoHeadView.m */; };
 		8961E9CC2182BBA700B914FD /* FoundListMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8961E9CB2182BBA700B914FD /* FoundListMessageCell.m */; };
 		8961E9D0218303C100B914FD /* FoundListRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8961E9CE218303C100B914FD /* FoundListRecordCell.m */; };
 		8961E9D3218306FB00B914FD /* ZSRunLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8961E9D2218306FB00B914FD /* ZSRunLabelView.m */; };
@@ -34,6 +37,8 @@
 		8961E9E02183190D00B914FD /* BaseFoundController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8961E9DF2183190D00B914FD /* BaseFoundController.m */; };
 		8961E9E32186E5B000B914FD /* ScreenFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8961E9E22186E5B000B914FD /* ScreenFriendCell.m */; };
 		8961E9E62186FDA000B914FD /* FriendAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8961E9E52186FDA000B914FD /* FriendAlertView.m */; };
+		8962808A21A2BC69000E6F4E /* FriendCircleDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8962808921A2BC69000E6F4E /* FriendCircleDetailController.m */; };
+		8978BE3121A3F6E100909125 /* DNBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8978BE3021A3F6E000909125 /* DNBaseViewController.m */; };
 		8997797B2181986D00069C52 /* FoundNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8997797A2181986D00069C52 /* FoundNavView.m */; };
 		899779812181A11C00069C52 /* FoundListVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 899779802181A11C00069C52 /* FoundListVideoCell.m */; };
 		899779872181A1B000069C52 /* FoundListPositionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 899779862181A1B000069C52 /* FoundListPositionCell.m */; };
@@ -199,6 +204,7 @@
 		89BDBEA8218C0D4F003674EE /* EmotionImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BDBE14218C0D4F003674EE /* EmotionImages.m */; };
 		89BDBEA9218C0D4F003674EE /* IMEmotionEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BDBE16218C0D4F003674EE /* IMEmotionEntity.m */; };
 		89BDBEAA218C0D4F003674EE /* VoiceButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BDBE17218C0D4F003674EE /* VoiceButtonView.m */; };
+		89BEB28921A4EAD200822455 /* DNMineCellHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BEB28821A4EAD200822455 /* DNMineCellHeadView.m */; };
 		89CA1089218A990400E922AB /* ChatDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CA1088218A990400E922AB /* ChatDetailsController.m */; };
 		89CA108C218AA1A100E922AB /* ChatTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CA108B218AA1A100E922AB /* ChatTextCell.m */; };
 		89CA108F218AA1C000E922AB /* ChatRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CA108E218AA1C000E922AB /* ChatRecordCell.m */; };
@@ -220,6 +226,15 @@
 		89CF94742189AF680066E65E /* UIButton+Style.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CF94732189AF680066E65E /* UIButton+Style.m */; };
 		89D7108C2182A935007B02E7 /* FoundListFouceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D7108B2182A935007B02E7 /* FoundListFouceCell.m */; };
 		89D7108F2182AB5D007B02E7 /* FoucePeopleCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D7108E2182AB5D007B02E7 /* FoucePeopleCollectionCell.m */; };
+		89E265F221A25CBC0035C6D6 /* FriendInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E265F121A25CBC0035C6D6 /* FriendInfoCell.m */; };
+		89E7696A21A3F8AE00FA6B1C /* UIColor+VmExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E7696821A3F8AE00FA6B1C /* UIColor+VmExt.m */; };
+		89E7696D21A3FB5D00FA6B1C /* DNFriendDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E7696C21A3FB5D00FA6B1C /* DNFriendDetailModel.m */; };
+		89E7697021A4104400FA6B1C /* DNFriendPhoneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E7696F21A4104400FA6B1C /* DNFriendPhoneCell.m */; };
+		89E7697321A4262E00FA6B1C /* DNMineDataassetsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E7697221A4262E00FA6B1C /* DNMineDataassetsView.m */; };
+		89E7697621A4266100FA6B1C /* DNShareOutbonusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E7697521A4266100FA6B1C /* DNShareOutbonusView.m */; };
+		89E7697921A4340000FA6B1C /* DNAssetsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E7697821A4340000FA6B1C /* DNAssetsCollectionViewCell.m */; };
+		89E925FD21A56DEB0079EEF0 /* DNMineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E925FC21A56DEB0079EEF0 /* DNMineController.m */; };
+		CD418A0BDA039E26C2151982 /* Pods_daner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0D50FAC1BC6ADB42F46FFE7 /* Pods_daner.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -269,13 +284,20 @@
 		5A7954AB218438FD004254BE /* MessageNavView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageNavView.h; sourceTree = "<group>"; };
 		5A7954AC218438FD004254BE /* MessageNavView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageNavView.m; sourceTree = "<group>"; };
 		609699645D51553CA644A01F /* Pods-daner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-daner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-daner/Pods-daner.debug.xcconfig"; sourceTree = "<group>"; };
-		74A3A91CA7FB2FDC006D5626 /* Pods_daner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_daner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		891BB079218ADCE00032CE77 /* ChatInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatInputView.h; sourceTree = "<group>"; };
 		891BB07A218ADCE00032CE77 /* ChatInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatInputView.m; sourceTree = "<group>"; };
 		891BB07E218ADFE10032CE77 /* UIPlaceHolderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPlaceHolderTextView.h; sourceTree = "<group>"; };
 		891BB07F218ADFE10032CE77 /* UIPlaceHolderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPlaceHolderTextView.m; sourceTree = "<group>"; };
 		891BB081218B14220032CE77 /* FriendDetailComCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendDetailComCell.h; sourceTree = "<group>"; };
 		891BB082218B14220032CE77 /* FriendDetailComCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendDetailComCell.m; sourceTree = "<group>"; };
+		895B658A21A4FD1B0044C2F6 /* DNTaskCenterCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNTaskCenterCell.h; sourceTree = "<group>"; };
+		895B658B21A4FD1B0044C2F6 /* DNTaskCenterCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNTaskCenterCell.m; sourceTree = "<group>"; };
+		895B658D21A51F2B0044C2F6 /* DNMineAboutHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNMineAboutHeadView.h; sourceTree = "<group>"; };
+		895B658E21A51F2B0044C2F6 /* DNMineAboutHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNMineAboutHeadView.m; sourceTree = "<group>"; };
+		895B65B621A533F90044C2F6 /* DNHisBaseInfoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNHisBaseInfoController.h; sourceTree = "<group>"; };
+		895B65B721A533F90044C2F6 /* DNHisBaseInfoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNHisBaseInfoController.m; sourceTree = "<group>"; };
+		895B65B921A539900044C2F6 /* DNHisBaseInfoHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNHisBaseInfoHeadView.h; sourceTree = "<group>"; };
+		895B65BA21A539900044C2F6 /* DNHisBaseInfoHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNHisBaseInfoHeadView.m; sourceTree = "<group>"; };
 		8961E9CA2182BBA700B914FD /* FoundListMessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoundListMessageCell.h; sourceTree = "<group>"; };
 		8961E9CB2182BBA700B914FD /* FoundListMessageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoundListMessageCell.m; sourceTree = "<group>"; };
 		8961E9CE218303C100B914FD /* FoundListRecordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundListRecordCell.m; sourceTree = "<group>"; };
@@ -294,6 +316,10 @@
 		8961E9E22186E5B000B914FD /* ScreenFriendCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScreenFriendCell.m; sourceTree = "<group>"; };
 		8961E9E42186FDA000B914FD /* FriendAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendAlertView.h; sourceTree = "<group>"; };
 		8961E9E52186FDA000B914FD /* FriendAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendAlertView.m; sourceTree = "<group>"; };
+		8962808821A2BC69000E6F4E /* FriendCircleDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendCircleDetailController.h; sourceTree = "<group>"; };
+		8962808921A2BC69000E6F4E /* FriendCircleDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendCircleDetailController.m; sourceTree = "<group>"; };
+		8978BE2F21A3F6E000909125 /* DNBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNBaseViewController.h; sourceTree = "<group>"; };
+		8978BE3021A3F6E000909125 /* DNBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNBaseViewController.m; sourceTree = "<group>"; };
 		899779792181986D00069C52 /* FoundNavView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoundNavView.h; sourceTree = "<group>"; };
 		8997797A2181986D00069C52 /* FoundNavView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoundNavView.m; sourceTree = "<group>"; };
 		8997797F2181A11C00069C52 /* FoundListVideoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoundListVideoCell.h; sourceTree = "<group>"; };
@@ -498,6 +524,8 @@
 		89BDBE15218C0D4F003674EE /* UITextView+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Category.h"; sourceTree = "<group>"; };
 		89BDBE16218C0D4F003674EE /* IMEmotionEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMEmotionEntity.m; sourceTree = "<group>"; };
 		89BDBE17218C0D4F003674EE /* VoiceButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoiceButtonView.m; sourceTree = "<group>"; };
+		89BEB28721A4EAD200822455 /* DNMineCellHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNMineCellHeadView.h; sourceTree = "<group>"; };
+		89BEB28821A4EAD200822455 /* DNMineCellHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNMineCellHeadView.m; sourceTree = "<group>"; };
 		89CA1087218A990400E922AB /* ChatDetailsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatDetailsController.h; sourceTree = "<group>"; };
 		89CA1088218A990400E922AB /* ChatDetailsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatDetailsController.m; sourceTree = "<group>"; };
 		89CA108A218AA1A100E922AB /* ChatTextCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatTextCell.h; sourceTree = "<group>"; };
@@ -540,7 +568,24 @@
 		89D7108B2182A935007B02E7 /* FoundListFouceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoundListFouceCell.m; sourceTree = "<group>"; };
 		89D7108D2182AB5D007B02E7 /* FoucePeopleCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoucePeopleCollectionCell.h; sourceTree = "<group>"; };
 		89D7108E2182AB5D007B02E7 /* FoucePeopleCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoucePeopleCollectionCell.m; sourceTree = "<group>"; };
+		89E265F021A25CBC0035C6D6 /* FriendInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendInfoCell.h; sourceTree = "<group>"; };
+		89E265F121A25CBC0035C6D6 /* FriendInfoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendInfoCell.m; sourceTree = "<group>"; };
+		89E7696821A3F8AE00FA6B1C /* UIColor+VmExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+VmExt.m"; sourceTree = "<group>"; };
+		89E7696921A3F8AE00FA6B1C /* UIColor+VmExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+VmExt.h"; sourceTree = "<group>"; };
+		89E7696B21A3FB5D00FA6B1C /* DNFriendDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNFriendDetailModel.h; sourceTree = "<group>"; };
+		89E7696C21A3FB5D00FA6B1C /* DNFriendDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNFriendDetailModel.m; sourceTree = "<group>"; };
+		89E7696E21A4104300FA6B1C /* DNFriendPhoneCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNFriendPhoneCell.h; sourceTree = "<group>"; };
+		89E7696F21A4104400FA6B1C /* DNFriendPhoneCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNFriendPhoneCell.m; sourceTree = "<group>"; };
+		89E7697121A4262E00FA6B1C /* DNMineDataassetsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNMineDataassetsView.h; sourceTree = "<group>"; };
+		89E7697221A4262E00FA6B1C /* DNMineDataassetsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNMineDataassetsView.m; sourceTree = "<group>"; };
+		89E7697421A4266100FA6B1C /* DNShareOutbonusView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNShareOutbonusView.h; sourceTree = "<group>"; };
+		89E7697521A4266100FA6B1C /* DNShareOutbonusView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNShareOutbonusView.m; sourceTree = "<group>"; };
+		89E7697721A4340000FA6B1C /* DNAssetsCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNAssetsCollectionViewCell.h; sourceTree = "<group>"; };
+		89E7697821A4340000FA6B1C /* DNAssetsCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNAssetsCollectionViewCell.m; sourceTree = "<group>"; };
+		89E925FB21A56DEB0079EEF0 /* DNMineController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNMineController.h; sourceTree = "<group>"; };
+		89E925FC21A56DEB0079EEF0 /* DNMineController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNMineController.m; sourceTree = "<group>"; };
 		C5BC9AFCCF8292ECADDA3D7A /* Pods-daner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-daner.release.xcconfig"; path = "Pods/Target Support Files/Pods-daner/Pods-daner.release.xcconfig"; sourceTree = "<group>"; };
+		E0D50FAC1BC6ADB42F46FFE7 /* Pods_daner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_daner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -548,7 +593,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F029F25F061BC8924B9EE7F /* Pods_daner.framework in Frameworks */,
+				CD418A0BDA039E26C2151982 /* Pods_daner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,6 +646,12 @@
 				89BDB4A42187E59400FE61FD /* FriendInformationController.m */,
 				89CF946B218950A50066E65E /* BaseInformationController.h */,
 				89CF946C218950A50066E65E /* BaseInformationController.m */,
+				8962808821A2BC69000E6F4E /* FriendCircleDetailController.h */,
+				8962808921A2BC69000E6F4E /* FriendCircleDetailController.m */,
+				89E7696B21A3FB5D00FA6B1C /* DNFriendDetailModel.h */,
+				89E7696C21A3FB5D00FA6B1C /* DNFriendDetailModel.m */,
+				895B65B621A533F90044C2F6 /* DNHisBaseInfoController.h */,
+				895B65B721A533F90044C2F6 /* DNHisBaseInfoController.m */,
 			);
 			path = Friend;
 			sourceTree = "<group>";
@@ -630,6 +681,8 @@
 			children = (
 				89B76C9821816D49007D7202 /* MineController.h */,
 				89B76C9921816D49007D7202 /* MineController.m */,
+				89E925FB21A56DEB0079EEF0 /* DNMineController.h */,
+				89E925FC21A56DEB0079EEF0 /* DNMineController.m */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -655,6 +708,12 @@
 				89CF945621893E390066E65E /* PersonalFriendsCell.m */,
 				891BB081218B14220032CE77 /* FriendDetailComCell.h */,
 				891BB082218B14220032CE77 /* FriendDetailComCell.m */,
+				89E265F021A25CBC0035C6D6 /* FriendInfoCell.h */,
+				89E265F121A25CBC0035C6D6 /* FriendInfoCell.m */,
+				89E7696E21A4104300FA6B1C /* DNFriendPhoneCell.h */,
+				89E7696F21A4104400FA6B1C /* DNFriendPhoneCell.m */,
+				895B65B921A539900044C2F6 /* DNHisBaseInfoHeadView.h */,
+				895B65BA21A539900044C2F6 /* DNHisBaseInfoHeadView.m */,
 				89CF9458218943B80066E65E /* FriendDetailList */,
 				89BDB4A62187E70400FE61FD /* MJNIndexView */,
 			);
@@ -764,6 +823,8 @@
 				89BDB4AC2187F07200FE61FD /* UIView+CTExtensions.m */,
 				89CF94722189AF680066E65E /* UIButton+Style.h */,
 				89CF94732189AF680066E65E /* UIButton+Style.m */,
+				89E7696921A3F8AE00FA6B1C /* UIColor+VmExt.h */,
+				89E7696821A3F8AE00FA6B1C /* UIColor+VmExt.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -832,6 +893,8 @@
 		89B76C7D2181653C007D7202 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				8978BE2F21A3F6E000909125 /* DNBaseViewController.h */,
+				8978BE3021A3F6E000909125 /* DNBaseViewController.m */,
 				89B76C8921816BCA007D7202 /* BaseViewController.h */,
 				89B76C8821816BCA007D7202 /* BaseViewController.m */,
 				89B76C8421816AE5007D7202 /* DanerTabBarController.h */,
@@ -1087,6 +1150,18 @@
 			children = (
 				89CF946F218996330066E65E /* MineHeadView.h */,
 				89CF9470218996330066E65E /* MineHeadView.m */,
+				89E7697121A4262E00FA6B1C /* DNMineDataassetsView.h */,
+				89E7697221A4262E00FA6B1C /* DNMineDataassetsView.m */,
+				89E7697421A4266100FA6B1C /* DNShareOutbonusView.h */,
+				89E7697521A4266100FA6B1C /* DNShareOutbonusView.m */,
+				89E7697721A4340000FA6B1C /* DNAssetsCollectionViewCell.h */,
+				89E7697821A4340000FA6B1C /* DNAssetsCollectionViewCell.m */,
+				89BEB28721A4EAD200822455 /* DNMineCellHeadView.h */,
+				89BEB28821A4EAD200822455 /* DNMineCellHeadView.m */,
+				895B658A21A4FD1B0044C2F6 /* DNTaskCenterCell.h */,
+				895B658B21A4FD1B0044C2F6 /* DNTaskCenterCell.m */,
+				895B658D21A51F2B0044C2F6 /* DNMineAboutHeadView.h */,
+				895B658E21A51F2B0044C2F6 /* DNMineAboutHeadView.m */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -1103,7 +1178,7 @@
 		FDFA82D0D5CEE1C1F476EAAC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				74A3A91CA7FB2FDC006D5626 /* Pods_daner.framework */,
+				E0D50FAC1BC6ADB42F46FFE7 /* Pods_daner.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1119,7 +1194,7 @@
 				89B76C4421815B27007D7202 /* Sources */,
 				89B76C4521815B27007D7202 /* Frameworks */,
 				89B76C4621815B27007D7202 /* Resources */,
-				E717D553A92A91BB33066801 /* [CP] Embed Pods Frameworks */,
+				57511C6D990D4EC2EF8E3471 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1385,7 +1460,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E717D553A92A91BB33066801 /* [CP] Embed Pods Frameworks */ = {
+		57511C6D990D4EC2EF8E3471 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1400,7 +1475,16 @@
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/Reachability/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SJAttributesFactory/SJAttributesFactory.framework",
+				"${BUILT_PRODUCTS_DIR}/SJBaseVideoPlayer/SJBaseVideoPlayer.framework",
+				"${BUILT_PRODUCTS_DIR}/SJFullscreenPopGesture/SJFullscreenPopGesture.framework",
+				"${BUILT_PRODUCTS_DIR}/SJObserverHelper/SJObserverHelper.framework",
+				"${BUILT_PRODUCTS_DIR}/SJRouter/SJRouter.framework",
+				"${BUILT_PRODUCTS_DIR}/SJScrollEntriesView/SJScrollEntriesView.framework",
+				"${BUILT_PRODUCTS_DIR}/SJUIFactory/SJUIFactory.framework",
+				"${BUILT_PRODUCTS_DIR}/SJUIKit/SJUIKit.framework",
 				"${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -1413,7 +1497,16 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SJAttributesFactory.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SJBaseVideoPlayer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SJFullscreenPopGesture.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SJObserverHelper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SJRouter.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SJScrollEntriesView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SJUIFactory.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SJUIKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1438,12 +1531,15 @@
 				89B76C8A21816BCA007D7202 /* BaseViewController.m in Sources */,
 				89CA1098218AA1FA00E922AB /* ChatPictureCell.m in Sources */,
 				89BDB4A92187E73400FE61FD /* FriendInfoHeadView.m in Sources */,
+				89E7696A21A3F8AE00FA6B1C /* UIColor+VmExt.m in Sources */,
+				8978BE3121A3F6E100909125 /* DNBaseViewController.m in Sources */,
 				89D7108F2182AB5D007B02E7 /* FoucePeopleCollectionCell.m in Sources */,
 				89B76C5021815B27007D7202 /* ViewController.m in Sources */,
 				8961E9CC2182BBA700B914FD /* FoundListMessageCell.m in Sources */,
 				5A3549732185A3070085469B /* MJNIndexView.m in Sources */,
 				899779812181A11C00069C52 /* FoundListVideoCell.m in Sources */,
 				5A7954A7218438A7004254BE /* BaseView.m in Sources */,
+				89E7697021A4104400FA6B1C /* DNFriendPhoneCell.m in Sources */,
 				5A7954AA218438C1004254BE /* BaseTableViewCell.m in Sources */,
 				89BDB4BD2188693500FE61FD /* FriendDetailFootView.m in Sources */,
 				89BDB4BA21885C8E00FE61FD /* FriendDetailHeadView.m in Sources */,
@@ -1452,13 +1548,16 @@
 				89B76C5B21815B29007D7202 /* main.m in Sources */,
 				89B76C4D21815B27007D7202 /* AppDelegate.m in Sources */,
 				5A354967218477E30085469B /* FriendHeadView.m in Sources */,
+				89E7696D21A3FB5D00FA6B1C /* DNFriendDetailModel.m in Sources */,
 				89BDBEA7218C0D4F003674EE /* UIView+Extension.m in Sources */,
 				89BDBEAA218C0D4F003674EE /* VoiceButtonView.m in Sources */,
 				8961E9E02183190D00B914FD /* BaseFoundController.m in Sources */,
 				5A3549792185A7A20085469B /* MyFriendsCell.m in Sources */,
 				89BDB4B1218839D500FE61FD /* FireworksView.m in Sources */,
+				89E265F221A25CBC0035C6D6 /* FriendInfoCell.m in Sources */,
 				89BDB4AD2187F07200FE61FD /* UIView+CTExtensions.m in Sources */,
 				89CA109B218AA22500E922AB /* ChatLocationCell.m in Sources */,
+				895B65BB21A539900044C2F6 /* DNHisBaseInfoHeadView.m in Sources */,
 				89BDB4B7218854C900FE61FD /* FriendDetailController.m in Sources */,
 				89CA109E218AA26100E922AB /* ChatMoneyCell.m in Sources */,
 				89CF946D218950A50066E65E /* BaseInformationController.m in Sources */,
@@ -1468,6 +1567,7 @@
 				89CF9461218944A10066E65E /* FriendRecordCell.m in Sources */,
 				89BDBEA8218C0D4F003674EE /* EmotionImages.m in Sources */,
 				89CA1092218AA1D100E922AB /* ChatVideoCell.m in Sources */,
+				89BEB28921A4EAD200822455 /* DNMineCellHeadView.m in Sources */,
 				8961E9DB2183187500B914FD /* KKClassificationView.m in Sources */,
 				5A3549762185A33C0085469B /* WPFSearchResultViewController.m in Sources */,
 				89B76C8321816A5A007D7202 /* DanerTabBarItem.m in Sources */,
@@ -1481,6 +1581,7 @@
 				891BB07B218ADCE00032CE77 /* ChatInputView.m in Sources */,
 				8961E9DC2183187500B914FD /* KKSliderButtonView.m in Sources */,
 				5A3549702185A3070085469B /* contactModel.m in Sources */,
+				89E7697321A4262E00FA6B1C /* DNMineDataassetsView.m in Sources */,
 				5A7954AD218438FD004254BE /* MessageNavView.m in Sources */,
 				89CF945B218944180066E65E /* FriendVideoCell.m in Sources */,
 				8961E9DD2183187500B914FD /* KKClassiflcationLayout.m in Sources */,
@@ -1488,21 +1589,28 @@
 				89BDBEA4218C0D4F003674EE /* UITextView+Category.m in Sources */,
 				89CF9467218945FC0066E65E /* FriendMusicCell.m in Sources */,
 				8961E9E62186FDA000B914FD /* FriendAlertView.m in Sources */,
+				895B658F21A51F2B0044C2F6 /* DNMineAboutHeadView.m in Sources */,
 				89CA1089218A990400E922AB /* ChatDetailsController.m in Sources */,
 				5A35495D218464F10085469B /* MyFouceController.m in Sources */,
 				8997798B2181B81B00069C52 /* UILabel+String.m in Sources */,
 				89BDBEA1218C0D4F003674EE /* InputToolbar.m in Sources */,
+				89E7697921A4340000FA6B1C /* DNAssetsCollectionViewCell.m in Sources */,
 				89CF9471218996330066E65E /* MineHeadView.m in Sources */,
+				89E7697621A4266100FA6B1C /* DNShareOutbonusView.m in Sources */,
 				8961E9E32186E5B000B914FD /* ScreenFriendCell.m in Sources */,
 				89BDBEA9218C0D4F003674EE /* IMEmotionEntity.m in Sources */,
+				89E925FD21A56DEB0079EEF0 /* DNMineController.m in Sources */,
 				89BDBEA2218C0D4F003674EE /* MoreButtonView.m in Sources */,
 				89BDBEA3218C0D4F003674EE /* EmojiCollectionViewCell.m in Sources */,
 				8997797B2181986D00069C52 /* FoundNavView.m in Sources */,
+				895B65B821A533F90044C2F6 /* DNHisBaseInfoController.m in Sources */,
 				89CF945E218944880066E65E /* FriendLocationCell.m in Sources */,
 				89B76C9721816D2F007D7202 /* FoundController.m in Sources */,
 				89BDB4A52187E59400FE61FD /* FriendInformationController.m in Sources */,
+				895B658C21A4FD1B0044C2F6 /* DNTaskCenterCell.m in Sources */,
 				89CF9464218944CA0066E65E /* FriendTextCell.m in Sources */,
 				891BB080218ADFE10032CE77 /* UIPlaceHolderTextView.m in Sources */,
+				8962808A21A2BC69000E6F4E /* FriendCircleDetailController.m in Sources */,
 				89B76C8E21816CC0007D7202 /* MessageController.m in Sources */,
 				89BDBEA5218C0D4F003674EE /* EmojiButtonView.m in Sources */,
 				89D7108C2182A935007B02E7 /* FoundListFouceCell.m in Sources */,
@@ -1686,6 +1794,42 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"HighlightedSearch\"",
+					"-framework",
+					"\"LTScrollView\"",
+					"-framework",
+					"\"MBProgressHUD\"",
+					"-framework",
+					"\"MJRefresh\"",
+					"-framework",
+					"\"Reachability\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"SJAttributesFactory\"",
+					"-framework",
+					"\"SJBaseVideoPlayer\"",
+					"-framework",
+					"\"SJFullscreenPopGesture\"",
+					"-framework",
+					"\"SJObserverHelper\"",
+					"-framework",
+					"\"SJRouter\"",
+					"-framework",
+					"\"SJScrollEntriesView\"",
+					"-framework",
+					"\"SJUIFactory\"",
+					"-framework",
+					"\"SJUIKit\"",
+					"-framework",
+					"\"YYKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = daner3.dnaer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1703,6 +1847,42 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"HighlightedSearch\"",
+					"-framework",
+					"\"LTScrollView\"",
+					"-framework",
+					"\"MBProgressHUD\"",
+					"-framework",
+					"\"MJRefresh\"",
+					"-framework",
+					"\"Reachability\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"SJAttributesFactory\"",
+					"-framework",
+					"\"SJBaseVideoPlayer\"",
+					"-framework",
+					"\"SJFullscreenPopGesture\"",
+					"-framework",
+					"\"SJObserverHelper\"",
+					"-framework",
+					"\"SJRouter\"",
+					"-framework",
+					"\"SJScrollEntriesView\"",
+					"-framework",
+					"\"SJUIFactory\"",
+					"-framework",
+					"\"SJUIKit\"",
+					"-framework",
+					"\"YYKit\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = daner3.dnaer;
 				PRODUCT_NAME = "$(TARGET_NAME)";

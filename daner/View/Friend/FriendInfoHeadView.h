@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FriendInfoHeadView : BaseView
+@interface FriendInfoHeadView : BaseView<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UIImageView *bgImage;
 @property(nonatomic,strong)UIImageView *headImage;
 @property(nonatomic,strong)UIButton *backBtn;
@@ -44,8 +44,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong)UILabel *line3;
 @property(nonatomic,strong)UILabel *line4;
 @property(nonatomic,strong)UIImageView *rightImage;
+@property(nonatomic,strong)UITableView *tableview;
 @property(nonatomic,copy)void (^backBlcok)(void);
-
+@property(nonatomic,copy)void (^selectedBlcok)(NSInteger);
 
 @end
 

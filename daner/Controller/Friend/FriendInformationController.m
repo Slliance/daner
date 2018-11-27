@@ -9,11 +9,11 @@
 #import "FriendInformationController.h"
 #import "FriendInfoHeadView.h"
 #import "KKClassificationView.h"
-#import "BaseFoundController.h"
 
 #import "LTScrollView-Swift.h"
 #import "MJRefresh.h"
 #import "BaseInformationController.h"
+#import "DNHisBaseInfoController.h"
 
 @interface FriendInformationController ()<LTSimpleScrollViewDelegate>
 @property(nonatomic,strong)FriendInfoHeadView *headView;
@@ -29,7 +29,7 @@
 @implementation FriendInformationController
 -(FriendInfoHeadView *)headView{
     if (!_headView) {
-        _headView = [[FriendInfoHeadView alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, 540)];
+        _headView = [[FriendInfoHeadView alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, 627)];
     }
     return _headView;
 }
@@ -43,7 +43,10 @@
     [self.headView setBackBlcok:^{
         [weakself.navigationController popViewControllerAnimated:YES];
     }];
-    
+    [self.headView setSelectedBlcok:^(NSInteger index) {
+        DNHisBaseInfoController *hisVC = [[DNHisBaseInfoController alloc]init];
+        [weakself.navigationController pushViewController:hisVC animated:YES];
+    }];
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -123,13 +126,16 @@
              _layout.bottomLineHeight = 0.0;
              _layout.isHiddenSlider = YES;
              _layout.bottomLineCornerRadius = 2.0;
-             _layout.isAverage = true;
+             _layout.isAverage = false;
+             _layout.lrMargin = 20;
+             _layout.titleMargin = 50;
              _layout.titleViewBgColor = [UIColor whiteColor];
              _layout.titleColor = DSColorFromHex(0x969696);
              _layout.titleSelectColor = DSColorFromHex(0x454545);
+             _layout.titleSelectFont = [UIFont boldSystemFontOfSize:13];
              _layout.titleFont = [UIFont systemFontOfSize:13];
              _layout.scale = 1.25;
-             _layout.sliderHeight = [self navHeightWithHeight];
+             _layout.sliderHeight =50;
              /* 更多属性设置请参考 LTLayout 中 public 属性说明 */
          }
          return _layout;

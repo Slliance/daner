@@ -179,6 +179,18 @@
     }else{
         FriendDetailController *friendVC = [[FriendDetailController alloc]init];
         friendVC.hidesBottomBarWhenPushed = YES;
+        DNFriendDetailModel *model = [[DNFriendDetailModel alloc]init];
+        model.phoneNumList = @[@{@"title":@"工作",@"num":@"13645678861"},@{@"title":@"固话",@"num":@"021-4363268"}];
+        model.professionalList = @[@"源点科技 CEO",@"dnaer科技 CEO"];
+        model.email = @"yuandian@dnaer.com";
+        model.url = @"www.dnaer.com";
+        model.address = @"浦江复地中心";
+        model.group = @"同学";
+        model.label = @"大学室友";
+        model.qqNum = @"169234052";
+        model.wechatNum = @"233252395";
+        model.other = @"很好的合作伙伴";
+        [friendVC  setResultModel:model];
         [self.navigationController pushViewController:friendVC animated:YES];
     }
    

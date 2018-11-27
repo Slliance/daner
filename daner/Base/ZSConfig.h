@@ -14,6 +14,9 @@
 #define SCREENWIDTH [[UIScreen mainScreen] bounds].size.width
 #define SCREENHEIGHT [[UIScreen mainScreen] bounds].size.height
 /**封装颜色*/
+#define COLHEX(s) [UIColor colorWithHexString:s]
+#define App_Frame_Height    [[UIScreen mainScreen] bounds].size.height
+#define App_Frame_Width     [[UIScreen mainScreen] bounds].size.width
 #define DSColorMake(r, g, b)            [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
 #define DSColorAlphaMake(r, g, b, a)    [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 #define DSColorFromHex(rgb)     [UIColor colorWithRed:((float)((rgb & 0xFF0000) >> 16))/255.0 green:((float)((rgb & 0xFF00) >> 8))/255.0 blue:((float)(rgb & 0xFF))/255.0 alpha:1.0]
@@ -27,6 +30,7 @@
 #define FONT_PingFang_SC_Regular(x) [UIFont fontWithName:@"PingFangSC-Light" size:x]?[UIFont fontWithName:@"PingFangSC-Light" size:x]:[UIFont systemFontOfSize:x]
 
 
+#import "UIColor+VmExt.h"
 #import <Masonry/Masonry.h>
 #import "UIView+CTExtensions.h"
 #import "UILabel+String.h"

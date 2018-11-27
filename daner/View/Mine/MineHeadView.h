@@ -7,25 +7,21 @@
 //
 
 #import "BaseView.h"
+#import "DNMineDataassetsView.h"
+#import "DNShareOutbonusView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MineHeadView : BaseView
+@property(nonatomic,strong)UIView *bgView;
 @property(nonatomic,strong)UIImageView *bgImage;
 @property(nonatomic,strong)UIImageView *headImage;
 @property(nonatomic,strong)UIButton *backBtn;
 @property(nonatomic,strong)UIButton *moreBtn;
 @property(nonatomic,strong)UIButton *fouceBtn;
-@property(nonatomic,strong)UIButton *sendBtn;
-@property(nonatomic,strong)UIButton *originalBtn;
-@property(nonatomic,strong)UIButton *sexBtn;
-///星座
-@property(nonatomic,strong)UIButton *constellateBtn;
-@property(nonatomic,strong)UIButton *cityBtn;
 @property(nonatomic,strong)UILabel *nameLabel;
 @property(nonatomic,strong)UILabel *detailLabel;
 @property(nonatomic,strong)UIImageView *vImage;
-@property(nonatomic,strong)UILabel *contentLabel;
 @property(nonatomic,strong)UILabel *fouceNumLabel;
 @property(nonatomic,strong)UILabel *fouceTitleLabel;
 @property(nonatomic,strong)UILabel *fansNumLabel;
@@ -37,18 +33,20 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong)UILabel *friendNumLabel;
 @property(nonatomic,strong)UILabel *friendTitleLabel;
 @property(nonatomic,strong)UIButton *moreSortBtn;
-@property(nonatomic,strong)UIButton *integralBtn;
-///橱柜
-@property(nonatomic,strong)UIImageView *ambryImage;
-@property(nonatomic,strong)UILabel *ambryLabel;
-@property(nonatomic,strong)UIImageView *urlImage;
-@property(nonatomic,strong)UILabel *urlLabel;
+@property(nonatomic,strong)UILabel *assetsTitleLabel;
+
+@property(nonatomic,strong)UILabel *DNumLabel;
+@property(nonatomic,strong)UILabel *DTitleLabel;
+@property(nonatomic,strong)UILabel *integralNumLabel;
+@property(nonatomic,strong)UILabel *integralTitleLabel;
+@property(nonatomic,strong)UILabel *moneyNumLabel;
+@property(nonatomic,strong)UILabel *moneyTitleLabel;
 @property(nonatomic,strong)UILabel *line1;
-@property(nonatomic,strong)UILabel *line2;
-@property(nonatomic,strong)UILabel *line3;
-@property(nonatomic,strong)UILabel *line4;
-@property(nonatomic,strong)UIImageView *rightImage;
+@property(nonatomic,strong)DNMineDataassetsView*assetsView;
+@property(nonatomic,strong)DNShareOutbonusView*shareOutView;
+
 @property(nonatomic,copy)void (^backBlcok)(void);
+
 @end
 
 NS_ASSUME_NONNULL_END

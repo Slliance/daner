@@ -7,6 +7,7 @@
 //
 
 #import "FriendInfoHeadView.h"
+#import "FriendInfoCell.h"
 
 @implementation FriendInfoHeadView
 
@@ -41,7 +42,7 @@
 -(UIButton *)moreBtn{
     if (!_moreBtn) {
         _moreBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_moreBtn setImage:[UIImage imageNamed:@"more_other"] forState:UIControlStateNormal];
+        [_moreBtn setImage:[UIImage imageNamed:@"setting_other"] forState:UIControlStateNormal];
         _moreBtn.frame = CGRectMake(SCREENWIDTH-50, 50, 30, 30);
         [_moreBtn addTarget:self action:@selector(pressMore) forControlEvents:UIControlEventTouchUpInside];
     }
@@ -232,7 +233,16 @@
     }
     return _contentLabel;
 }
-
+-(UITableView *)tableview{
+    if (!_tableview) {
+        _tableview = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, 0, 0) style:UITableViewStylePlain];
+        _tableview.delegate = self;
+        _tableview.dataSource = self;
+        _tableview.scrollEnabled = NO;
+        _tableview.separatorStyle = UITableViewCellSeparatorStyleNone;
+    }
+    return _tableview;
+}
 -(UILabel *)line1{
     if (!_line1) {
         _line1 = [[UILabel alloc]init];
@@ -261,13 +271,7 @@
     }
     return _line4;
 }
--(UIImageView *)ambryImage{
-    if (!_ambryImage) {
-        _ambryImage = [[UIImageView alloc]init];
-        _ambryImage.image = [UIImage imageNamed:@"store_othe"];
-    }
-    return _ambryImage;
-}
+
 -(UIImageView *)urlImage{
     if (!_urlImage) {
         _urlImage = [[UIImageView alloc]init];
@@ -275,23 +279,7 @@
     }
     return _urlImage;
 }
--(UIImageView *)rightImage{
-    if (!_rightImage) {
-        _rightImage = [[UIImageView alloc]init];
-        _rightImage.image = [UIImage imageNamed:@"icon_right"];
-    }
-    return _rightImage;
-}
--(UILabel *)ambryLabel{
-    if (!_ambryLabel) {
-        _ambryLabel = [[UILabel alloc]init];
-        _ambryLabel.text = @"商品橱窗";
-        _ambryLabel.font = [UIFont systemFontOfSize:13];
-        _ambryLabel.textAlignment = NSTextAlignmentLeft;
-        _ambryLabel.textColor = DSColorFromHex(0x474747);
-    }
-    return _ambryLabel;
-}
+
 -(UILabel *)urlLabel{
     if (!_urlLabel) {
         _urlLabel = [[UILabel alloc]init];
@@ -337,6 +325,7 @@
         [self addSubview:self.rightImage];
         [self addSubview:self.fouceBtn];
         [self addSubview:self.sendBtn];
+        [self addSubview:self.tableview];
         [self.fouceBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.bgImage.mas_bottom).offset(10);
             make.right.equalTo(self).offset(-20);
@@ -357,31 +346,21 @@
         self.constellateBtn.frame = CGRectMake(self.sexBtn.ctRight+7, self.detailLabel.ctBottom+21, 57, 20);
         self.cityBtn.frame = CGRectMake(self.constellateBtn.ctRight+6, self.detailLabel.ctBottom+21, 72, 20);
         self.contentLabel.frame = CGRectMake(20, self.originalBtn.ctBottom+11, SCREENWIDTH-50, 62);
+        
+        
+        
         [self.line1 mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self).offset(20);
             make.top.equalTo(self.contentLabel.mas_bottom).offset(20);
-            make.right.equalTo(self).offset(-20);
             make.height.mas_equalTo(0.5);
+            make.right.equalTo(self).offset(-19);
         }];
         [self.line2 mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self).offset(20);
             make.top.equalTo(self.line1.mas_bottom).offset(78);
-            make.right.equalTo(self).offset(-20);
             make.height.mas_equalTo(0.5);
+            make.right.equalTo(self).offset(-19);
         }];
-        [self.line3 mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self).offset(20);
-            make.top.equalTo(self.line2.mas_bottom).offset(40);
-            make.right.equalTo(self).offset(-20);
-            make.height.mas_equalTo(0.5);
-        }];
-        [self.line4 mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self).offset(20);
-            make.top.equalTo(self.line3.mas_bottom).offset(40);
-            make.right.equalTo(self).offset(-20);
-            make.height.mas_equalTo(0.5);
-        }];
-        
         self.fouceNumLabel.frame = CGRectMake(0, self.contentLabel.ctBottom+40, SCREENWIDTH/4, 15);
         self.fouceTitleLabel.frame = CGRectMake(0, self.fouceNumLabel.ctBottom+10, SCREENWIDTH/4, 15);
         self.fansNumLabel.frame = CGRectMake(SCREENWIDTH/4, self.contentLabel.ctBottom+40, SCREENWIDTH/4, 15);
@@ -390,41 +369,45 @@
         self.zanTitleLabel.frame = CGRectMake(SCREENWIDTH/2, self.zanNumLabel.ctBottom+10, SCREENWIDTH/4, 15);
         self.hateNumLabel.frame = CGRectMake(SCREENWIDTH*3/4, self.contentLabel.ctBottom+40, SCREENWIDTH/4, 15);
         self.hateTitleLabel.frame = CGRectMake(SCREENWIDTH*3/4, self.hateNumLabel.ctBottom+10, SCREENWIDTH/4, 15);
-        [self.ambryImage mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self).offset(21);
-            make.top.equalTo(self.line2.mas_bottom).offset(14);
-            make.width.mas_equalTo(11);
-            make.height.mas_equalTo(10);
-        }];
-        [self.urlImage mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self).offset(20);
-            make.top.equalTo(self.line3.mas_bottom).offset(14);
-            make.width.mas_equalTo(12);
-            make.height.mas_equalTo(12);
-        }];
-        [self.ambryLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self.ambryImage.mas_right).offset(8);
-            make.top.equalTo(self.line2.mas_bottom).offset(13);
-            make.width.mas_equalTo(100);
-            make.height.mas_equalTo(12);
-        }];
-        [self.urlLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self.urlImage.mas_right).offset(9);
-            make.top.equalTo(self.line3.mas_bottom).offset(15);
-            make.width.mas_equalTo(100);
-            make.height.mas_equalTo(10);
-        }];
-        [self.rightImage mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self).offset(SCREENWIDTH-26);
-            make.top.equalTo(self.line2.mas_bottom).offset(14);
-            make.width.mas_equalTo(6);
-            make.height.mas_equalTo(11);
-        }];
         
+        [self.tableview mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self);
+            make.top.equalTo(self.line2.mas_bottom);
+            make.height.mas_equalTo(52*3);
+            make.right.equalTo(self);
+        }];
     }
     return self;
 }
-
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 3;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 52;
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString*identify = @"FriendInfoCell";
+    FriendInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+    if (!cell) {
+        cell = [[FriendInfoCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
+    }
+    NSArray *imageArr = @[@"info_friend",@"store_othe",@"link_other"];
+    NSArray *titleArr = @[@"基础信息",@"商品橱窗",@"www.dnaer.com"];
+    [cell.ambryImage setImage:[UIImage imageNamed:imageArr[indexPath.row]] forState:UIControlStateNormal];
+    cell.ambryLabel.text = titleArr[indexPath.row];
+    if (indexPath.row ==2) {
+        cell.ambryLabel.textColor = DSColorFromHex(0x18609C);
+        cell.rightImage.hidden = YES;
+    }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    return cell;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    self.selectedBlcok(indexPath.row);
+}
 -(void)pressBack{
     self.backBlcok();
 }

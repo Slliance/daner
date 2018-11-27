@@ -149,7 +149,16 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Reachability/Reachability.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SJAttributesFactory/SJAttributesFactory.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SJBaseVideoPlayer/SJBaseVideoPlayer.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SJFullscreenPopGesture/SJFullscreenPopGesture.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SJObserverHelper/SJObserverHelper.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SJRouter/SJRouter.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SJScrollEntriesView/SJScrollEntriesView.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SJUIFactory/SJUIFactory.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SJUIKit/SJUIKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -159,7 +168,16 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Reachability/Reachability.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SJAttributesFactory/SJAttributesFactory.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SJBaseVideoPlayer/SJBaseVideoPlayer.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SJFullscreenPopGesture/SJFullscreenPopGesture.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SJObserverHelper/SJObserverHelper.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SJRouter/SJRouter.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SJScrollEntriesView/SJScrollEntriesView.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SJUIFactory/SJUIFactory.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SJUIKit/SJUIKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

@@ -14,6 +14,8 @@
 #import "FriendMusicCell.h"
 #import "FriendPictureCell.h"
 #import "LTScrollView-Swift.h"
+#import "FriendCircleDetailController.h"
+
 @interface BaseInformationController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *tableview;
 @end
@@ -21,7 +23,7 @@
 @implementation BaseInformationController
 -(UITableView *)tableview{
     if (!_tableview) {
-        _tableview = [[UITableView alloc]initWithFrame:CGRectMake(0,[self navHeightWithHeight], SCREENWIDTH, SCREENHEIGHT-[self navHeightWithHeight]) style:UITableViewStylePlain];
+        _tableview = [[UITableView alloc]initWithFrame:CGRectMake(0,[self navHeightWithHeight]-40, SCREENWIDTH, SCREENHEIGHT-[self navHeightWithHeight]+40) style:UITableViewStylePlain];
         _tableview.separatorColor = [UIColor whiteColor];
         self.tableview.backgroundColor = DSColorFromHex(0xF0F0F0);
         _tableview.delegate = self;
@@ -76,6 +78,7 @@
         if (!cell) {
             cell = [[FriendVideoCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
         }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }else if (indexPath.row ==1){
         static NSString *identify = @"FriendRecordCell";
@@ -83,6 +86,7 @@
         if (!cell) {
             cell = [[FriendRecordCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
         }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }else if (indexPath.row ==2){
         static NSString *identify = @"FriendPictureCell";
@@ -90,6 +94,7 @@
         if (!cell) {
             cell = [[FriendPictureCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
         }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
         
     }else if (indexPath.row ==3){
@@ -98,6 +103,7 @@
         if (!cell) {
             cell = [[FriendMusicCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
         }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
         
     }else if (indexPath.row ==4){
@@ -106,6 +112,7 @@
         if (!cell) {
             cell = [[FriendTextCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
         }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }
     static NSString *identify = @"FriendLocationCell";
@@ -113,9 +120,15 @@
     if (!cell) {
         cell = [[FriendLocationCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
     }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    FriendCircleDetailController*circleVc = [[FriendCircleDetailController alloc]init];
+    [circleVc setType:indexPath.row];
+    [self.navigationController pushViewController:circleVc animated:YES];
+}
 
 
 /*
